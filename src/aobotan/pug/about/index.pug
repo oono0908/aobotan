@@ -1,0 +1,16 @@
+extends ../common/_layout.pug
+
+block append css
+  link(rel='stylesheet', href="/suit-site/css/about/style.css")
+block append js 
+  script(src='https://code.jquery.com/jquery-3.3.1.js')
+  script(src="/suit-site/js/common/script.js" defer)
+  script(src="/suit-site/js/about/script.js" defer)
+
+block var
+  - var page = 'about'
+
+block main
+    main
+      section.about
+      include ../common/_contact-section.pug

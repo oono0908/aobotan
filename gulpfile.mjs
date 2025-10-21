@@ -15,22 +15,22 @@ import htmlmin from 'gulp-htmlmin';
 const sass = gulpSass(dartSass);
 
 const src = {
-  root: './src/suit-site',
-  pug: ['./src/suit-site/pug/**/*.pug', '!src/pug/**/_*.pug'],
-  pugbase: './src/suit-site/pug',
-  pugwatch: 'src/suit-site/pug/**/*.pug',
-  sass: ['./src/suit-site/sass/**/*.scss'],
-  sasswatch: './src/suit-site/sass/**/*.scss',
-  img:'./src/suit-site/img/**/*',
-  js: './src/suit-site/js/**/*.js'
+  root: './src/aobotan',
+  pug: ['./src/aobotan/pug/**/*.pug', '!src/pug/**/_*.pug'],
+  pugbase: './src/aobotan/pug',
+  pugwatch: 'src/aobotan/pug/**/*.pug',
+  sass: ['./src/aobotan/sass/**/*.scss'],
+  sasswatch: './src/aobotan/sass/**/*.scss',
+  img:'./src/aobotan/img/**/*',
+  js: './src/aobotan/js/**/*.js'
 };
  
 const dest = {
   root: './dest/',
-  pug: './dest/suit-site/',
-  css: './dest/suit-site/css/',
-  img: './dest/suit-site/img/',
-  js: './dest/suit-site/js/'
+  pug: './dest/aobotan/',
+  css: './dest/aobotan/css/',
+  img: './dest/aobotan/img/',
+  js: './dest/aobotan/js/'
 };
 
 const img_task = () => (
@@ -59,7 +59,7 @@ const sass_task = () => {
           "Android >= 4"
         ],
 
-      cascade: false
+      cascade: false,
       })
     ]))
   // .pipe(cleanCSS())
@@ -90,7 +90,7 @@ const server_task = () => {
     server: {
       baseDir: dest.root,
     },
-    startPath: '/suit-site/',
+    startPath: '/aobotan/',
   });
 }
  
