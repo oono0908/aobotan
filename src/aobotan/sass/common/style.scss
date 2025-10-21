@@ -3,3 +3,25 @@
 @use "header";
 @use "footer";
 
+// spでは表示
+.md-none{
+  @include mq("md"){
+    display: none !important;
+  }
+}
+
+// pcで表示
+.md-show{
+  display: none !important;
+  @include mq("md"){
+    display: block !important;
+  }
+}
+
+// display: flex;が要素に指定してある場合
+.md-show-for-flex{
+  display: none !important;
+  @include mq("md"){
+    display: flex !important;
+  }
+}

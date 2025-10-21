@@ -1,0 +1,331 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+a[href^="tel:"] {
+  pointer-events: none;
+}
+@media screen and (min-width: 768px) {
+  a[href^="tel:"] {
+    pointer-events: auto;
+  }
+}
+
+a,
+button {
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* =========================================================
+header-sp
+========================================================= */
+.header-sp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.header-sp__inner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-sp__logo {
+  width: 98px;
+  margin-right: auto;
+  padding-top: 10px;
+}
+
+.logo-title__link {
+  display: block;
+  width: 100%;
+}
+
+.hamberger {
+  width: 56px;
+  height: 48px;
+  background-color: #4282B8;
+  position: relative;
+}
+
+.hamberger__line {
+  width: 32px;
+  height: 1px;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.hamberger__line:first-child {
+  top: 12px;
+}
+.hamberger__line:nth-child(2) {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.hamberger__line:last-child {
+  bottom: 12px;
+}
+
+.hamberger__line.is-open:first-child {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.hamberger__line.is-open:nth-child(2) {
+  opacity: 0;
+}
+.hamberger__line.is-open:last-child {
+  bottom: 50%;
+  -webkit-transform: translate(-50%, 50%) rotate(-45deg);
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  z-index: 100;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: none;
+  overflow-x: scroll;
+}
+.drawer.is-open {
+  display: block;
+}
+
+.drawer__inner {
+  width: 100%;
+  padding: 148px 20px 80px 20px;
+}
+
+.drawer__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer__item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.drawer__item:not(:first-child) {
+  margin-top: 32px;
+}
+
+.drawer__link {
+  display: inline-block;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.drawer__link.drawer__item--title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-bottom: 1px solid #4282B8;
+  padding-bottom: 3px;
+}
+
+.drawer__link.drawer__link--contact {
+  position: relative;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.drawer__link.drawer__link--contact:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/aobotan/img/common/mail.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -25px;
+}
+
+.drawer__copy {
+  display: block;
+  margin: 0 auto;
+  margin-top: 28px;
+}
+
+/* =========================================================
+header-pc
+========================================================= */
+.header-pc {
+  width: 280px;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.header-pc__inner {
+  padding: 74px 40px 0 40px;
+}
+
+.header-pc__logo {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.header-pc__nav {
+  margin-top: 57px;
+}
+
+.header-pc__nav-items {
+  border-bottom: 1px solid #4282B8;
+  padding-bottom: 32px;
+}
+
+.header-pc__nav-title-wrapper {
+  padding-bottom: 32px;
+  border-bottom: 1px solid #4282B8;
+}
+
+.header-pc__nav-title {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.header-pc__nav-title:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  width: 24px;
+  height: 1px;
+  background-color: #4282B8;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header-pc__nav-title:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 12px;
+  width: 1px;
+  height: 24px;
+  background-color: #4282B8;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header-pc__nav-title--news:before,
+.header-pc__nav-title--contact:before {
+  display: none;
+}
+.header-pc__nav-title--news:after,
+.header-pc__nav-title--contact:after {
+  display: none;
+}
+
+.header-pc__nav-title-wrapper:not(:first-child) {
+  margin-top: 32px;
+}
+
+.header-pc__nav-title-wrapper.is-open > .header-pc__nav-title:before {
+  opacity: 0;
+}
+.header-pc__nav-title-wrapper.is-open > .header-pc__nav-title:after {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.header-pc__nav-items {
+  display: none;
+  padding: 32px 17px;
+  border-bottom: 1px solid #4282B8;
+}
+
+.header-pc__nav-item:not(:first-child) {
+  margin-top: 24px;
+}
+
+.header-pc__nav-link {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .md-none {
+    display: none !important;
+  }
+}
+
+.md-show {
+  display: none !important;
+}
+@media screen and (min-width: 768px) {
+  .md-show {
+    display: block !important;
+  }
+}
+
+.md-show-for-flex {
+  display: none !important;
+}
+@media screen and (min-width: 768px) {
+  .md-show-for-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}

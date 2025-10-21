@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oono0908/dogsite.git"
+    "url": "git+https://github.com/oono0908/aobotan.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oono0908/dogsite/issues"
+    "url": "https://github.com/oono0908/aobotan/issues"
   },
-  "homepage": "https://github.com/oono0908/dogsite#readme",
+  "homepage": "https://github.com/oono0908/aobotan#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "browser-sync": "^3.0.4",
