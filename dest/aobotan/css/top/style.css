@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
 }
@@ -11,6 +12,18 @@ html {
 
 body {
   font-family: "Zen Kaku Gothic New", sans-serif;
+  width: 100%;
+}
+
+.body__inner {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .body__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 a[href^="tel:"] {
@@ -40,4 +53,255 @@ img {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    width: calc(100% - 280px);
+    height: 100vh;
+    background-color: none;
+  }
+}
+
+.mv {
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .mv:before {
+    content: "";
+    width: 62.6724137931%;
+    aspect-ratio: 1/1;
+    background-color: #4282B8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    display: inline-block;
+  }
+}
+
+.mv__inner {
+  position: absolute;
+  top: 112px;
+  left: 10px;
+  background-color: #F8F8F8;
+  width: calc(100% - 10px);
+  border-radius: 10px 0 0 10px;
+  aspect-ratio: 365/589;
+}
+@media screen and (min-width: 768px) {
+  .mv__inner {
+    position: absolute;
+    top: 3.4482758621%;
+    left: 0;
+    width: 96.5517241379%;
+    aspect-ratio: 1120/873;
+    border-radius: 50px;
+  }
+}
+
+.mv__img-wrapper {
+  display: none;
+  position: absolute;
+}
+
+.mv__img01 {
+  width: 30.1369863014%;
+  top: 39.2190152801%;
+  left: 4.9315068493%;
+}
+@media screen and (min-width: 768px) {
+  .mv__img01 {
+    width: 28.0357142857%;
+    top: 46.5063001145%;
+    left: 7.7678571429%;
+  }
+}
+
+.mv__img02 {
+  width: 22.4657534247%;
+  top: 39.8981324278%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@media screen and (min-width: 768px) {
+  .mv__img02 {
+    width: 18.5714285714%;
+    top: 36.5406643757%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.mv__img03 {
+  width: 24.1095890411%;
+  top: 46.0101867572%;
+  right: 3.2876712329%;
+}
+@media screen and (min-width: 768px) {
+  .mv__img03 {
+    width: 16.25%;
+    top: 44.6735395189%;
+    right: 5%;
+  }
+}
+
+.mv__img04 {
+  width: 36.7123287671%;
+  top: 5.2631578947%;
+  right: 3.2876712329%;
+}
+@media screen and (min-width: 768px) {
+  .mv__img04 {
+    width: 23.0357142857%;
+    top: 7.3310423826%;
+    right: 4.9107142857%;
+  }
+}
+
+.mv__img05 {
+  width: 28.2191780822%;
+  top: 1.6977928693%;
+  left: 4.3835616438%;
+}
+@media screen and (min-width: 768px) {
+  .mv__img05 {
+    width: 17.4107142857%;
+    top: 7.4455899198%;
+    left: 6.3392857143%;
+  }
+}
+
+.mv__title {
+  position: absolute;
+  top: 69.2699490662%;
+  left: 4.9315068493%;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .mv__title {
+    top: 74.1122565865%;
+    left: 41.6964285714%;
+  }
+}
+
+.mv__title-main {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000000;
+  display: inline-block;
+  padding: 14px;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .mv__title-main {
+    font-size: clamp(3.2rem, 4vw, 6.4rem);
+  }
+}
+
+.mv__title-sub {
+  line-height: 2;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 21px;
+}
+@media screen and (min-width: 768px) {
+  .mv__title-sub {
+    font-size: clamp(1.2rem, 1vw, 1.6rem);
+    margin-top: clamp(10px, 2vw, 35px);
+  }
+}
+
+.mv__scroll-down {
+  position: absolute;
+  bottom: 4.0747028862%;
+  left: 4.9315068493%;
+}
+@media screen and (min-width: 768px) {
+  .mv__scroll-down {
+    bottom: 7.3310423826%;
+    left: 1.6071428571%;
+  }
+}
+
+.mv__scroll-down-text {
+  color: #4282B8;
+  font-size: 1rem;
+  font-weight: 700;
+  position: relative;
+}
+.mv__scroll-down-text:after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0;
+  background-color: #4282B8;
+  -webkit-animation: scrollLine 1.8s ease-in-out infinite;
+  animation: scrollLine 1.8s ease-in-out infinite;
+}
+@media screen and (min-width: 768px) {
+  .mv__scroll-down-text:after {
+    width: 2px;
+    height: 0;
+    -webkit-animation: scrollLinePc 1.8s ease-in-out infinite;
+    animation: scrollLinePc 1.8s ease-in-out infinite;
+  }
+}
+
+/* ===== アニメーション定義 ===== */
+@-webkit-keyframes scrollLine {
+  0% {
+    height: 0;
+    top: 110%;
+    opacity: 0;
+  }
+  100% {
+    height: 52px;
+    opacity: 1;
+  }
+}
+@keyframes scrollLine {
+  0% {
+    height: 0;
+    top: 110%;
+    opacity: 0;
+  }
+  100% {
+    height: 52px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes scrollLinePc {
+  0% {
+    height: 0;
+    top: 110%;
+    opacity: 0;
+  }
+  100% {
+    height: 112px;
+    opacity: 1;
+  }
+}
+@keyframes scrollLinePc {
+  0% {
+    height: 0;
+    top: 110%;
+    opacity: 0;
+  }
+  100% {
+    height: 112px;
+    opacity: 1;
+  }
 }

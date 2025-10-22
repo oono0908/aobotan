@@ -4,13 +4,19 @@
 /* =========================================================
 header-sp
 ========================================================= */
-
+.header{
+  width: 100%;
+  position: relative;
+  @include mq("md"){
+    width: 280px;
+  }
+}
 .header-sp {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: $header;
+  width: 100%;
 }
 
 .header-sp__inner {
@@ -82,7 +88,8 @@ header-sp
   z-index: $drawer;
   transition: all 0.3s ease;
   display: none;
-  overflow-x: scroll;
+  overflow-y: scroll;
+  scrollbar-width: none;
   &.is-open {
     display: block;
   }
@@ -156,9 +163,8 @@ header-pc
 ========================================================= */
 
 .header-pc{
-  width: 280px;
+  position: absolute;
   background-color: $white;
-  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;

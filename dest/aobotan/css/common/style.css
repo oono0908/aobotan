@@ -11,6 +11,18 @@ html {
 
 body {
   font-family: "Zen Kaku Gothic New", sans-serif;
+  width: 100%;
+}
+
+.body__inner {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .body__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 a[href^="tel:"] {
@@ -45,12 +57,22 @@ img {
 /* =========================================================
 header-sp
 ========================================================= */
+.header {
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    width: 280px;
+  }
+}
+
 .header-sp {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 200;
+  width: 100%;
 }
 
 .header-sp__inner {
@@ -126,7 +148,8 @@ header-sp
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   display: none;
-  overflow-x: scroll;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 .drawer.is-open {
   display: block;
@@ -200,9 +223,8 @@ header-sp
 header-pc
 ========================================================= */
 .header-pc {
-  width: 280px;
+  position: absolute;
   background-color: #FFFFFF;
-  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;

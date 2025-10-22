@@ -1,0 +1,1 @@
+$(window).on("load",function(){let t=[2,5,3,1,4],i=e=>{var n;e<t.length?(n=("0"+t[e]).slice(-2),$(".js-mv-img"+n).fadeIn(1e3,function(){setTimeout(()=>i(e+1),10)})):$(".js-mv-title").fadeIn(800)};i(0)});

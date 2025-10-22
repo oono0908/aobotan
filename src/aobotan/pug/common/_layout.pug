@@ -32,9 +32,10 @@ html(lang="ja")
     block js
       script(src='/aobotan/js/common/script.js' defer)
   body
-    include ./_header.pug
-    block main
-    include ./_footer.pug
+    .body__inner
+      include ./_header.pug
+      block main
+        include ./_footer.pug
 
 
 
