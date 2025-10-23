@@ -3,6 +3,12 @@
 @use "header";
 @use "footer";
 
+.inner{
+  padding: 0 20px;
+  @include mq("md"){
+    padding: 0;
+  }
+}
 // spでは表示
 .md-none{
   @include mq("md"){

@@ -1,0 +1,62 @@
+@use "../base/base";
+@use "../global" as *;
+
+.btn{
+  border-radius: 10px;
+  height: 60px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn--circle{
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+}
+
+.btn--primary{
+  border: 1px solid $black;
+  color: $black;
+  width: 240px;
+  font-weight: $bold;
+  &:after{
+    background-color: $black;
+  }
+  &:hover{
+    color: $white;
+    background-color: $black;
+    &:after{
+      background-color: $white;
+    }
+  }
+}
+
+.btn--secondary{
+  border: 1px solid $blue;
+  color: $blue;
+  width: 260px;
+  font-weight: $bold;
+  &:after{
+    background-color: $blue;
+  }
+  &:hover{
+    color: $white;
+    background-color: $blue;
+    &:after{
+      background-color: $white;
+    }
+  }
+  @include mq("md"){
+    width: 284px;
+  }
+}

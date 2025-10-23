@@ -326,6 +326,15 @@ header-pc
   color: #000000;
 }
 
+.inner {
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .inner {
+    padding: 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .md-none {
     display: none !important;

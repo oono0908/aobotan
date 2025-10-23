@@ -1,23 +1,27 @@
 @use "../base/base";
 @use "../global" as *;
 @use "../common/contact-section";
+@use "../common/section-title";
+@use "../common/btn";
 
 .main {
   width: 100%;
-  height: 100vh;
   @include mq("md") {
     width: calc(100% - 280px);
-    height: 100vh;
     background-color: none;
   }
 }
 
-// mv
+/* =========================================================
+= mv =
+========================================================= */
 .mv {
   width: 100%;
-  height: inherit;
   position: relative;
+  padding-top: 112px;
   @include mq("md") {
+    padding-top: 40px;
+
     &:before {
       content: "";
       width: calc(727 / 1160 * 100%);
@@ -33,17 +37,12 @@
 }
 
 .mv__inner {
-  position: absolute;
-  top: 112px;
-  left: 10px;
+  position: relative;
   background-color: $white2;
   width: calc(100% - 10px);
   border-radius: 10px 0 0 10px;
   aspect-ratio: 365 / 589;
   @include mq("md") {
-    position: absolute;
-    top: calc(40 / 1160 * 100%);
-    left: 0;
     width: calc(1120 / 1160 * 100%);
     aspect-ratio: 1120 / 873;
     border-radius: 50px;
@@ -112,11 +111,11 @@
   position: absolute;
   top: calc(408 / 589 * 100%);
   left: calc(18 / 365 * 100%);
+  display: none;
   @include mq("md") {
     top: calc(647 / 873 * 100%);
     left: calc(467 / 1120 * 100%);
   }
-  display: none;
 }
 
 .mv__title-main {
@@ -177,7 +176,6 @@
   }
 }
 
-/* ===== アニメーション定義 ===== */
 @keyframes scrollLine {
   0% {
     height: 0;
@@ -201,3 +199,101 @@
     opacity: 1;
   }
 }
+
+/* =========================================================
+= about =
+========================================================= */
+
+.about {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about__inner {
+  padding-top: 73px;
+  @include mq("md") {
+    padding-top: 76px;
+  }
+}
+
+.about__swiper-container {
+  position: relative;
+}
+
+.about__swiper {
+  padding: 16px 0 16px 58px !important;
+  background-color: $white2 !important;
+  @include mq("md") {
+    padding: 63px 0 63px 48px !important;
+  }
+}
+
+.swiper-slide {
+  width: 200px !important;
+  aspect-ratio: 1 / 1 !important;
+  @include mq("md") {
+    width: 360px !important;
+  }
+}
+
+.about__swiper-text {
+  padding-top: 16px;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  letter-spacing: 0.5em;
+  font-weight: $bold;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: $white2;
+  position: absolute;
+  top: calc(116 / 284 * 100%);
+  right: calc(27 / 375 * 100%);
+  height: 284px;
+  width: 112px;
+  z-index: 10;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  @include mq("md") {
+    font-size: 4rem;
+    padding-top: 16px;
+    top: calc(254 / 486 * 100%);
+    right: calc(182 / 1160 * 100%);
+    width: 172px;
+    height: 452px;
+  }
+}
+
+.about__swiper-text--blue {
+  color: $blue;
+}
+
+.about__swiper-sub {
+  position: absolute;
+  top: 258px;
+  right: 148px;
+  z-index: 10;
+  width: 60px;
+  @include mq("md") {
+    top: 452px;
+    right: 374px;
+    width: 161px;
+  }
+}
+
+.about__body{
+  padding-top: 183px;
+  width: 100%;
+  @include mq("md") {
+    width: 429px;
+    padding-top: 71px;
+  }
+}
+
+.about__btn{
+  margin-top: 32px;
+  @include mq("md"){
+    margin-top: 40px;
+  }
+}
+

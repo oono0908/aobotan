@@ -1,0 +1,32 @@
+@use "../base/base";
+@use "../global" as *;
+
+
+.section-title__ja{
+  font-size: 2rem;
+  font-weight: $bold;
+  color: $black;
+  @include mq("md"){
+    font-size: 2.4rem;
+  }
+}
+
+.section-title__en{
+  width: 242px;
+  margin-top: 30px;
+  @include mq("md"){
+    width: 429px;
+    margin-top: 40px;
+  }
+}
+
+.section-title-sub{
+  font-size: 1.4rem;
+  font-weight: $normal;
+  line-height: 1.8;
+  color: $black;
+  margin-top: 40px;
+  @include mq("md"){
+    font-size: 1.6rem;
+  }
+}
