@@ -520,3 +520,137 @@ img {
     margin-top: 40px;
   }
 }
+
+/* =========================================================
+= service =
+========================================================= */
+.service {
+  padding-top: 78px;
+}
+@media screen and (min-width: 768px) {
+  .service {
+    padding-top: 85px;
+  }
+}
+
+.service__cards {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .service__cards {
+    max-width: 1005px;
+  }
+}
+
+.service__card {
+  margin-top: 24px;
+  list-style: none;
+}
+@media screen and (min-width: 768px) {
+  .service__card {
+    margin-top: 64px;
+  }
+}
+
+.card__inner {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .card__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card__inner--reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+}
+
+.card__img-wrapper {
+  width: 100%;
+  aspect-ratio: 516/464;
+}
+@media screen and (min-width: 768px) {
+  .card__img-wrapper {
+    aspect-ratio: 516/464;
+    max-width: 516px;
+  }
+}
+
+.card__body {
+  margin-top: 34px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .card__body {
+    margin-top: 0;
+    width: calc(100% - 516px);
+    padding-left: 56px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card__inner--reverse > .card__body {
+    padding-left: 0;
+    padding-right: 56px;
+  }
+}
+
+.card__num-img-wrapper {
+  display: inline-block;
+  position: relative;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .card__num-img-wrapper {
+    width: 174px;
+    display: block;
+    margin-left: -18%;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card__inner--reverse > .card__body > .card__num-img-wrapper {
+    margin-left: auto;
+    margin-right: -15%;
+  }
+}
+
+.card__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .card__title {
+    margin-top: 20px;
+  }
+}
+
+.card__text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-top: 16px;
+  margin-top: 26px;
+}
+@media screen and (min-width: 768px) {
+  .card__text {
+    margin-top: 48px;
+  }
+}
+
+.card__btn {
+  margin-top: 28px;
+}
