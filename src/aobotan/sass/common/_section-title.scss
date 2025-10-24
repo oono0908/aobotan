@@ -30,3 +30,31 @@
     font-size: 1.6rem;
   }
 }
+
+.title--about{
+  width: 242px;
+  @include mq("md"){
+    width: 429px;
+  }
+}
+
+.title--service{
+  width: 277px;
+  @include mq("md"){
+    width: 491px;
+  }
+}
+
+.title--news{
+  width: 192px;
+  @include mq("md"){
+    width: 340px;
+  }
+}
+
+.title--contact{ 
+  width: 311px;
+  @include mq("md"){
+    width: 553px;
+  }
+}

@@ -25,6 +25,10 @@ body {
   }
 }
 
+ol, ul {
+  list-style: none;
+}
+
 a[href^="tel:"] {
   pointer-events: none;
 }

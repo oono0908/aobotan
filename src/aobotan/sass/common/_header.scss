@@ -12,7 +12,7 @@ header-sp
   }
 }
 .header-sp {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: $header;
@@ -163,13 +163,10 @@ header-pc
 ========================================================= */
 
 .header-pc{
-  position: absolute;
+  position: fixed;
   background-color: $white;
   top: 0;
   left: 0;
-  height: 100vh;
-  overflow-y: scroll;
-  scrollbar-width: none;
 }
 
 .header-pc__inner{

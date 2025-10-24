@@ -21,6 +21,9 @@ body {
   }
 }
 
+ol,ul{
+  list-style: none;
+}
 
 // PCでは電話番号のクリックを無効にする
 a[href^="tel:"] {

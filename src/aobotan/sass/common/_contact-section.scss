@@ -1,4 +1,126 @@
 @use "../base/base";
 @use "../global" as *;
+@use "../common/btn";
 
 // contact
+.contact{
+  padding-top: 85px;
+  @include mq("md"){
+    padding-top: 160px;
+  }
+}
+
+.contact__inner{
+  padding: 27px 20px;
+  background-color: $white2;
+  position: relative;
+  width: 100%;
+  &:after{
+    content: "";
+    display: block;
+    width: calc(59 / 375 * 100%);
+    aspect-ratio: 59 / 86;
+    position: absolute;
+    background-image: url("/aobotan/img/top/contact/contact.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -10%;
+    right: 8%;
+  }
+  @include mq("md"){
+    padding: 32px 24px;
+    border-radius: 50px 0 0 50px;
+    &:after{
+      content: "";
+      display: block;
+      width: calc(175 / 1160 * 100%);
+      aspect-ratio: 175 / 256;
+    }
+  }
+}
+
+.contact__body{
+  margin-top: 47px;
+  @include mq("md"){
+    margin-top: 39px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.contact__tel-wrapper{
+  padding-bottom: 29px;
+  border-bottom: 1px solid $black;
+  display: flex;
+  align-items: bottom;
+  @include mq("md"){
+    flex-direction: column;
+    padding-right: 32px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.contact__tel-eng{
+  font-size: 3.2rem;
+  font-weight: $bold;
+  display: inline-block;
+}
+
+.contact__tel-ja{
+  font-size: 1.2rem;
+  font-weight: $bold;
+  display: inline-block;
+  margin-left: 16px;
+  @include mq("md"){
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.contact__num-wrapper{
+  padding: 24px 0 36px 0;
+  @include mq("md"){
+    padding: 0 32px;
+  }
+}
+
+.contact__num{
+  font-size: 3.2rem;
+  font-weight: $bold;
+  color: $black;
+}
+
+.contact__num-hours{
+  font-size: 1.2rem;
+  font-weight: $bold;
+  color: $black;
+  margin-top: 10px;
+  display: block;
+}
+
+.contact__mail-btn{
+  margin: 0 auto;
+  width: 284px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("/aobotan/img/common/mail.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @include mq("md"){
+    margin: 0 0 0 32px
+  }
+}

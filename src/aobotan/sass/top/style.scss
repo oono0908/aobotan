@@ -251,7 +251,7 @@
   height: 284px;
   width: 112px;
   z-index: 10;
-  display:flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   @include mq("md") {
@@ -281,7 +281,7 @@
   }
 }
 
-.about__body{
+.about__body {
   padding-top: 183px;
   width: 100%;
   @include mq("md") {
@@ -290,9 +290,9 @@
   }
 }
 
-.about__btn{
+.about__btn {
   margin-top: 32px;
-  @include mq("md"){
+  @include mq("md") {
     margin-top: 40px;
   }
 }
@@ -301,74 +301,170 @@
 = service =
 ========================================================= */
 
-.service{
+.service {
   padding-top: 78px;
-  @include mq("md"){
+  @include mq("md") {
     padding-top: 85px;
   }
 }
 
-.service__cards{
+.service__inner {
+  position: relative;
+  padding-top: 27px;
+  padding-bottom: 42px;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $white2;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url("/aobotan/img/top/service/service.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -2%;
+    right: 8%;
+    aspect-ratio: 69 / 96;
+    display: block;
+    width: calc(69 / 375 * 100%);
+  }
+  @include mq("md") {
+    padding-top: 49px;
+    padding-bottom: 100px;
+    padding-right: 20px;
+    &:after {
+      right: 0;
+      left: auto;
+      border-radius: 50px 0 0 50px;
+      width: calc(968 / 1160 * 100%);
+    }
+    &:before {
+      width: calc(124 / 1160 * 100%);
+      aspect-ratio: 124 / 172;
+    }
+  }
+}
+
+.service__cards {
   width: 100%;
-  @include mq("md"){
+  @include mq("md") {
     max-width: 1005px;
   }
 }
 
-.service__card{
+.service__card {
   margin-top: 24px;
-  list-style: none;
-  @include mq("md"){
+  @include mq("md") {
     margin-top: 64px;
   }
 }
 
-.card__inner{
+.card__inner {
   width: 100%;
-  @include mq("md"){
+  @include mq("md") {
     display: flex;
     justify-content: space-between;
   }
 }
 
-.card__inner--reverse{
-  @include mq("md"){
+.card__inner--reverse {
+  @include mq("md") {
     flex-direction: row-reverse;
   }
 }
 
-
-.card__img-wrapper{
+.card__img-wrapper {
   width: 100%;
   aspect-ratio: 516 / 464;
-  @include mq("md"){
+  position: relative;
+  &:after {
+    @include mq("md") {
+      content: "";
+      position: absolute;
+      background-image: url("/aobotan/img/top/service/num01.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      z-index: -1;
+      top: 3%;
+      width: calc(174 / 516 * 100%);
+      aspect-ratio: 174 / 168;
+      bottom: auto;
+    }
+  }
+  @include mq("md") {
     aspect-ratio: 516 / 464;
     max-width: 516px;
   }
 }
 
-.card__body{
-  margin-top: 34px;
-  width: 100%;
-  @include mq("md"){
-    margin-top: 0;
-    width: calc(100% - 516px);
-    padding-left: 56px;
+.card__img-wrapper--01 {
+  @include mq("md") {
+    &:after {
+      right: -30%;
+      left: auto;
+    }
+  }
+  &:after {
+    background-image: url("/aobotan/img/top/service/num01.svg");
   }
 }
 
-.card__inner--reverse > .card__body{
-  @include mq("md"){
+.card__img-wrapper--02 {
+  @include mq("md") {
+    &:after {
+      left: -30%;
+    }
+  }
+  &:after {
+    background-image: url("/aobotan/img/top/service/num02.svg");
+  }
+}
+
+.card__img-wrapper--03 {
+  @include mq("md") {
+    &:after {
+      right: -30%;
+      left: auto;
+    }
+  }
+  &:after {
+    background-image: url("/aobotan/img/top/service/num03.svg");
+  }
+}
+
+.card__body {
+  margin-top: 34px;
+  width: 100%;
+  @include mq("md") {
+    margin-top: 0;
+    width: calc(100% - 516px);
+    padding-left: 56px;
+    width: 50%;
+    padding-top: 178px;
+  }
+}
+
+.card__inner--reverse > .card__body {
+  @include mq("md") {
     padding-left: 0;
     padding-right: 56px;
   }
 }
 
-.card__num-img-wrapper{
+.card__num-img-wrapper {
   display: inline-block;
   position: relative;
   z-index: -1;
-  @include mq("md"){
+  @include mq("md") {
     width: 174px;
     display: block;
     margin-left: -18%;
@@ -376,36 +472,211 @@
   }
 }
 
-.card__inner--reverse > .card__body > .card__num-img-wrapper{
-  @include mq("md"){
+.card__inner--reverse > .card__body > .card__num-img-wrapper {
+  @include mq("md") {
     margin-left: auto;
     margin-right: -15%;
   }
 }
 
-.card__title{
+.card__title {
   font-size: 2.4rem;
   font-weight: $bold;
   padding: 10px 16px;
   background-color: $white;
-  @include mq("md"){
+  white-space: nowrap;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 58px;
+    aspect-ratio: 58 / 48;
+    @include mq("md") {
+      content: none;
+    }
+  }
+  @include mq("md") {
     margin-top: 20px;
   }
 }
 
-.card__text{
+.card__title--01 {
+  &:after {
+    background-image: url("/aobotan/img/top/service/num01.svg");
+  }
+}
+
+.card__title--02 {
+  &:after {
+    background-image: url("/aobotan/img/top/service/num02.svg");
+  }
+}
+
+.card__title--03 {
+  &:after {
+    background-image: url("/aobotan/img/top/service/num03.svg");
+  }
+}
+
+.card__text {
   font-size: 1.6rem;
   font-weight: $normal;
   line-height: 1.8;
   margin-top: 16px;
   margin-top: 26px;
-  @include mq("md"){
+  @include mq("md") {
     margin-top: 48px;
   }
 }
 
-.card__btn{
+.card__btn {
   margin-top: 28px;
 }
 
+/* =========================================================
+= news =
+========================================================= */
 
+.news__inner {
+  padding-top: 85px;
+  @include mq("md") {
+    padding-top: 107px;
+    padding-right: 40px;
+  }
+}
+
+.news__items {
+  margin-top: 48px;
+}
+
+.news__item {
+  border-bottom: 1px solid $blue;
+  padding: 16px 0;
+  position: relative;
+  padding-right: 30px;
+  @include mq("md") {
+    padding: 32px 0;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid $blue;
+    border-bottom: 2px solid $blue;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%) rotate(-135deg);
+    @include mq("md") {
+      right: 2%;
+    }
+  }
+}
+
+.news__item:first-child {
+  border-top: 1px solid $blue;
+}
+
+.item__tag {
+  display: inline-block;
+  border: 1px solid $blue;
+  color: $blue;
+  font-weight: $normal;
+  font-size: 1.4ewm;
+  padding: 5px 16px;
+}
+
+.item__date {
+  font-size: 1.4rem;
+  font-weight: $normal;
+  color: $blue;
+  margin-left: 16px;
+}
+
+.item__title {
+  font-size: 1.6rem;
+  color: $black;
+  font-weight: $bold;
+  margin-top: 24px;
+  display: block;
+  transition: all 0.3s ease;
+  line-height: 1.5;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+// モーダル
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.is-active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.modal__inner {
+  width: calc(860 / 1440 * 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  padding: 16px 102px;
+}
+
+.modal__title {
+  @include mq("md") {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-weight: $bold;
+    color: $black;
+  }
+}
+
+.modal__img-wrapper {
+  width: 100%;
+  aspect-ratio: 656 / 366;
+  margin-top: 16px;
+}
+
+.modal__text-wrapper {
+  overflow-y: scroll;
+  height: 87px;
+  @include mq("md") {
+    margin-top: 35px;
+  }
+}
+
+.modal__text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: $normal;
+}
+
+.modal__btn {
+  display: block;
+  @include mq("md") {
+    margin: 61px auto 0;
+  }
+}

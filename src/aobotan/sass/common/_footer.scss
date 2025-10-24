@@ -1,6 +1,133 @@
 @use "../base/base";
 @use "../global" as *;
 
+.footer__inner {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @include mq("md") {
+    padding-bottom: 26px;
+    padding-top: 0;
+    margin-top: 117px;
+    padding-right: 40px;
+  }
+}
 
+.footer__container {
+  @include mq("md"){
+    display: flex;
+  }
+}
 
+.footer__company-infos {
+  @include mq("md") {
+    width: 50%;
+  }
+}
 
+.footer__logo {
+  width: 222px;
+  margin: 0 auto;
+  @include mq("md") {
+    margin: 0;
+  }
+}
+
+.footer__info {
+  margin-top: 36px;
+  @include mq("md") {
+    margin-top: 39px;
+  }
+}
+
+.footer__info-item {
+  text-align: center;
+  font-size: 1.2rem;
+  color: $black;
+  font-weight: $normal;
+  @include mq("md") {
+    text-align: left;
+  }
+}
+
+.footer__info-item:not(:first-child) {
+  margin-top: 20px;
+  @include mq("md") {
+  }
+}
+
+.footer-nav {
+  margin-top: 66px;
+  @include mq("md") {
+    width: 50%;
+    margin-top: 25px;
+  }
+}
+
+.footer-nav__items {
+  display: flex;
+  flex-direction: column;
+  column-gap: 32px;
+  @include mq("md") {
+    flex-direction: row;
+    column-gap: 24px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-nav__item {
+  text-align: center;
+  color: $black;
+  @include mq("md") {
+    text-align: right;
+  }
+}
+
+.footer-nav__item:not(:first-child) {
+  margin-top: 32px;
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.footer-nav__link {
+  color: $black;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: $bold;
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.footer-nav__link--contact {
+  position: relative;
+  padding-left: 25px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("/aobotan/img/common/mail.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+  }
+}
+
+.footer__copy {
+  margin-top: 58px;
+  font-size: 1.2rem;
+  font-weight: $normal;
+  color: $black;
+  text-align: center;
+  @include mq("md") {
+    margin-top: 58px;
+    text-align: right;
+  }
+}
