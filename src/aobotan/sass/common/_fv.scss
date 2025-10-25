@@ -1,0 +1,37 @@
+@use "../base/base";
+@use "../global" as *;
+
+
+.fv {
+  width: 100%;
+  position: relative;
+  padding-top: 112px;
+  @include mq("md") {
+    padding-top: 40px;
+
+    &:before {
+      content: "";
+      width: calc(727 / 1160 * 100%);
+      aspect-ratio: 1 / 1;
+      background-color: $blue;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      display: inline-block;
+    }
+  }
+}
+
+.fv__inner {
+  position: relative;
+  background-color: $white2;
+  width: calc(100% - 10px);
+  border-radius: 10px 0 0 10px;
+  aspect-ratio: 365 / 589;
+  @include mq("md") {
+    width: calc(1120 / 1160 * 100%);
+    aspect-ratio: 1120 / 873;
+    border-radius: 50px;
+  }
+}

@@ -3,6 +3,17 @@
 @use "header";
 @use "footer";
 
+.main {
+  width: 100%;
+  @include mq("md") {
+    width: calc(100% - 240px);
+    background-color: none;
+  }
+  @include mq("lg"){
+    width: calc(100% - 280px);
+  }
+}
+
 .inner{
   padding: 0 20px;
   @include mq("md"){

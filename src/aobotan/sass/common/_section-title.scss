@@ -34,27 +34,39 @@
 .title--about{
   width: 242px;
   @include mq("md"){
-    width: 429px;
+    width: 339px;
+  }
+  @include mq("lg"){
+   width: 429px;
   }
 }
 
 .title--service{
   width: 277px;
   @include mq("md"){
-    width: 491px;
+    width: 401px;
+  }
+  @include mq("lg"){
+   width: 491px;
   }
 }
 
 .title--news{
   width: 192px;
   @include mq("md"){
-    width: 340px;
+    width: 250px;
+  }
+  @include mq("lg"){
+   width: 340px;
   }
 }
 
 .title--contact{ 
   width: 311px;
   @include mq("md"){
-    width: 553px;
+    width: 463px;
+  }
+  @include mq("lg"){
+   width: 553px;
   }
 }

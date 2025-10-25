@@ -1,4 +1,287 @@
 @use "../base/base";
 @use "../global" as *;
+@use "../common/section-title";
 @use "../common/contact-section";
+@use "../common/fv";
 
+.about-fv {
+  @include mq("md") {
+    &:before {
+      content: "";
+      aspect-ratio: 727 / 583;
+    }
+  }
+}
+
+.about-fv__inner {
+  width: calc(100% - 10px);
+  @include mq("md") {
+    width: calc(1120 / 1160 * 100%);
+    aspect-ratio: 1120 / 681;
+    border-radius: 50px;
+    background-image: url("/aobotan/img/about/about-fv.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+// 私たちについて
+
+.about__inner {
+  padding-top: 64px;
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url("/aobotan/img/about/about-img01.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    @include mq("md") {
+      width: calc(165 / 1160 * 100%);
+      aspect-ratio: 165 / 198;
+      top: 0;
+      left: 50%;
+    }
+  }
+}
+
+.title__main {
+  font-size: 1.4rem;
+  font-weight: $bold;
+  color: $black;
+  @include mq("md") {
+    font-size: 2.4rem;
+  }
+}
+
+.title__sub {
+  @include mq("md") {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-weight: $normal;
+    color: $black;
+    margin-top: 64px;
+  }
+}
+
+.title__btns {
+  @include mq("md") {
+    margin-top: 64px;
+    display: flex;
+    column-gap: 24px;
+  }
+}
+
+.title__btn-item {
+  position: relative;
+  @include mq("md") {
+    width: 208px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid $blue;
+    background-color: $white;
+    color: $black;
+    font-size: 1.6rem;
+    padding-top: 11px;
+    font-weight: $normal;
+    text-align: center;
+    cursor: pointer;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 11px;
+      width: 5px;
+      height: 5px;
+      border-left: 1px solid $blue;
+      border-bottom: 1px solid $blue;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// 経営理念
+
+.about__section-title {
+  font-size: 1.4rem;
+  font-weight: $bold;
+  color: $black;
+  @include mq("md") {
+    font-size: 3.2rem;
+    margin-top: 80px;
+  }
+}
+
+.section01-body {
+  @include mq("md") {
+    margin-top: 64px;
+    width: calc(923 / 1160 * 100%);
+    aspect-ratio: 923 / 519;
+  }
+}
+
+// 会社概要
+
+.section02__wrapper {
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    max-width: 953px;
+  }
+}
+
+.section02__body {
+  @include mq("md") {
+    width: calc(485 / 953 * 100%);
+  }
+}
+
+.section02__body-text {
+  @include mq("md") {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-weight: $normal;
+    color: $black;
+  }
+}
+
+.section02__thumb {
+  @include mq("md") {
+    width: calc(331 / 953 * 100%);
+  }
+}
+
+.section02__thumb-img-wrapper {
+  @include mq("md") {
+    width: 100%;
+    aspect-ratio: 331 / 425;
+  }
+}
+
+.section02__role {
+  color: $black;
+  font-weight: $normal;
+  font-size: 1.6rem;
+  margin-top: 16px;
+  display: inline-block;
+  @include mq("md") {
+    color: $black;
+    font-weight: $normal;
+    font-size: 1.6rem;
+    margin-top: 16px;
+  }
+}
+
+.section02__name {
+  color: $black;
+  font-weight: $normal;
+  font-size: 1.6rem;
+  margin-top: 16px;
+  @include mq("md") {
+    color: $blue;
+    font-weight: $bold;
+    font-size: 3.2rem;
+    margin-top: 24px;
+  }
+}
+
+// 会社概要テーブル
+.section02__table {
+  margin-top: 40px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $white;
+  @include mq("md") {
+    max-width: 953px;
+    margin-top: 82px;
+  }
+}
+
+.section02__table-row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $blue;
+  @include mq("md") {
+    padding: 30px 0;
+    flex-direction: row;
+  }
+}
+
+.section02__table-label {
+  font-weight: $bold;
+  color: $black;
+  font-size: 1.4rem;
+  @include mq("md") {
+    font-size: 1.6rem;
+    width: 25%;
+  }
+}
+
+.section02__table-value {
+  background-color: $white;
+  color: $black;
+  font-size: 1.4rem;
+
+  @include mq("md") {
+    font-size: 1.6rem;
+  }
+}
+
+
+// 安全への取り組み
+.sectoin03__cards {
+  @include mq("md") {
+    margin-top: 88px;
+    max-width: 953px;
+  }
+}
+
+.section02__card:not(:first-child) {
+  @include mq("md") {
+    margin-top: 30px;
+  }
+}
+
+.card__title {
+  font-size: 1.4rem;
+  font-weight: $bold;
+  color: $black;
+  @include mq("md") {
+    font-size: 2.4rem;
+  }
+}
+
+.card__inner {
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 31px;
+    column-gap: 30px;
+  }
+}
+
+.card__body {
+  @include mq("md") {
+    width: calc(642 / 953 * 100%);
+    line-height: 1.8;
+    font-size: 1.6rem;
+    font-weight: $normal;
+    color: $black;
+  }
+}
+
+.card__img-wrapper {
+  @include mq("md") {
+    width: calc(267 / 953 * 100%);
+    aspect-ratio: 267 / 208;
+  }
+}

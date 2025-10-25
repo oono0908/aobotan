@@ -3,51 +3,11 @@
 @use "../common/contact-section";
 @use "../common/section-title";
 @use "../common/btn";
-
-.main {
-  width: 100%;
-  @include mq("md") {
-    width: calc(100% - 280px);
-    background-color: none;
-  }
-}
+@use "../common/fv";
 
 /* =========================================================
 = mv =
 ========================================================= */
-.mv {
-  width: 100%;
-  position: relative;
-  padding-top: 112px;
-  @include mq("md") {
-    padding-top: 40px;
-
-    &:before {
-      content: "";
-      width: calc(727 / 1160 * 100%);
-      aspect-ratio: 1 / 1;
-      background-color: $blue;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-      display: inline-block;
-    }
-  }
-}
-
-.mv__inner {
-  position: relative;
-  background-color: $white2;
-  width: calc(100% - 10px);
-  border-radius: 10px 0 0 10px;
-  aspect-ratio: 365 / 589;
-  @include mq("md") {
-    width: calc(1120 / 1160 * 100%);
-    aspect-ratio: 1120 / 873;
-    border-radius: 50px;
-  }
-}
 
 .mv__img-wrapper {
   display: none;
@@ -229,10 +189,13 @@
 }
 
 .swiper-slide {
-  width: 200px !important;
+  max-width: 200px !important;
   aspect-ratio: 1 / 1 !important;
   @include mq("md") {
-    width: 360px !important;
+    max-width: 280px !important;
+  }
+  @include mq("lg"){
+    max-width: 360px !important;
   }
 }
 
@@ -255,6 +218,14 @@
   justify-content: center;
   flex-direction: column;
   @include mq("md") {
+    font-size: 3rem;
+    padding-top: 16px;
+    top: calc(254 / 486 * 100%);
+    right: 10%;
+    width: 110px;
+    height: 350px;
+  }
+  @include mq("lg"){
     font-size: 4rem;
     padding-top: 16px;
     top: calc(254 / 486 * 100%);
@@ -275,6 +246,11 @@
   z-index: 10;
   width: 60px;
   @include mq("md") {
+    top: 330px;
+    right: 240px;
+    width: 110px;
+  }
+  @include mq("lg"){
     top: 452px;
     right: 374px;
     width: 161px;
@@ -354,9 +330,6 @@
 
 .service__cards {
   width: 100%;
-  @include mq("md") {
-    max-width: 1005px;
-  }
 }
 
 .service__card {
@@ -370,7 +343,6 @@
   width: 100%;
   @include mq("md") {
     display: flex;
-    justify-content: space-between;
   }
 }
 
@@ -590,7 +562,7 @@
   border: 1px solid $blue;
   color: $blue;
   font-weight: $normal;
-  font-size: 1.4ewm;
+  font-size: 1.4rem;
   padding: 5px 16px;
 }
 
@@ -635,16 +607,65 @@
 }
 
 .modal__inner {
-  width: calc(860 / 1440 * 100%);
   position: absolute;
+  width: calc(100% - 32px);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $white;
-  padding: 16px 102px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 16px;
+  padding-right: 16px;
+  @include mq("md") {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 80%;
+  }
+  @include mq("lg") {
+    padding-left: clamp(30px, calc(102 / 1440 * 100%), 102px);
+    padding-right: clamp(30px, calc(102 / 1440 * 100%), 102px);
+    width: calc(860 / 1440 * 100%);
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 0;
+  right: -6%;
+  width: 45px;
+  height: 45px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 45px;
+    height: 3px;
+    background-color: $white;
+    transform-origin: center;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
 }
 
 .modal__title {
+  font-size: 1.4rem;
+  font-weight: $bold;
+  color: $black;
+  line-height: 1.5;
+  margin-top: 10px;
   @include mq("md") {
     margin-top: 16px;
     font-size: 1.6rem;
@@ -657,26 +678,43 @@
 .modal__img-wrapper {
   width: 100%;
   aspect-ratio: 656 / 366;
-  margin-top: 16px;
+  margin-top: 12px;
+  @include mq("md") {
+    margin-top: 16px;
+  }
 }
 
 .modal__text-wrapper {
   overflow-y: scroll;
-  height: 87px;
+  height: 78px;
+  margin-top: 15px;
   @include mq("md") {
     margin-top: 35px;
+    height: 87px;
   }
 }
 
 .modal__text {
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
+  line-height: 1.5;
   font-weight: $normal;
+  @include mq("md") {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-weight: $normal;
+  }
 }
 
 .modal__btn {
   display: block;
+  width: 150px;
+  height: 40px;
+  font-size: 1.2rem;
+  margin: 20px auto 0;
   @include mq("md") {
     margin: 61px auto 0;
+    width: 240px;
+    height: 60px;
+    font-size: 1.6rem;
   }
 }

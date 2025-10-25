@@ -107,6 +107,13 @@ $(function () {
     $("body").css("overflow", ""); // スクロールを有効化
   });
 
+  // 閉じるボタン（×印）をクリックした時の処理
+  $(".modal__close-btn").on("click", function () {
+    const $modal = $(this).closest(".modal");
+    $modal.removeClass("is-active");
+    $("body").css("overflow", ""); // スクロールを有効化
+  });
+
   // モーダルの背景をクリックした時の処理
   $(".modal").on("click", function (e) {
     if (e.target === this) {

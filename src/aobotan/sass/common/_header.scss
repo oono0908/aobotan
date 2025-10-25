@@ -8,7 +8,10 @@ header-sp
   width: 100%;
   position: relative;
   @include mq("md"){
-    width: 280px;
+    width: 240px;
+  }
+  @include mq("lg"){
+   width: 280px;
   }
 }
 .header-sp {
@@ -170,7 +173,10 @@ header-pc
 }
 
 .header-pc__inner{
-  padding: 74px 40px 0 40px;
+  padding: 74px 20px 0 20px;
+  @include mq("lg"){
+    padding: 74px 40px 0 40px;
+  }
 }
 
 .header-pc__logo {

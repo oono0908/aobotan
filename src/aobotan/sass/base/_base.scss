@@ -33,7 +33,6 @@ a[href^="tel:"] {
   }
 }
 
-// aタグには標準でホバーアニメーションが付与されるようにする
 a,
 button {
   text-align:  left;
@@ -45,6 +44,43 @@ button {
     cursor: pointer;
   }
 }
+
+// フォーカススタイル
+:root {
+  --focus-ring: 3px solid #3b82f6;
+}
+
+// Tab でフォーカスが当たる要素の“見える”フォーカス
+a[href]:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+  border-radius: 6px;
+}
+
+// :focus-visible 非対応ブラウザ向けフォールバック
+a[href]:focus,
+button:focus,
+[role="button"]:focus,
+[tabindex]:not([tabindex="-1"]):focus {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+a[href]:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+[role="button"]:focus:not(:focus-visible),
+[tabindex]:not([tabindex="-1"]):focus:not(:focus-visible) {
+  outline: none;
+}
+
+// 無効化された要素は除外
+button:disabled:focus,
+[aria-disabled="true"]:focus {
+  outline: none;
+}
+
 
 img {
   width: 100%;
