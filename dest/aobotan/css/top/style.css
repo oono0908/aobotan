@@ -45,6 +45,8 @@ button {
   border: none;
   outline: none;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 a:hover,
 button:hover {
@@ -402,16 +404,19 @@ img {
   }
 }
 
-.fv {
+/* =========================================================
+= mv =
+========================================================= */
+.mv {
   width: 100%;
   position: relative;
   padding-top: 112px;
 }
 @media screen and (min-width: 768px) {
-  .fv {
-    padding-top: 40px;
+  .mv {
+    padding-top: 3.4482758621%;
   }
-  .fv:before {
+  .mv:before {
     content: "";
     width: 62.6724137931%;
     aspect-ratio: 1/1;
@@ -424,7 +429,7 @@ img {
   }
 }
 
-.fv__inner {
+.mv__inner {
   position: relative;
   background-color: #F8F8F8;
   width: calc(100% - 10px);
@@ -432,16 +437,13 @@ img {
   aspect-ratio: 365/589;
 }
 @media screen and (min-width: 768px) {
-  .fv__inner {
+  .mv__inner {
     width: 96.5517241379%;
     aspect-ratio: 1120/873;
     border-radius: 50px;
   }
 }
 
-/* =========================================================
-= mv =
-========================================================= */
 .mv__img-wrapper {
   display: none;
   position: absolute;

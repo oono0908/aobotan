@@ -1,0 +1,150 @@
+@use "../base/base";
+@use "../global" as *;
+@use "../common/contact-section";
+@use "../common/section-title";
+@use "../common/lower-fv";
+@use "../common/lower-title";
+@use "../common/scroll-btn";
+
+.service__inner {
+  width: 100%;
+  padding-bottom: 60px;
+  @include mq("md"){
+    max-width: 960px;
+    padding-top: 64px;
+  }
+}
+
+.section__items {
+  margin-top: 50px;
+  @include mq("md"){
+    margin-top: 74px;
+  }
+}
+
+.section__item:not(:first-child) {
+  margin-top: 40px;
+  @include mq("md"){
+    margin-top: 72px;
+  }
+}
+
+.item__img-wrapper {
+  width: 100%;
+  aspect-ratio: 960 / 400;
+  @include mq("md"){
+    width: 100%;
+    aspect-ratio: 960 / 400;
+  }
+}
+
+.item__body {
+  width: 100%;
+  margin-top: 30px;
+  @include mq("md"){
+    max-width: 860px;
+    margin: 58px auto 0;
+  }
+}
+
+.item__title {
+    font-weight: $bold;
+    color: $black;
+    font-size: 2rem;
+  @include mq("md"){
+    font-size: 2.4rem;
+    padding-bottom: 39px;
+    border-bottom: 1px solid $blue;
+  }
+}
+
+.item__info-wrapper {
+  margin-top: 20px;
+  @include mq("md"){
+    margin-top: 20px;
+    display: flex;
+    column-gap: 40px;
+  }
+}
+
+.item__detail-title {
+    font-weight: $bold;
+    color: $black;
+    line-height: 1.8;
+    font-size: 1.6rem;
+  @include mq("md"){
+    font-size: 2rem;
+    width: calc(374 / 860 * 100%);
+  }
+}
+
+.item__detail-text {
+    font-weight: $normal;
+    color: $black;
+    line-height: 1.8;
+    font-size: 1.4rem;
+    margin-top: 16px;
+  @include mq("md"){
+    font-size: 1.6rem;
+    width: calc(446 / 860 * 100%);
+    margin-top: 0;
+  }
+}
+
+.item__details {
+  margin-top: 40px;
+  @include mq("md"){
+    margin-top: 88px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 62px;
+  }
+}
+
+.details__item {
+  width: 100%;
+  @include mq("md"){
+    width: calc(352 / 860 * 100%);
+  }
+}
+
+.details__item:not(:first-child) {
+  margin-top: 20px;
+  @include mq("md"){
+    margin-top: 0;
+  }
+}
+
+.details__title {
+    font-weight: $bold;
+    color: $black;
+    font-size: 1.4rem;
+  @include mq("md"){
+    font-size: 1.6rem;
+  }
+}
+
+.details__img-wrapper {
+    width: 100%;
+    aspect-ratio: 352 / 274;
+    margin-top: 14px;
+  @include mq("md"){
+    width: 100%;
+    aspect-ratio: 352 / 274;
+    margin-top: 20px;
+  }
+}
+
+.details__date{
+  font-size: 1.2rem;
+  font-weight: $normal;
+  color: $black;
+  margin-top: 14px;
+  text-align: right;
+  @include mq("md"){
+    font-size: 1.4rem;
+    font-weight: $normal;
+    color: $black;
+    margin-top: 20px;
+  }
+}

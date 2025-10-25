@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".title__btn-item").on("click",function(t){t.preventDefault();var t=$(this).data("target");t&&(t=$(t)).length&&(t=t.offset().top-80,$("html, body").animate({scrollTop:t},800,"swing"))})});

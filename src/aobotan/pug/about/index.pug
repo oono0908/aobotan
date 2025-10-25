@@ -4,8 +4,8 @@ block append css
   link(rel='stylesheet', href="/aobotan/css/about/style.css")
 block append js 
   script(src='https://code.jquery.com/jquery-3.3.1.js')
-  script(src="/suit-site/js/common/script.js" defer)
-  script(src="/suit-site/js/about/script.js" defer)
+  script(src="/aobotan/js/common/script.js" defer)
+  script(src="/aobotan/js/about/script.js" defer)
 
 block var
   - var page = 'about'
@@ -16,26 +16,22 @@ block main
         .fv__inner.about-fv__inner
       .about
         .about__inner.inner
-          section.title
-            h2.title__main 私たちについて
-            p.title__sub 「丁寧な家造りで、理想を現実に」
-              br
-              | これを実現するために、わたしたちが行っていることを
-              br
-              | 一部ご紹介します。
+          section.lower-title
+            h2.lower-title__main 私たちについて
+            p.lower-title__sub 「丁寧な家造りで、理想を現実に」これを実現するために、わたしたちが行っていることを一部ご紹介します。
             ul.title__btns
-              li.title__btn-item
-                button.title__btn("") 経営理念
-              li.title__btn-item
-                button.title__btn("") 会社概要
-              li.title__btn-item
-                button.title__btn("") 安全への取り組み
-          section.section01
+              li.title__btn-item(data-target="#philosophy")
+                button.title__btn 経営理念
+              li.title__btn-item(data-target="#company")
+                button.title__btn 会社概要
+              li.title__btn-item(data-target="#safety")
+                button.title__btn 安全への取り組み
+          section.section01#philosophy
             h3.about__section-title 経営理念
             .section01-body
               img.section01-img(src="/aobotan/img/about/about-img02.png" alt="")
+          section.section02#company
             h3.about__section-title 会社概要
-          section.section02
             .section02__wrapper
               .section02__body
                 p.section02__body-text 青牡丹工務店は、1965年に創業しました。当初は小さな地域の工務店として始まりましたが、顧客志向の高いサービスと品質へのこだわりが徐々に評判を高め、地域の信頼を得ることとなりました。
@@ -75,7 +71,7 @@ block main
                 tr.section02__table-row
                   td.section02__table-label 代表取締役
                   td.section02__table-value 谷垣周平
-          section.section03
+          section.section03#safety
             h3.about__section-title 安全への取り組み
             ul.sectoin03__cards
               li.section02__card.card

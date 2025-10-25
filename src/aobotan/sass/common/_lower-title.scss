@@ -1,0 +1,57 @@
+@use "../base/base";
+@use "../global" as *;
+
+.lower-title {
+  position: relative;
+  width: 100%;
+  &:after {
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    @include mq("md") {
+      width: calc(165 / 1160 * 100%);
+      aspect-ratio: 165 / 198;
+      top: 0;
+      left: 50%;
+    }
+  }
+}
+
+.lower-title__main {
+  font-size: 2.4rem;
+  font-weight: $bold;
+  color: $black;
+  text-align: center;
+  @include mq("md") {
+    text-align: left;
+  }
+}
+
+.lower-title__sub {
+  font-size: 1.6rem;
+  font-weight: $normal;
+  line-height: 1.8;
+  color: $black;
+  margin-top: 40px;
+  @include mq("md") {
+    margin-top: 64px;
+    max-width: 422px;
+  }
+}
+
+
+.title--about {
+  &:after {
+    background-image: url("/aobotan/img/about/about-img01.png");
+  }
+}
+
+.title--service {
+  &:after {
+    background-image: url("/aobotan/img/service/service-img01.png");
+  }
+}
+

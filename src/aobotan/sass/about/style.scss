@@ -2,125 +2,35 @@
 @use "../global" as *;
 @use "../common/section-title";
 @use "../common/contact-section";
-@use "../common/fv";
-
-.about-fv {
-  @include mq("md") {
-    &:before {
-      content: "";
-      aspect-ratio: 727 / 583;
-    }
-  }
-}
-
-.about-fv__inner {
-  width: calc(100% - 10px);
-  @include mq("md") {
-    width: calc(1120 / 1160 * 100%);
-    aspect-ratio: 1120 / 681;
-    border-radius: 50px;
-    background-image: url("/aobotan/img/about/about-fv.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-// 私たちについて
+@use "../common/lower-fv";
+@use "../common/lower-title";
+@use "../common/scroll-btn";
 
 .about__inner {
-  padding-top: 64px;
-}
-
-.title {
-  position: relative;
   width: 100%;
-  &:after {
-    content: "";
-    position: absolute;
-    background-image: url("/aobotan/img/about/about-img01.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    @include mq("md") {
-      width: calc(165 / 1160 * 100%);
-      aspect-ratio: 165 / 198;
-      top: 0;
-      left: 50%;
-    }
-  }
-}
-
-.title__main {
-  font-size: 1.4rem;
-  font-weight: $bold;
-  color: $black;
-  @include mq("md") {
-    font-size: 2.4rem;
-  }
-}
-
-.title__sub {
-  @include mq("md") {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    font-weight: $normal;
-    color: $black;
-    margin-top: 64px;
-  }
-}
-
-.title__btns {
-  @include mq("md") {
-    margin-top: 64px;
-    display: flex;
-    column-gap: 24px;
-  }
-}
-
-.title__btn-item {
-  position: relative;
-  @include mq("md") {
-    width: 208px;
-    height: 60px;
-    border-radius: 10px;
-    border: 1px solid $blue;
-    background-color: $white;
-    color: $black;
-    font-size: 1.6rem;
-    padding-top: 11px;
-    font-weight: $normal;
-    text-align: center;
-    cursor: pointer;
-    &:after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 11px;
-      width: 5px;
-      height: 5px;
-      border-left: 1px solid $blue;
-      border-bottom: 1px solid $blue;
-      transform: rotate(-45deg);
-    }
+  padding-bottom: 60px;
+  @include mq("md"){
+    padding-top: 64px;
   }
 }
 
 // 経営理念
 
 .about__section-title {
-  font-size: 1.4rem;
+  margin-top: 50px;
+  font-size: 2rem;
   font-weight: $bold;
   color: $black;
+  text-align: center;
   @include mq("md") {
     font-size: 3.2rem;
     margin-top: 80px;
+    text-align: left;
   }
 }
 
 .section01-body {
+  margin-top: 30px;
   @include mq("md") {
     margin-top: 64px;
     width: calc(923 / 1160 * 100%);
@@ -131,6 +41,7 @@
 // 会社概要
 
 .section02__wrapper {
+  margin-top: 30px;
   @include mq("md") {
     display: flex;
     justify-content: space-between;
@@ -146,25 +57,23 @@
 }
 
 .section02__body-text {
-  @include mq("md") {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    font-weight: $normal;
-    color: $black;
-  }
+  margin-top: 20px;
+  font-size: 1.6rem;
+  font-weight: $normal;
+  line-height: 1.8;
+  color: $black;
 }
 
 .section02__thumb {
+  margin-top: 20px;
   @include mq("md") {
     width: calc(331 / 953 * 100%);
   }
 }
 
 .section02__thumb-img-wrapper {
-  @include mq("md") {
-    width: 100%;
-    aspect-ratio: 331 / 425;
-  }
+  width: 100%;
+  aspect-ratio: 331 / 425;
 }
 
 .section02__role {
@@ -173,18 +82,12 @@
   font-size: 1.6rem;
   margin-top: 16px;
   display: inline-block;
-  @include mq("md") {
-    color: $black;
-    font-weight: $normal;
-    font-size: 1.6rem;
-    margin-top: 16px;
-  }
 }
 
 .section02__name {
-  color: $black;
-  font-weight: $normal;
-  font-size: 1.6rem;
+  color: $blue;
+  font-weight: $bold;
+  font-size: 2.6rem;
   margin-top: 16px;
   @include mq("md") {
     color: $blue;
@@ -210,6 +113,8 @@
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid $blue;
+  row-gap: 8px;
+  padding: 16px 0;
   @include mq("md") {
     padding: 30px 0;
     flex-direction: row;
@@ -219,9 +124,8 @@
 .section02__table-label {
   font-weight: $bold;
   color: $black;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   @include mq("md") {
-    font-size: 1.6rem;
     width: 25%;
   }
 }
@@ -229,16 +133,14 @@
 .section02__table-value {
   background-color: $white;
   color: $black;
-  font-size: 1.4rem;
-
-  @include mq("md") {
-    font-size: 1.6rem;
-  }
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 
 // 安全への取り組み
 .sectoin03__cards {
+  margin-top: 40px;
   @include mq("md") {
     margin-top: 88px;
     max-width: 953px;
@@ -246,13 +148,14 @@
 }
 
 .section02__card:not(:first-child) {
+  margin-top: 40px;
   @include mq("md") {
     margin-top: 30px;
   }
 }
 
 .card__title {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: $bold;
   color: $black;
   @include mq("md") {
@@ -270,18 +173,21 @@
 }
 
 .card__body {
+  margin-top: 30px;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: $normal;
+  color: $black;
   @include mq("md") {
     width: calc(642 / 953 * 100%);
-    line-height: 1.8;
-    font-size: 1.6rem;
-    font-weight: $normal;
-    color: $black;
   }
 }
 
 .card__img-wrapper {
+  width: 100%;
+  aspect-ratio: 331 / 250;
+  margin-top: 30px;
   @include mq("md") {
     width: calc(267 / 953 * 100%);
-    aspect-ratio: 267 / 208;
   }
 }

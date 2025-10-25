@@ -1,0 +1,91 @@
+extends ../common/_layout.pug
+
+block append css
+  link(rel='stylesheet', href="/aobotan/css/service/style.css")
+block append js 
+  script(src="/aobotan/js/common/script.js" defer)
+  script(src="/aobotan/js/service/script.js" defer)
+
+block var
+  - var page = 'about'
+
+block main
+    main.main
+      .fv.service-fv
+        .fv__inner.service-fv__inner
+      .service
+        .service__inner.inner
+          section.lower-title.title--service
+            h2.lower-title__main 事業内容
+            p.lower-title__sub 青牡丹工務店は、「住宅建築・リフォーム」「方針新築・リフォーム」「公共工事」の3つを事業の柱としています。ここではそれぞれご紹介します。
+            ul.title__btns
+              li.title__btn-item
+                button.title__btn("") 住宅建築・リフォーム
+              li.title__btn-item
+                button.title__btn("") 法人新築・リフォーム
+              li.title__btn-item
+                button.title__btn("") 公共工事
+          section.section01
+            ul.section__items.section__items
+              li.section__item.item
+                .item__img-wrapper
+                  img.item__img(src="/aobotan/img/service/service-section01 1.jpg" alt="住宅建築・リフォームについて紹介するための住宅の写真")
+                .item__body
+                  h3.item__title 住宅建築・リフォーム
+                  .item__info-wrapper
+                    p.item__detail-title 注文住宅では、お客様のニーズや希望に合わせて、オーダーメイドの家を提供します。私たちは、建物の設計から完成までのプロセスで、お客様と緊密に連携し、理想の暮らしを実現するための最適な解決策を提案します。
+                    p.item__detail-text 私たちは、建物の設計から完成までのプロセスで、お客様と緊密に連携し、理想の暮らしを実現するための最適な解決策を提案します。
+                  ul.item__details
+                    li.details__item
+                      .details__title 芦屋（兵庫県）のコテージ付き住宅
+                      .details__img-wrapper
+                        img.details__img(src="/aobotan/img/service/service-section01 2.jpg" alt="住宅建築・リフォームについて紹介するための住宅の写真")
+                      .details__date 工年月：R2年2月 構造：S造
+                    li.details__item
+                      .details__title 鷹峯（京都府京都市）のモダン和風住宅
+                      .details__img-wrapper
+                        img.details__img(src="/aobotan/img/service/service-section01 3.jpg" alt="住宅建築・リフォームについて紹介するための住宅の写真")
+                      .details__date 施工年月：R4年4月 構造：木造
+              li.section__item.item
+                .item__img-wrapper
+                  img.item__img(src="/aobotan/img/service/service-section02 1.jpg", alt="法人新築・リフォームのイメージ写真")
+                .item__body
+                  h3.item__title 法人新築・リフォーム
+                  .item__info-wrapper
+                    p.item__detail-title 既存の商業施設やオフィス、工場などの建物を改修し、最新のビジネスニーズに適した空間へと生まれ変わらせます。設備の更新やレイアウトの見直し、外装や内装のリニューアルなど、お客様の要望に応じたリフォームプランを提案し、スムーズな工事を実施します。
+                    p.item__detail-text 商業施設やオフィスビル、工場など、法人向けの建物の新築や改修を手がけています。機能性とデザイン性を両立し、事業成長に寄与する空間づくりを支援します。
+                  ul.item__details
+                    li.details__item
+                      .details__title 株式会社kaminari station
+                      .details__img-wrapper
+                        img.details__img(src="/aobotan/img/service/service-section02 2.jpg", alt="株式会社kaminari station 外観写真")
+                      .details__date 施工年月：H25年4月 構造：S造
+                    li.details__item
+                      .details__title 鮮室隆運（株） // TODO: 社名要確認
+                      .details__img-wrapper
+                        img.details__img(src="/aobotan/img/service/service-section02 3.jpg", alt="青い外装の工場外観写真")
+                      .details__date 施工年月：R4年3月 構造：S造
+
+
+              li.section__item.item
+                .item__img-wrapper
+                  img.item__img(src="/aobotan/img/service/service-section03 1.jpg", alt="公共工事の実績イメージ（公共施設の外観）")
+                .item__body
+                  h3.item__title 公共工事
+                  .item__info-wrapper
+                    p.item__detail-title 公共工事事業は、地域社会の発展や住民の生活に関わる重要な工事です。政府や自治体からの委託を受け、厳しい品質基準や工期管理が求められる中、当社では経験豊富な専門家がチームを構成し、最新の技術とノウハウを駆使して、安全で信頼性の高い公共施設の建設に貢献しています。
+                    p.item__detail-text 道路や橋梁、公共施設などの建設・改修を行う事業です。快適で安全な街づくりを目指し、丁寧な施工で高品質な成果を提供します。
+                  ul.item__details
+                    li.details__item
+                      .details__title 神戸市立真島小学校 内装工事
+                      .details__img-wrapper
+                        img.details__img(src="/aobotan/img/service/service-section03 2.jpg", alt="小学校の教室内装の写真")
+                      .details__date 施工年月：R1年3月 構造：S造
+                    li.details__item
+                      .details__title 枚方市内 郵便局 // TODO: 正式名称に差し替え
+                      .details__img-wrapper
+                        img.details__img(src="/aobotan/img/service/service-section03 3.jpg", alt="郵便局庁舎の外観写真")
+                      .details__date 施工年月：R4年4月 構造：木造
+
+      include ../common/_contact-section.pug
+      include ../common/_footer.pug

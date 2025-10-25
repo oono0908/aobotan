@@ -7,12 +7,11 @@
   position: relative;
   padding-top: 112px;
   @include mq("md") {
-    padding-top: 40px;
-
+    padding-top: calc(40 / 1160 * 100%);
     &:before {
       content: "";
       width: calc(727 / 1160 * 100%);
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 727 / 583;
       background-color: $blue;
       position: absolute;
       top: 0;
@@ -25,13 +24,21 @@
 
 .fv__inner {
   position: relative;
-  background-color: $white2;
   width: calc(100% - 10px);
-  border-radius: 10px 0 0 10px;
-  aspect-ratio: 365 / 589;
   @include mq("md") {
     width: calc(1120 / 1160 * 100%);
-    aspect-ratio: 1120 / 873;
+    aspect-ratio: 1120 / 681;
     border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
+}
+
+.about-fv__inner{
+  background-image: url("/aobotan/img/about/about-fv.jpg");
+}
+
+.service-fv__inner{
+  background-image: url("/aobotan/img/service/service-fv.jpg");
 }

@@ -1,0 +1,61 @@
+@use "../base/base";
+@use "../global" as *;
+
+.title__btns {
+  display: none;
+  @include mq("md") {
+    margin-top: 64px;
+    display: flex;
+    column-gap: 24px;
+  }
+}
+
+.title__btn-item {
+  position: relative;
+  @include mq("md") {
+    width: 208px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid $blue;
+    background-color: $white;
+    color: $black;
+    font-size: 1.6rem;
+    font-weight: $normal;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover{
+      background-color: $blue;
+      &:after{
+        border-left: 1px solid $white;
+        border-bottom: 1px solid $white;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 11px;
+      width: 6px;
+      height: 6px;
+      border-left: 1px solid $blue;
+      border-bottom: 1px solid $blue;
+      transform: rotate(-45deg);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.title__btn{
+  transition: all 0.3s ease;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 11px;
+}
+
+.title__btn-item:hover > .title__btn{
+  color: $white;
+  background-color: $blue;
+}
