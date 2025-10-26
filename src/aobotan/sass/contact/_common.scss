@@ -1,0 +1,125 @@
+@use "../base/base";
+@use "../global" as *;
+@use "../common/section-title";
+@use "../common/contact-section";
+@use "../common/lower-fv";
+@use "../common/lower-title";
+
+.contact__inner{
+  @include mq("md"){
+    padding-top: 64px;
+  }
+}
+
+.contact__contents{
+  @include mq("md"){
+    display: flex;
+    column-gap: 40px;
+    justify-content: space-between;
+    max-width: 960px;
+    margin-top: 62px;
+
+  }
+}
+
+.contact__contents-main{
+  @include mq("md"){
+    width: calc(470 / 960 * 100%);
+  }
+}
+
+.bar{
+  @include mq("md"){
+    display: flex;
+    column-gap: 52px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.bar-item{
+  position: relative;
+  @include mq("md"){
+    width: 208px;
+    height: 58px;
+    border: 1px solid $blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+}
+
+.bar-item.is--active{
+    border: 1px solid $blue;
+    background-color: $blue;
+    color: $white;
+    & > .bar-item__num{
+      color: $white;
+    }
+    & > .bar-item__text{
+      color: $white;
+    }
+}
+
+.bar-item:not(:first-child){
+  @include mq("md"){
+    
+    &:before{
+      content: "";
+      display: block;
+      width: 52px;
+      height: 1px;
+      background-color: $blue;
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.bar-item__num{
+  font-size: 1.2rem;
+  font-weight: $bold;
+  color: $blue;
+  text-align: center;
+  display: block;
+}
+
+.bar-item__text{
+  font-size: 1.6rem;
+  font-weight: $bold;
+  color: $blue;
+  text-align: center;
+  display: block;
+}
+
+.contact__tel-wrapper{
+  @include mq("md"){
+    width: calc(260 / 960 * 100%);
+  }
+}
+
+.contact__tel-text{
+  font-size: 1.6rem;
+  font-weight: $bold;
+  color: $black;
+  display: block;
+}
+
+.contact__num{
+  font-size: 3.2rem;
+  font-weight: $bold;
+  color: $black;
+  display: block;
+  margin-top: 29px;
+}
+
+.contact__num-hours{  
+  font-size: 1.2rem;
+  font-weight: $bold;
+  color: $black;
+  display: block;
+  margin-top: 14px;
+}

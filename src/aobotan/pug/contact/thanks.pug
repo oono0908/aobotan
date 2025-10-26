@@ -1,0 +1,33 @@
+extends ../common/_layout.pug
+
+block append css
+  link(rel='stylesheet', href="/aobotan/css/contact/thanks.css")
+block append js 
+  script(src="/aobotan/js/common/script.js" defer)
+
+block var
+  - var page = 'contact'
+
+block main
+    main.main
+      .fv.contact-fv
+        .fv__inner.contact-fv__inner
+      .contact
+        .contact__inner.inner
+          section.lower-title.title--contact
+            h2.lower-title__main 送信完了
+            p.lower-title__sub お問い合わせありがとうございました。
+              br
+              | 後日担当者より返信させていただきますので、お待ち下さいませ。
+          .contact__contents
+            .contact__contents-main
+              .contact__process-bar.bar
+                .bar-item
+                  span.bar-item__num 01
+                  span.bar-item__text 入力
+                .bar-item.is--active
+                  span.bar-item__num 02
+                  span.bar-item__text 送信完了
+              a.btn.btn--primary.btn--circle.btn--return(href="/") トップページへ戻る
+      include ../common/_contact-section.pug
+      include ../common/_footer.pug

@@ -26,11 +26,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&amp;family=Zen+Kaku+Gothic+New&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/aobotan/css/common/reset.css" type="text/css">
     <link rel="stylesheet" href="/aobotan/css/common/style.css" type="text/css">
-    <link rel="stylesheet" href="/aobotan/css/contact/style.css">
+    <link rel="stylesheet" href="/aobotan/css/contact/thanks.css">
     <script src="/aobotan/js/common/script.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="/aobotan/js/common/script.js" defer></script>
-    <script src="/aobotan/js/contact/script.js" defer></script>
   </head>
   <body>
     <div class="body__inner">
@@ -94,81 +92,16 @@
         <div class="contact">
           <div class="contact__inner inner">
             <section class="lower-title title--contact">
-              <h2 class="lower-title__main">お問い合わせ</h2>
-              <p class="lower-title__sub">青牡丹工務店のサービスにご興味を持って頂き、誠にありがとうございます。下記のフォームよりお問い合わせください。</p>
+              <h2 class="lower-title__main">送信完了</h2>
+              <p class="lower-title__sub">お問い合わせありがとうございました。<br>後日担当者より返信させていただきますので、お待ち下さいませ。</p>
             </section>
             <div class="contact__contents">
               <div class="contact__contents-main">
                 <div class="contact__process-bar bar">
-                  <div class="bar-item is--active"><span class="bar-item__num">01</span><span class="bar-item__text">入力</span></div>
-                  <div class="bar-item"><span class="bar-item__num">02</span><span class="bar-item__text">送信完了</span></div>
-                </div>
-                <div class="contact__form-wrapper">
-                  <form class="contact__form" action="/contact" method="POST">
-                    <fieldset class="form-group radio">
-                      <legend class="form-group__title radio__legend">お問い合わせの種類<span class="form-group__required">必須</span></legend>
-                      <ul class="radio__list">
-                        <li class="radio__item">
-                          <input class="radio__input visually-hidden" id="type-custom" type="radio" name="inquiryType" value="custom" required>
-                          <label class="radio__label" for="type-custom"> 注文住宅の相談</label>
-                        </li>
-                        <li class="radio__item">
-                          <input class="radio__input visually-hidden" id="type-corporate" type="radio" name="inquiryType" value="corporate">
-                          <label class="radio__label" for="type-corporate"> 法人建築の相談</label>
-                        </li>
-                        <li class="radio__item">
-                          <input class="radio__input visually-hidden" id="type-renovation" type="radio" name="inquiryType" value="renovation">
-                          <label class="radio__label" for="type-renovation"> リフォームの相談</label>
-                        </li>
-                        <li class="radio__item">
-                          <input class="radio__input visually-hidden" id="type-public" type="radio" name="inquiryType" value="public">
-                          <label class="radio__label" for="type-public"> 公共工事の相談</label>
-                        </li>
-                        <li class="radio__item">
-                          <input class="radio__input visually-hidden" id="type-other" type="radio" name="inquiryType" value="other">
-                          <label class="radio__label" for="type-other"> その他</label>
-                        </li>
-                      </ul>
-                    </fieldset>
-                    <fieldset class="form-group" name="fullName">
-                      <legend class="form-group__title">お名前<span class="form-group__required">必須</span></legend>
-                      <div class="form-group__input-wrapper">
-                        <div class="form-group__row">
-                          <input class="form-group__input" id="name-family" type="text" name="familyName" required autocomplete="family-name" aria-describedby="name-family-hint" placeholder="青牡丹"><small class="form-hint visually-hidden" id="name-family-hint">例）青牡丹</small>
-                        </div>
-                        <div class="form-group__row">
-                          <input class="form-group__input" id="name-given" type="text" name="givenName" required autocomplete="given-name" aria-describedby="name-given-hint" placeholder="幸太郎"><small class="form-hint visually-hidden" id="name-given-hint">例）幸太郎</small>
-                        </div>
-                      </div>
-                    </fieldset>
-                    <div class="form-group">
-                      <label class="form-group__title" for="email">メールアドレス<span class="form-group__required" aria-hidden="true">必須</span></label>
-                      <input class="form-group__input" id="email" type="email" name="email" required autocomplete="email" aria-describedby="email-hint" placeholder="aobotan@gmail.com"><small class="visually-hidden" id="email-hint">例）aobotan@gmail.com</small>
-                    </div>
-                    <!-- 電話番号-->
-                    <div class="form-group">
-                      <label class="form-group__title" for="tel">
-                         電話番号<span class="form-group__required" aria-hidden="true">必須</span></label>
-                      <input class="form-group__input" id="tel" type="tel" name="tel" required autocomplete="tel" placeholder="000-0000-0000" aria-describedby="tel-hint"><small class="visually-hidden" id="tel-hint">ハイフンあり 10〜11桁</small>
-                    </div>
-                    <!-- 住所-->
-                    <div class="form-group">
-                      <label class="form-group__title" for="address">住所<span class="form-group__required">必須</span></label>
-                      <input class="form-group__input" id="address" type="text" name="address" required autocomplete="street-address" placeholder="大阪府大阪市中央区北区南町5-6-7" aria-describedby="address-hint"><small class="form-hint visually-hidden" id="address-hint">マンション名・部屋番号までご入力ください</small>
-                    </div>
-                    <div class="form-group">
-                      <div class="checkbox-wrapper">
-                        <input class="form-group__checkbox-input visually-hidden" id="privacy" type="checkbox" name="privacy" required>
-                        <label class="form-group__checkbox-label label--square" for="privacy">プライバシーポリシーに同意します<span class="form-group__required"> 必須</span></label>
-                      </div>
-                    </div>
-                    <div class="form-submit">
-                      <button class="btn btn--primary btn--circle btn--submit" type="submit">送信する</button>
-                    </div>
-                  </form>
-                </div>
+                  <div class="bar-item"><span class="bar-item__num">01</span><span class="bar-item__text">入力</span></div>
+                  <div class="bar-item is--active"><span class="bar-item__num">02</span><span class="bar-item__text">送信完了</span></div>
+                </div><a class="btn btn--primary btn--circle btn--return" href="/">トップページへ戻る</a>
               </div>
-              <aside class="contact__contents-sub"><span class="contact__tel-text">お電話も受け付けています。</span><span class="contact__num">0000-000-0000</span><span class="contact__num-hours">営業時間 10:00-20:00</span></aside>
             </div>
           </div>
         </div>

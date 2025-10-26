@@ -3,14 +3,14 @@
 @use "../common/btn";
 
 // contact
-.contact{
+.contact-common{
   padding-top: 85px;
   @include mq("md"){
     padding-top: 160px;
   }
 }
 
-.contact__inner{
+.contact-common__inner{
   padding: 27px 20px;
   background-color: $white2;
   position: relative;
@@ -40,7 +40,7 @@
   }
 }
 
-.contact__body{
+.contact-common__body{
   margin-top: 47px;
   @include mq("md"){
     margin-top: 39px;
@@ -49,7 +49,7 @@
   }
 }
 
-.contact__tel-wrapper{
+.contact-common__tel-wrapper{
   padding-bottom: 29px;
   border-bottom: 1px solid $black;
   display: flex;
@@ -62,13 +62,13 @@
   }
 }
 
-.contact__tel-eng{
+.contact-common__tel-eng{
   font-size: 3.2rem;
   font-weight: $bold;
   display: inline-block;
 }
 
-.contact__tel-ja{
+.contact-common__tel-ja{
   font-size: 1.2rem;
   font-weight: $bold;
   display: inline-block;
@@ -79,20 +79,20 @@
   }
 }
 
-.contact__num-wrapper{
+.contact-common__num-wrapper{
   padding: 24px 0 36px 0;
   @include mq("md"){
     padding: 0 32px;
   }
 }
 
-.contact__num{
+.contact-common__num{
   font-size: 3.2rem;
   font-weight: $bold;
   color: $black;
 }
 
-.contact__num-hours{
+.contact-common__num-hours{
   font-size: 1.2rem;
   font-weight: $bold;
   color: $black;
@@ -100,7 +100,7 @@
   display: block;
 }
 
-.contact__mail-btn{
+.contact-common__mail-btn{
   margin: 0 auto;
   width: 284px;
   display: flex;

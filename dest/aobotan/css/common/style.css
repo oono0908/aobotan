@@ -25,7 +25,8 @@ body {
   }
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -39,7 +40,8 @@ a[href^="tel:"] {
 }
 
 a,
-button {
+button,
+input {
   text-align: left;
   background-color: transparent;
   border: none;
@@ -49,16 +51,20 @@ button {
   margin: 0;
 }
 a:hover,
-button:hover {
+button:hover,
+input:hover {
   cursor: pointer;
 }
 
 :root {
-  --focus-ring: 3px solid #3b82f6;
+  --focus-ring: 2px solid #3b82f6;
 }
 
 a[href]:focus-visible,
 button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
 [role=button]:focus-visible,
 [tabindex]:not([tabindex="-1"]):focus-visible {
   outline: var(--focus-ring);
@@ -68,6 +74,9 @@ button:focus-visible,
 
 a[href]:focus,
 button:focus,
+input:focus,
+textarea:focus,
+select:focus,
 [role=button]:focus,
 [tabindex]:not([tabindex="-1"]):focus {
   outline: var(--focus-ring);
@@ -76,12 +85,18 @@ button:focus,
 
 a[href]:focus:not(:focus-visible),
 button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
 [role=button]:focus:not(:focus-visible),
 [tabindex]:not([tabindex="-1"]):focus:not(:focus-visible) {
   outline: none;
 }
 
 button:disabled:focus,
+input:disabled:focus,
+textarea:disabled:focus,
+select:disabled:focus,
 [aria-disabled=true]:focus {
   outline: none;
 }

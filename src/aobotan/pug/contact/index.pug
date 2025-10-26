@@ -1,16 +1,136 @@
 extends ../common/_layout.pug
 
 block append css
-  link(rel='stylesheet', href="/suit-site/css/contact/style.css")
+  link(rel='stylesheet', href="/aobotan/css/contact/style.css")
 block append js 
   script(src='https://code.jquery.com/jquery-3.3.1.js')
-  script(src="/suit-site/js/common/script.js" defer)
-  script(src="/suit-site/js/contact/script.js" defer)
+  script(src="/aobotan/js/common/script.js" defer)
+  script(src="/aobotan/js/contact/script.js" defer)
 
 block var
   - var page = 'contact'
 
 block main
-    main
-      
+    main.main
+      .fv.contact-fv
+        .fv__inner.contact-fv__inner
+      .contact
+        .contact__inner.inner
+          section.lower-title.title--contact
+            h2.lower-title__main お問い合わせ
+            p.lower-title__sub 青牡丹工務店のサービスにご興味を持って頂き、誠にありがとうございます。下記のフォームよりお問い合わせください。
+          .contact__contents
+            .contact__contents-main
+              .contact__process-bar.bar
+                .bar-item.is--active
+                  span.bar-item__num 01
+                  span.bar-item__text 入力
+                .bar-item
+                  span.bar-item__num 02
+                  span.bar-item__text 送信完了
+              .contact__form-wrapper
+                form.contact__form(action="/contact" method="POST")
+                  fieldset.form-group.radio
+                    legend.form-group__title.radio__legend
+                      | お問い合わせの種類
+                      span.form-group__required 必須
+                    ul.radio__list
+                      li.radio__item
+                        input.radio__input.visually-hidden#type-custom(type="radio" name="inquiryType" value="custom" required)
+                        label.radio__label(for="type-custom")  注文住宅の相談
+                      li.radio__item
+                        input.radio__input.visually-hidden#type-corporate(type="radio" name="inquiryType" value="corporate")
+                        label.radio__label(for="type-corporate")  法人建築の相談
+                      li.radio__item
+                        input.radio__input.visually-hidden#type-renovation(type="radio" name="inquiryType" value="renovation")
+                        label.radio__label(for="type-renovation")  リフォームの相談
+                      li.radio__item
+                        input.radio__input.visually-hidden#type-public(type="radio" name="inquiryType" value="public")
+                        label.radio__label(for="type-public")  公共工事の相談
+                      li.radio__item
+                        input.radio__input.visually-hidden#type-other(type="radio" name="inquiryType" value="other")
+                        label.radio__label(for="type-other")  その他
+                  fieldset.form-group(name="fullName")
+                    legend.form-group__title
+                      | お名前
+                      span.form-group__required 必須
+                    .form-group__input-wrapper
+                      .form-group__row
+                        input.form-group__input#name-family(
+                          type="text"
+                          name="familyName"
+                          required
+                          autocomplete="family-name"
+                          aria-describedby="name-family-hint"
+                          placeholder="青牡丹"
+                        )
+                        small.form-hint.visually-hidden#name-family-hint 例）青牡丹
+                      .form-group__row
+                        input.form-group__input#name-given(
+                          type="text"
+                          name="givenName"
+                          required
+                          autocomplete="given-name"
+                          aria-describedby="name-given-hint"
+                          placeholder="幸太郎"
+                        )
+                        small.form-hint.visually-hidden#name-given-hint 例）幸太郎
+                  .form-group
+                    label.form-group__title(for="email")
+                      | メールアドレス
+                      span.form-group__required(aria-hidden="true") 必須
+                    input.form-group__input#email(
+                      type="email"
+                      name="email"
+                      required
+                      autocomplete="email"
+                      aria-describedby="email-hint"
+                      placeholder="aobotan@gmail.com"
+                    )
+                    small.visually-hidden#email-hint 例）aobotan@gmail.com
+
+                  // 電話番号
+                  .form-group
+                    label.form-group__title(for="tel") 
+                      | 電話番号
+                      span.form-group__required(aria-hidden="true") 必須
+                    input.form-group__input#tel(
+                      type="tel"
+                      name="tel"
+                      required
+                      autocomplete="tel"
+                      placeholder="000-0000-0000"
+                      aria-describedby="tel-hint"
+                    )
+                    small.visually-hidden#tel-hint ハイフンあり 10〜11桁
+
+                  // 住所
+                  .form-group
+                    label.form-group__title(for="address")
+                      | 住所
+                      span.form-group__required 必須
+                    input.form-group__input#address(
+                      type="text"
+                      name="address"
+                      required
+                      autocomplete="street-address"
+                      placeholder="大阪府大阪市中央区北区南町5-6-7"
+                      aria-describedby="address-hint"
+                    )
+                    small.form-hint.visually-hidden#address-hint マンション名・部屋番号までご入力ください
+
+                  .form-group
+                    .checkbox-wrapper
+                      input.form-group__checkbox-input.visually-hidden#privacy(type="checkbox" name="privacy" required)
+                      label.form-group__checkbox-label.label--square(for="privacy")
+                        | プライバシーポリシーに同意します
+                        span.form-group__required  必須
+                  .form-submit
+                    button.btn.btn--primary.btn--circle.btn--submit(type="submit") 送信する
+            aside.contact__contents-sub
+              span.contact__tel-text お電話も受け付けています。
+              span.contact__num 0000-000-0000
+              span.contact__num-hours 営業時間 10:00-20:00
+      include ../common/_contact-section.pug
+      include ../common/_footer.pug
 

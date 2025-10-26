@@ -1,0 +1,31 @@
+@use "../base/base";
+@use "../global" as *;
+@use "../common/section-title";
+@use "../common/contact-section";
+@use "../common/lower-fv";
+@use "../common/lower-title";
+@use "./common";
+
+.btn--return{
+  margin-top: 40px;
+  @include mq("md"){
+    margin-top: 113px;
+  }
+}
+
+.btn--return{
+  color: $white;
+  background-color: $blue;
+  width: 284px;
+  line-height: 60px;
+  &:after{
+    background-color: $white;
+  }
+  &:hover{
+    color: $blue;
+    background-color: $white;
+    &:after{
+      background-color: $blue;
+    }
+  }
+}
