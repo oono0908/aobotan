@@ -527,12 +527,18 @@ img {
   background-image: url("/aobotan/img/contact/contact-img01.png");
 }
 
+.contact__inner {
+  padding-top: 40px;
+}
 @media screen and (min-width: 768px) {
   .contact__inner {
     padding-top: 64px;
   }
 }
 
+.contact__contents {
+  margin-top: 40px;
+}
 @media screen and (min-width: 768px) {
   .contact__contents {
     display: -webkit-box;
@@ -555,6 +561,15 @@ img {
   }
 }
 
+.bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 22px;
+  -moz-column-gap: 22px;
+  column-gap: 22px;
+  margin: 0 auto;
+}
 @media screen and (min-width: 768px) {
   .bar {
     display: -webkit-box;
@@ -563,31 +578,31 @@ img {
     -webkit-column-gap: 52px;
     -moz-column-gap: 52px;
     column-gap: 52px;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    margin: 0;
   }
 }
 
 .bar-item {
   position: relative;
+  width: 150px;
+  height: 50px;
+  padding: 7px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 1px solid #4282B8;
 }
 @media screen and (min-width: 768px) {
   .bar-item {
     width: 208px;
     height: 58px;
-    border: 1px solid #4282B8;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     padding: 10px 0;
   }
 }
@@ -604,18 +619,21 @@ img {
   color: #FFFFFF;
 }
 
+.bar-item:not(:first-child):before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 1px;
+  background-color: #4282B8;
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 @media screen and (min-width: 768px) {
   .bar-item:not(:first-child):before {
-    content: "";
-    display: block;
     width: 52px;
-    height: 1px;
-    background-color: #4282B8;
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
   }
 }
 
@@ -628,16 +646,27 @@ img {
 }
 
 .bar-item__text {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #4282B8;
   text-align: center;
   display: block;
 }
-
 @media screen and (min-width: 768px) {
-  .contact__tel-wrapper {
+  .bar-item__text {
+    font-size: 1.6rem;
+  }
+}
+
+.contact__contents-sub {
+  margin-top: 40px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .contact__contents-sub {
     width: 27.0833333333%;
+    margin-top: 0;
+    text-align: left;
   }
 }
 
@@ -665,19 +694,12 @@ img {
 }
 
 .btn--return {
-  margin-top: 40px;
-}
-@media screen and (min-width: 768px) {
-  .btn--return {
-    margin-top: 113px;
-  }
-}
-
-.btn--return {
+  margin: 60px auto 0;
   color: #FFFFFF;
   background-color: #4282B8;
   width: 284px;
   line-height: 60px;
+  display: block;
 }
 .btn--return:after {
   background-color: #FFFFFF;
@@ -688,4 +710,9 @@ img {
 }
 .btn--return:hover:after {
   background-color: #4282B8;
+}
+@media screen and (min-width: 768px) {
+  .btn--return {
+    margin-top: 113px;
+  }
 }

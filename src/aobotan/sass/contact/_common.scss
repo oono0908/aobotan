@@ -6,19 +6,20 @@
 @use "../common/lower-title";
 
 .contact__inner{
+  padding-top: 40px;
   @include mq("md"){
     padding-top: 64px;
   }
 }
 
 .contact__contents{
+  margin-top: 40px;
   @include mq("md"){
     display: flex;
     column-gap: 40px;
     justify-content: space-between;
     max-width: 960px;
     margin-top: 62px;
-
   }
 }
 
@@ -29,23 +30,28 @@
 }
 
 .bar{
+  display: flex;
+  column-gap: 22px;
+  margin: 0 auto;
   @include mq("md"){
     display: flex;
     column-gap: 52px;
-    display: flex;
-    justify-content: space-between;
+    margin: 0;
   }
 }
 
 .bar-item{
   position: relative;
+  width: 150px;
+  height: 50px;
+  padding: 7px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid $blue;
   @include mq("md"){
     width: 208px;
     height: 58px;
-    border: 1px solid $blue;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 10px 0;
   }
 }
@@ -63,18 +69,18 @@
 }
 
 .bar-item:not(:first-child){
-  @include mq("md"){
-    
-    &:before{
-      content: "";
-      display: block;
+  &:before{
+    content: "";
+    display: block;
+    width: 22px;
+    height: 1px;
+    background-color: $blue;
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    @include mq("md"){
       width: 52px;
-      height: 1px;
-      background-color: $blue;
-      position: absolute;
-      top: 50%;
-      right: 100%;
-      transform: translateY(-50%);
     }
   }
 }
@@ -88,16 +94,23 @@
 }
 
 .bar-item__text{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: $bold;
   color: $blue;
   text-align: center;
   display: block;
+  @include mq("md"){
+    font-size: 1.6rem;
+  }
 }
 
-.contact__tel-wrapper{
+.contact__contents-sub{
+  margin-top: 40px;
+  text-align: center;
   @include mq("md"){
     width: calc(260 / 960 * 100%);
+    margin-top: 0;
+    text-align: left;
   }
 }
 
