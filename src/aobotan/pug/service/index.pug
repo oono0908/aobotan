@@ -5,6 +5,7 @@ block append css
 block append js 
   script(src="/aobotan/js/common/script.js" defer)
   script(src="/aobotan/js/service/script.js" defer)
+  script(src="/aobotan/js/scroll-btn/script.js" defer)
 
 block var
   - var page = 'about'
@@ -13,21 +14,21 @@ block main
     main.main
       .fv.service-fv
         .fv__inner.service-fv__inner
-      .service
+      .service.js-scroll-top
         .service__inner.inner
           section.lower-title.title--service
             h2.lower-title__main 事業内容
             p.lower-title__sub 青牡丹工務店は、「住宅建築・リフォーム」「方針新築・リフォーム」「公共工事」の3つを事業の柱としています。ここではそれぞれご紹介します。
             ul.title__btns
-              li.title__btn-item
-                button.title__btn("") 住宅建築・リフォーム
-              li.title__btn-item
-                button.title__btn("") 法人新築・リフォーム
-              li.title__btn-item
-                button.title__btn("") 公共工事
+              li.title__btn-item.js-title__btn-item(data-target="#service-residential")
+                button.title__btn 住宅建築・リフォーム
+              li.title__btn-item.js-title__btn-item(data-target="#service-corporate")
+                button.title__btn 法人新築・リフォーム
+              li.title__btn-item.js-title__btn-item(data-target="#service-public")
+                button.title__btn 公共工事
           section.section01
             ul.section__items.section__items
-              li.section__item.item
+              li.section__item.item.residential#service-residential
                 .item__img-wrapper
                   img.item__img(src="/aobotan/img/service/service-section01 1.jpg" alt="住宅建築・リフォームについて紹介するための住宅の写真")
                 .item__body
@@ -46,7 +47,7 @@ block main
                       .details__img-wrapper
                         img.details__img(src="/aobotan/img/service/service-section01 3.jpg" alt="住宅建築・リフォームについて紹介するための住宅の写真")
                       .details__date 施工年月：R4年4月 構造：木造
-              li.section__item.item
+              li.section__item.item.corporate#service-corporate
                 .item__img-wrapper
                   img.item__img(src="/aobotan/img/service/service-section02 1.jpg", alt="法人新築・リフォームのイメージ写真")
                 .item__body
@@ -65,9 +66,7 @@ block main
                       .details__img-wrapper
                         img.details__img(src="/aobotan/img/service/service-section02 3.jpg", alt="青い外装の工場外観写真")
                       .details__date 施工年月：R4年3月 構造：S造
-
-
-              li.section__item.item
+              li.section__item.item.public#service-public
                 .item__img-wrapper
                   img.item__img(src="/aobotan/img/service/service-section03 1.jpg", alt="公共工事の実績イメージ（公共施設の外観）")
                 .item__body

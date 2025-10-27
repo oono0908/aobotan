@@ -17,7 +17,7 @@
 .inner{
   padding: 0 20px;
   @include mq("md"){
-    padding: 0;
+    padding-right: 20px;
   }
 }
 // spでは表示

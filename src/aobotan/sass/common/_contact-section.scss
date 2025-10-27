@@ -42,7 +42,7 @@
 
 .contact-common__body{
   margin-top: 47px;
-  @include mq("md"){
+  @include mq("lg"){
     margin-top: 39px;
     display: flex;
     align-items: center;
@@ -53,8 +53,8 @@
   padding-bottom: 29px;
   border-bottom: 1px solid $black;
   display: flex;
-  align-items: bottom;
-  @include mq("md"){
+  align-items: baseline;
+  @include mq("lg"){
     flex-direction: column;
     padding-right: 32px;
     border-bottom: none;
@@ -73,7 +73,7 @@
   font-weight: $bold;
   display: inline-block;
   margin-left: 16px;
-  @include mq("md"){
+  @include mq("lg"){
     margin-left: 0;
     margin-top: 10px;
   }
@@ -81,7 +81,7 @@
 
 .contact-common__num-wrapper{
   padding: 24px 0 36px 0;
-  @include mq("md"){
+  @include mq("lg"){
     padding: 0 32px;
   }
 }
@@ -120,7 +120,7 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-  @include mq("md"){
+  @include mq("lg"){
     margin: 0 0 0 32px
   }
 }

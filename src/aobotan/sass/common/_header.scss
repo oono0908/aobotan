@@ -31,6 +31,7 @@ header-sp
   width: 98px;
   margin-right: auto;
   padding-top: 10px;
+  cursor: pointer;
 }
 
 .logo-title__link {
@@ -43,6 +44,7 @@ header-sp
   height: 48px;
   background-color: $blue;
   position: relative;
+  cursor: pointer;
 }
 
 .hamberger__line {
@@ -188,11 +190,6 @@ header-pc
   margin-top: 57px;
 }
 
-.header-pc__nav-items{
-  border-bottom: 1px solid $blue;
-  padding-bottom: 32px;
-}
-
 .header-pc__nav-title-wrapper{
   padding-bottom:32px;
   border-bottom: 1px solid $blue;
@@ -252,8 +249,7 @@ header-pc
 
 .header-pc__nav-items{
   display: none;
-  padding: 32px 17px;
-  border-bottom: 1px solid $blue;
+  padding: 32px 17px 0;
 }
 
 .header-pc__nav-item:not(:first-child){
@@ -264,4 +260,29 @@ header-pc
   font-size: 1.4rem;
   font-weight: $bold;
   color: $black;
+}
+
+.header-pc__nav-title{
+  color: $black;
+  font-weight: $bold;
+}
+
+.header-pc__nav-title-wrapper--contact{
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("/aobotan/img/common/mail.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.header-pc__nav-title--contact{
+  display: block;
+  padding-left: 35px;
 }

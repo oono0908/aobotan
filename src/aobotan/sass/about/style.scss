@@ -164,7 +164,7 @@
 }
 
 .card__inner {
-  @include mq("md") {
+  @include mq("lg") {
     display: flex;
     justify-content: space-between;
     margin-top: 31px;
@@ -179,7 +179,12 @@
   font-weight: $normal;
   color: $black;
   @include mq("md") {
+    width: 100%;
+    margin: 30px auto 0;
+  }
+  @include mq("lg") {
     width: calc(642 / 953 * 100%);
+    margin:0;
   }
 }
 
@@ -188,6 +193,15 @@
   aspect-ratio: 331 / 250;
   margin-top: 30px;
   @include mq("md") {
-    width: calc(267 / 953 * 100%);
+    width: 70%;
+    margin: 30px auto 0;
   }
+  @include mq("lg") {
+    width: calc(331 / 953 * 100%);
+    margin-top: 0;
+  }
+}
+
+.card__img-wrapper > img{
+  object-fit: cover;
 }

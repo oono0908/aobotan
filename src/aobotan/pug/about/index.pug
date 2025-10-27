@@ -3,9 +3,9 @@ extends ../common/_layout.pug
 block append css
   link(rel='stylesheet', href="/aobotan/css/about/style.css")
 block append js 
-  script(src='https://code.jquery.com/jquery-3.3.1.js')
   script(src="/aobotan/js/common/script.js" defer)
   script(src="/aobotan/js/about/script.js" defer)
+  script(src="/aobotan/js/scroll-btn/script.js" defer)
 
 block var
   - var page = 'about'
@@ -14,23 +14,23 @@ block main
     main.main
       .fv.about-fv
         .fv__inner.about-fv__inner
-      .about
+      .about.js-scroll-top
         .about__inner.inner
           section.lower-title
             h2.lower-title__main 私たちについて
             p.lower-title__sub 「丁寧な家造りで、理想を現実に」これを実現するために、わたしたちが行っていることを一部ご紹介します。
             ul.title__btns
-              li.title__btn-item(data-target="#philosophy")
+              li.title__btn-item.js-title__btn-item(data-target="#about-philosophy")
                 button.title__btn 経営理念
-              li.title__btn-item(data-target="#company")
+              li.title__btn-item.js-title__btn-item(data-target="#about-company")
                 button.title__btn 会社概要
-              li.title__btn-item(data-target="#safety")
+              li.title__btn-item.js-title__btn-item(data-target="#about-safety")
                 button.title__btn 安全への取り組み
-          section.section01#philosophy
+          section.section01.philosophy#about-philosophy
             h3.about__section-title 経営理念
             .section01-body
               img.section01-img(src="/aobotan/img/about/about-img02.png" alt="")
-          section.section02#company
+          section.section02.company#about-company
             h3.about__section-title 会社概要
             .section02__wrapper
               .section02__body
@@ -71,7 +71,7 @@ block main
                 tr.section02__table-row
                   td.section02__table-label 代表取締役
                   td.section02__table-value 谷垣周平
-          section.section03#safety
+          section.section03.safety#about-safety
             h3.about__section-title 安全への取り組み
             ul.sectoin03__cards
               li.section02__card.card

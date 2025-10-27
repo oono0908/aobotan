@@ -225,10 +225,18 @@
   aspect-ratio: 1 / 1 !important;
   @include mq("md") {
     max-width: 280px !important;
+    aspect-ratio: 1 / 1 !important;
   }
   @include mq("lg"){
     max-width: 360px !important;
+    aspect-ratio: 1 / 1 !important;
   }
+}
+
+.swiper-slide > img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .about__swiper-text {
@@ -285,7 +293,8 @@
   @include mq("lg"){
     top: 452px;
     right: 374px;
-    width: 161px;
+    // width: 161px;
+    width: calc(161 / 1160 * 100%);
   }
 }
 
@@ -373,13 +382,13 @@
 
 .card__inner {
   width: 100%;
-  @include mq("md") {
-    display: flex;
+  @include mq("lg"){
+   display: flex;
   }
 }
 
 .card__inner--reverse {
-  @include mq("md") {
+  @include mq("lg") {
     flex-direction: row-reverse;
   }
 }
@@ -392,16 +401,18 @@
     @include mq("md") {
       content: "";
       position: absolute;
-      background-image: url("/aobotan/img/top/service/num01.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       display: block;
       z-index: -1;
       top: 3%;
-      width: calc(174 / 516 * 100%);
+      width: calc(110 / 516 * 100%);
       aspect-ratio: 174 / 168;
       bottom: auto;
+    }
+    @include mq("lg"){
+      width: calc(174 / 516 * 100%);
     }
   }
   @include mq("md") {
@@ -411,10 +422,19 @@
 }
 
 .card__img-wrapper--01 {
-  @include mq("md") {
+  @include mq("md"){
+    &:after{
+      right: 0;
+      top: 100%;
+      z-index: 1;
+    }
+  }
+  @include mq("lg") {
     &:after {
       right: -30%;
+      top: 3%;
       left: auto;
+      z-index: -1;
     }
   }
   &:after {
@@ -423,9 +443,19 @@
 }
 
 .card__img-wrapper--02 {
-  @include mq("md") {
+  @include mq("md"){
+    &:after{
+      right: 0;
+      top: 100%;
+      z-index: 1;
+    }
+  }
+  @include mq("lg") {
     &:after {
       left: -30%;
+      right: auto;
+      top: 3%;
+      z-index: -1;
     }
   }
   &:after {
@@ -434,10 +464,19 @@
 }
 
 .card__img-wrapper--03 {
-  @include mq("md") {
+  @include mq("md"){
+    &:after{
+      right: 0;
+      top: 100%;
+      z-index: 10;
+    }
+  }
+  @include mq("lg") {
     &:after {
       right: -30%;
       left: auto;
+      top: 3%;
+      z-index: -1;
     }
   }
   &:after {
@@ -448,7 +487,7 @@
 .card__body {
   margin-top: 34px;
   width: 100%;
-  @include mq("md") {
+  @include mq("lg") {
     margin-top: 0;
     width: calc(100% - 516px);
     padding-left: 56px;
@@ -663,14 +702,18 @@
 
 .modal__close-btn {
   position: absolute;
-  top: 0;
-  right: -6%;
+  top: -45px;
+  right: 0;
   width: 45px;
   height: 45px;
   background: none;
   border: none;
   cursor: pointer;
   z-index: 1;
+  @include mq("lg") {
+    top: 0;
+    right: -45px;
+  }
   &::before,
   &::after {
     content: "";

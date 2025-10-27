@@ -103,14 +103,12 @@ select:disabled:focus,
 
 img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
 }
 
 .btn {
   border-radius: 10px;
-  height: 60px;
+  padding: 22px 0;
   text-align: center;
   display: inline-block;
   cursor: pointer;
@@ -139,16 +137,19 @@ img {
   width: 240px;
   font-weight: 700;
   font-size: 1.6rem;
+  text-align: center;
 }
 .btn--primary:after {
   background-color: #000000;
 }
-.btn--primary:hover {
-  color: #FFFFFF;
-  background-color: #000000;
-}
-.btn--primary:hover:after {
-  background-color: #FFFFFF;
+@media (hover: hover) {
+  .btn--primary:hover {
+    color: #FFFFFF;
+    background-color: #000000;
+  }
+  .btn--primary:hover:after {
+    background-color: #FFFFFF;
+  }
 }
 
 .btn--secondary {
@@ -157,16 +158,19 @@ img {
   width: 260px;
   font-weight: 700;
   font-size: 1.6rem;
+  text-align: center;
 }
 .btn--secondary:after {
   background-color: #4282B8;
 }
-.btn--secondary:hover {
-  color: #FFFFFF;
-  background-color: #4282B8;
-}
-.btn--secondary:hover:after {
-  background-color: #FFFFFF;
+@media (hover: hover) {
+  .btn--secondary:hover {
+    color: #FFFFFF;
+    background-color: #4282B8;
+  }
+  .btn--secondary:hover:after {
+    background-color: #FFFFFF;
+  }
 }
 @media screen and (min-width: 768px) {
   .btn--secondary {
@@ -218,7 +222,7 @@ img {
 .contact-common__body {
   margin-top: 47px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-common__body {
     margin-top: 39px;
     display: -webkit-box;
@@ -236,11 +240,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: bottom;
-  -ms-flex-align: bottom;
-  align-items: bottom;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-common__tel-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -264,7 +268,7 @@ img {
   display: inline-block;
   margin-left: 16px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-common__tel-ja {
     margin-left: 0;
     margin-top: 10px;
@@ -274,7 +278,7 @@ img {
 .contact-common__num-wrapper {
   padding: 24px 0 36px 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-common__num-wrapper {
     padding: 0 32px;
   }
@@ -322,7 +326,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-common__mail-btn {
     margin: 0 0 0 32px;
   }
@@ -696,12 +700,21 @@ img {
 @media screen and (min-width: 768px) {
   .swiper-slide {
     max-width: 280px !important;
+    aspect-ratio: 1/1 !important;
   }
 }
 @media screen and (min-width: 1024px) {
   .swiper-slide {
     max-width: 360px !important;
+    aspect-ratio: 1/1 !important;
   }
+}
+
+.swiper-slide > img {
+  -o-object-fit: cover !important;
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .about__swiper-text {
@@ -775,7 +788,7 @@ img {
   .about__swiper-sub {
     top: 452px;
     right: 374px;
-    width: 161px;
+    width: 13.8793103448%;
   }
 }
 
@@ -873,7 +886,7 @@ img {
 .card__inner {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .card__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -881,7 +894,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .card__inner--reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -899,16 +912,20 @@ img {
   .card__img-wrapper:after {
     content: "";
     position: absolute;
-    background-image: url("/aobotan/img/top/service/num01.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     display: block;
     z-index: -1;
     top: 3%;
-    width: 33.7209302326%;
+    width: 21.3178294574%;
     aspect-ratio: 174/168;
     bottom: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__img-wrapper:after {
+    width: 33.7209302326%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -920,8 +937,17 @@ img {
 
 @media screen and (min-width: 768px) {
   .card__img-wrapper--01:after {
+    right: 0;
+    top: 100%;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__img-wrapper--01:after {
     right: -30%;
+    top: 3%;
     left: auto;
+    z-index: -1;
   }
 }
 .card__img-wrapper--01:after {
@@ -930,7 +956,17 @@ img {
 
 @media screen and (min-width: 768px) {
   .card__img-wrapper--02:after {
+    right: 0;
+    top: 100%;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__img-wrapper--02:after {
     left: -30%;
+    right: auto;
+    top: 3%;
+    z-index: -1;
   }
 }
 .card__img-wrapper--02:after {
@@ -939,8 +975,17 @@ img {
 
 @media screen and (min-width: 768px) {
   .card__img-wrapper--03:after {
+    right: 0;
+    top: 100%;
+    z-index: 10;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__img-wrapper--03:after {
     right: -30%;
     left: auto;
+    top: 3%;
+    z-index: -1;
   }
 }
 .card__img-wrapper--03:after {
@@ -951,7 +996,7 @@ img {
   margin-top: 34px;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .card__body {
     margin-top: 0;
     width: calc(100% - 516px);
@@ -1180,14 +1225,20 @@ img {
 
 .modal__close-btn {
   position: absolute;
-  top: 0;
-  right: -6%;
+  top: -45px;
+  right: 0;
   width: 45px;
   height: 45px;
   background: none;
   border: none;
   cursor: pointer;
   z-index: 1;
+}
+@media screen and (min-width: 1024px) {
+  .modal__close-btn {
+    top: 0;
+    right: -45px;
+  }
 }
 .modal__close-btn::before, .modal__close-btn::after {
   content: "";

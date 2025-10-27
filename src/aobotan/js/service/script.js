@@ -17,3 +17,23 @@ $(window).on("load", function () {
     }
   }
 });
+
+// ページ内のアンカーリンク用のスムーズスクロール
+$(function () {
+  $("a[href^='#']").on("click", function (e) {
+    const href = $(this).attr("href");
+    const $target = $(href);
+
+    if ($target.length) {
+      e.preventDefault();
+      const targetOffset = $target.offset().top;
+      $("html, body").animate(
+        {
+          scrollTop: targetOffset,
+        },
+        800,
+        "swing"
+      );
+    }
+  });
+});

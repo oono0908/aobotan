@@ -1,88 +1,76 @@
 header.header
   .header-sp.js-header-sp.md-none
     .header-sp__inner
-      h1.header-sp__logo.logo-title
-        a(href="/").logo-title__link
-          img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル')
+      if page === "top"
+        h1.header-sp__logo.logo-title
+          a(href="#").logo-title__link
+            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル')
+      else
+        h1.header-sp__logo.logo-title
+          a(href="../index.html").logo-title__link
+            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル')
       .hamberger.md-none.js-hamberger
-        span.hamberger__line
-        span.hamberger__line
-        span.hamberger__line
+        span.hamberger__line.js-hamberger__line
+        span.hamberger__line.js-hamberger__line
+        span.hamberger__line.js-hamberger__line
   .drawer.js-drawer
     .drawer__inner
       ul.drawer__items
-        if page === "top"
-          li.drawer__item.js-drawer__item
-            a.drawer__link.drawer__item--title(href="/") トップページ
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="#about") 私たちについて
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="#management-philosophy") 経営理念
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="#company-overview") 会社概要
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="#initiatives") 安全への取り組み
-          li.drawer__item.js-drawer__item
-            a.drawer__link.drawer__item--title(href="#service") 事業内容
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="#residential") 住宅建築・リフォーム
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="#corporate") 法人新築・リフォーム
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="#public") 公共工事
-          li.drawer__item.js-drawer__item
-            a.drawer__link.drawer__item--title(href="#news") お知らせ
-          li.drawer__item.js-drawer__item
-            a.drawer__link.drawer__link--contact(href="#contact") お問い合わせ
-            small.drawer__copy &copy;AOBOTAN&nbsp;INC.
-        else
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="../index.html#about") 私たちについて
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="../index.html#management-philosophy") 経営理念
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="../index.html#company-overview") 会社概要
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="../index.html#initiatives") 安全への取り組み
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="../index.html#service") 事業内容
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="../index.html#residential") 住宅建築・リフォーム
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="../index.html#corporate") 法人新築・リフォーム
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="../index.html#public") 公共工事
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="../index.html#news") お知らせ
-          li.drawer__item.js-drawer__item
-            a.drawer__link(href="../index.html#contact") お問い合わせ
+        li.drawer__item.js-drawer__item
+          a.drawer__link.drawer__item--title(href="#top" data-href="#top") トップページ
+        li.drawer__item.js-drawer__item
+          a.drawer__link(href="#about" data-href="#about") 私たちについて
+        li.drawer__item.js-drawer__item
+          a.drawer__link(href="#philosophy" data-href="#about") 経営理念
+        li.drawer__item.js-drawer__item
+          a.drawer__link(href="#company" data-href="#about") 会社概要
+        li.drawer__item.js-drawer__item
+          a.drawer__link(href="#safety" data-href="#about") 安全への取り組み
+        li.drawer__item.js-drawer__item
+          a.drawer__link.drawer__item--title(href="#service" data-href="#service") 事業内容
+        li.drawer__item.js-drawer__item
+          a.drawer__link(href="#residential" data-href="#service") 住宅建築・リフォーム
+        li.drawer__item.js-drawer__item
+          a.drawer__link(href="#corporate" data-href="#service") 法人新築・リフォーム
+        li.drawer__item.js-drawer__item
+          a.drawer__link(href="#public" data-href="#service") 公共工事
+        li.drawer__item.js-drawer__item
+          a.drawer__link.drawer__item--title(href="#news" data-href="#news") お知らせ
+        li.drawer__item.js-drawer__item
+          a.drawer__link.drawer__link--contact(href="#contact" data-href="#contact") お問い合わせ
+          small.drawer__copy &copy;AOBOTAN&nbsp;INC.
   .header-pc.md-show
     .header-pc__inner
-      h1.header-pc__logo.logo-title
-        a.logo-title__link(href="/")
-          img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル')
+      if page === "top"
+        h1.header-pc__logo.logo-title
+          a(href="#").logo-title__link
+            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル')
+      else
+        h1.header-pc__logo.logo-title
+          a(href="../").logo-title__link
+            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル')
       nav.header-pc__nav
         .header-pc__nav-title-wrapper.js-header-pc__nav-title-wrapper
-          button.header-pc__nav-title(href="#about") 私たちについて
-        ul.header-pc__nav-items
-          li.header-pc__nav-item
-            a.header-pc__nav-link(href="#management-philosophy") 経営理念
-          li.header-pc__nav-item
-            a.header-pc__nav-link(href="#company-overview") 会社概要
-          li.header-pc__nav-item
-            a.header-pc__nav-link(href="#management-philosophy") 安全への取り組み
+          a.header-pc__nav-title(href="#about") 私たちについて
+          ul.header-pc__nav-items.js-header-pc__nav-items
+            li.header-pc__nav-item.js-header-pc__nav-item
+              a.header-pc__nav-link(href="#philosophy" data-href="#about") 経営理念
+            li.header-pc__nav-item.js-header-pc__nav-item
+              a.header-pc__nav-link(href="#company" data-href="#about") 会社概要
+            li.header-pc__nav-item.js-header-pc__nav-item
+              a.header-pc__nav-link(href="#safety" data-href="#about") 安全への取り組み
         .header-pc__nav-title-wrapper.js-header-pc__nav-title-wrapper
-          button.header-pc__nav-title(href="#service") 事業内容
-        ul.header-pc__nav-items
-          li.header-pc__nav-item
-            a.header-pc__nav-link(href="#residential") 住宅建築・リフォーム
-          li.header-pc__nav-item
-            a.header-pc__nav-link(href="#corporate") 法人新築・リフォーム
-          li.header-pc__nav-item
-            a.header-pc__nav-link(href="#public") 公共工事
-        .header-pc__nav-title-wrapper
-          button.header-pc__nav-title.header-pc__nav-title--news(href="#news") お知らせ
-        .header-pc__nav-title-wrapper
-          button.header-pc__nav-title.header-pc__nav-title--contact(href="#contact") お問い合わせ
+          a.header-pc__nav-title(href="#service") 事業内容
+          ul.header-pc__nav-items.js-header-pc__nav-items
+            li.header-pc__nav-item.js-header-pc__nav-item
+              a.header-pc__nav-link(href="#residential" data-href="#service") 住宅建築・リフォーム
+            li.header-pc__nav-item.js-header-pc__nav-item
+              a.header-pc__nav-link(href="#corporate" data-href="#service") 法人新築・リフォーム
+            li.header-pc__nav-item.js-header-pc__nav-item
+              a.header-pc__nav-link(href="#public" data-href="#service") 公共工事
+        .header-pc__nav-title-wrapper.js-header-pc__nav-title-wrapper.js-header-pc__nav-item
+          a.header-pc__nav-title.header-pc__nav-title--news(href="#news" data-href="#news") お知らせ
+        .header-pc__nav-title-wrapper.js-header-pc__nav-title-wrapper.header-pc__nav-title-wrapper--contact.js-header-pc__nav-item
+          a.header-pc__nav-title.header-pc__nav-title--contact(href="#contact" data-href="#contact") お問い合わせ
 
 

@@ -28,8 +28,9 @@
     <link rel="stylesheet" href="/aobotan/css/common/style.css" type="text/css">
     <link rel="stylesheet" href="/aobotan/css/top/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/aobotan/js/common/script.js"></script>
     <script src="/aobotan/js/common/script.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/aobotan/js/top/script.js" defer></script>
   </head>
@@ -38,53 +39,47 @@
       <header class="header">
         <div class="header-sp js-header-sp md-none">
           <div class="header-sp__inner">
-            <h1 class="header-sp__logo logo-title"><a class="logo-title__link" href="/"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル"></a></h1>
-            <div class="hamberger md-none js-hamberger"><span class="hamberger__line"></span><span class="hamberger__line"></span><span class="hamberger__line"></span></div>
+            <h1 class="header-sp__logo logo-title"><a class="logo-title__link" href="#"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル"></a></h1>
+            <div class="hamberger md-none js-hamberger"><span class="hamberger__line js-hamberger__line"></span><span class="hamberger__line js-hamberger__line"></span><span class="hamberger__line js-hamberger__line"></span></div>
           </div>
         </div>
         <div class="drawer js-drawer">
           <div class="drawer__inner">
             <ul class="drawer__items">
-              <li class="drawer__item js-drawer__item"><a class="drawer__link drawer__item--title" href="/">トップページ</a></li>
-              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#about">私たちについて</a></li>
-              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#management-philosophy">経営理念</a></li>
-              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#company-overview">会社概要</a></li>
-              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#initiatives">安全への取り組み</a></li>
-              <li class="drawer__item js-drawer__item"><a class="drawer__link drawer__item--title" href="#service">事業内容</a></li>
-              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#residential">住宅建築・リフォーム</a></li>
-              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#corporate">法人新築・リフォーム</a></li>
-              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#public">公共工事</a></li>
-              <li class="drawer__item js-drawer__item"><a class="drawer__link drawer__item--title" href="#news">お知らせ</a></li>
-              <li class="drawer__item js-drawer__item"><a class="drawer__link drawer__link--contact" href="#contact">お問い合わせ</a><small class="drawer__copy">&copy;AOBOTAN&nbsp;INC.</small></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link drawer__item--title" href="#top" data-href="#top">トップページ</a></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#about" data-href="#about">私たちについて</a></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#philosophy" data-href="#about">経営理念</a></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#company" data-href="#about">会社概要</a></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#safety" data-href="#about">安全への取り組み</a></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link drawer__item--title" href="#service" data-href="#service">事業内容</a></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#residential" data-href="#service">住宅建築・リフォーム</a></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#corporate" data-href="#service">法人新築・リフォーム</a></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link" href="#public" data-href="#service">公共工事</a></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link drawer__item--title" href="#news" data-href="#news">お知らせ</a></li>
+              <li class="drawer__item js-drawer__item"><a class="drawer__link drawer__link--contact" href="#contact" data-href="#contact">お問い合わせ</a><small class="drawer__copy">&copy;AOBOTAN&nbsp;INC.</small></li>
             </ul>
           </div>
         </div>
         <div class="header-pc md-show">
           <div class="header-pc__inner">
-            <h1 class="header-pc__logo logo-title"><a class="logo-title__link" href="/"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル"></a></h1>
+            <h1 class="header-pc__logo logo-title"><a class="logo-title__link" href="#"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル"></a></h1>
             <nav class="header-pc__nav">
-              <div class="header-pc__nav-title-wrapper js-header-pc__nav-title-wrapper">
-                <button class="header-pc__nav-title" href="#about">私たちについて</button>
+              <div class="header-pc__nav-title-wrapper js-header-pc__nav-title-wrapper"><a class="header-pc__nav-title" href="#about">私たちについて</a>
+                <ul class="header-pc__nav-items js-header-pc__nav-items">
+                  <li class="header-pc__nav-item js-header-pc__nav-item"><a class="header-pc__nav-link" href="#philosophy" data-href="#about">経営理念</a></li>
+                  <li class="header-pc__nav-item js-header-pc__nav-item"><a class="header-pc__nav-link" href="#company" data-href="#about">会社概要</a></li>
+                  <li class="header-pc__nav-item js-header-pc__nav-item"><a class="header-pc__nav-link" href="#safety" data-href="#about">安全への取り組み</a></li>
+                </ul>
               </div>
-              <ul class="header-pc__nav-items">
-                <li class="header-pc__nav-item"><a class="header-pc__nav-link" href="#management-philosophy">経営理念</a></li>
-                <li class="header-pc__nav-item"><a class="header-pc__nav-link" href="#company-overview">会社概要</a></li>
-                <li class="header-pc__nav-item"><a class="header-pc__nav-link" href="#management-philosophy">安全への取り組み</a></li>
-              </ul>
-              <div class="header-pc__nav-title-wrapper js-header-pc__nav-title-wrapper">
-                <button class="header-pc__nav-title" href="#service">事業内容</button>
+              <div class="header-pc__nav-title-wrapper js-header-pc__nav-title-wrapper"><a class="header-pc__nav-title" href="#service">事業内容</a>
+                <ul class="header-pc__nav-items js-header-pc__nav-items">
+                  <li class="header-pc__nav-item js-header-pc__nav-item"><a class="header-pc__nav-link" href="#residential" data-href="#service">住宅建築・リフォーム</a></li>
+                  <li class="header-pc__nav-item js-header-pc__nav-item"><a class="header-pc__nav-link" href="#corporate" data-href="#service">法人新築・リフォーム</a></li>
+                  <li class="header-pc__nav-item js-header-pc__nav-item"><a class="header-pc__nav-link" href="#public" data-href="#service">公共工事</a></li>
+                </ul>
               </div>
-              <ul class="header-pc__nav-items">
-                <li class="header-pc__nav-item"><a class="header-pc__nav-link" href="#residential">住宅建築・リフォーム</a></li>
-                <li class="header-pc__nav-item"><a class="header-pc__nav-link" href="#corporate">法人新築・リフォーム</a></li>
-                <li class="header-pc__nav-item"><a class="header-pc__nav-link" href="#public">公共工事</a></li>
-              </ul>
-              <div class="header-pc__nav-title-wrapper">
-                <button class="header-pc__nav-title header-pc__nav-title--news" href="#news">お知らせ</button>
-              </div>
-              <div class="header-pc__nav-title-wrapper">
-                <button class="header-pc__nav-title header-pc__nav-title--contact" href="#contact">お問い合わせ</button>
-              </div>
+              <div class="header-pc__nav-title-wrapper js-header-pc__nav-title-wrapper js-header-pc__nav-item"><a class="header-pc__nav-title header-pc__nav-title--news" href="#news" data-href="#news">お知らせ</a></div>
+              <div class="header-pc__nav-title-wrapper js-header-pc__nav-title-wrapper header-pc__nav-title-wrapper--contact js-header-pc__nav-item"><a class="header-pc__nav-title header-pc__nav-title--contact" href="#contact" data-href="#contact">お問い合わせ</a></div>
             </nav>
           </div>
         </div>
@@ -124,8 +119,7 @@
                 <p class="section-title__ja">私たちについて</p>
                 <div class="section-title__en title--about"><img src="/aobotan/img/top/about/about-title-eng.svg" alt="about"></div>
               </h2>
-              <div class="section-title-sub">「丁寧な家造りで、理想を現実に」。これは私たちの約束です。青牡丹工務店が手がける家は、ただの建物ではありません。それは、お客様の暮らしや夢を支える、信頼と品質に満ちた温かな空間です。</div>
-              <button class="btn btn--circle btn--primary about__btn" type="button" href="/about" value="私たちについてもっと見る">Read More</button>
+              <div class="section-title-sub">「丁寧な家造りで、理想を現実に」。これは私たちの約束です。青牡丹工務店が手がける家は、ただの建物ではありません。それは、お客様の暮らしや夢を支える、信頼と品質に満ちた温かな空間です。</div><a class="btn btn--circle btn--primary about__btn" type="button" href="./about" aria-label="私たちについてもっと見る">Read More</a>
             </div>
           </div>
         </section>
@@ -141,8 +135,7 @@
                   <div class="card__img-wrapper card__img-wrapper--01"><img src="/aobotan/img/top/service/service01.jpg" alt="住宅建築とリフォームについて紹介するための住宅の写真"></div>
                   <div class="card__body">
                     <h3 class="card__title card__title--01">住宅建築・リフォーム</h3>
-                    <p class="card__text">注文住宅では、お客様のニーズや希望に合わせて、オーダーメイドの家を提供します。私たちは、建物の設計から完成までのプロセスで、お客様と緊密に連携し、理想の暮らしを実現するための最適な解決策を提案します。</p>
-                    <button class="btn btn--primary card__btn btn--circle" type="button" href="/service/" value="具体的な事例を見る">Read More</button>
+                    <p class="card__text">注文住宅では、お客様のニーズや希望に合わせて、オーダーメイドの家を提供します。私たちは、建物の設計から完成までのプロセスで、お客様と緊密に連携し、理想の暮らしを実現するための最適な解決策を提案します。</p><a class="btn btn--primary card__btn btn--circle" type="button" href="./service/" value="具体的な事例を見る">Read More</a>
                   </div>
                 </div>
               </li>
@@ -151,8 +144,7 @@
                   <div class="card__img-wrapper card__img-wrapper--02"><img src="/aobotan/img/top/service/service02.jpg" alt="法人新築とリフォームについて紹介するための工場の写真"></div>
                   <div class="card__body">
                     <h3 class="card__title card__title--02">法人新築・リフォーム</h3>
-                    <p class="card__text">法人新築では、商業施設やオフィスビル、工場など、さまざまなニーズに応じた建物の新築を手がけています。お客様のビジネスの要件やイメージに合わせて、効率的で機能的な建物を設計・施工します。</p>
-                    <button class="btn btn--primary card__btn btn--circle" type="button" href="/service/" value="具体的な事例を見る">Read More</button>
+                    <p class="card__text">法人新築では、商業施設やオフィスビル、工場など、さまざまなニーズに応じた建物の新築を手がけています。お客様のビジネスの要件やイメージに合わせて、効率的で機能的な建物を設計・施工します。</p><a class="btn btn--primary card__btn btn--circle" type="button" href="./service/" value="具体的な事例を見る">Read More</a>
                   </div>
                 </div>
               </li>
@@ -161,8 +153,7 @@
                   <div class="card__img-wrapper card__img-wrapper--03"><img src="/aobotan/img/top/service/service03.jpg" alt="公共工事について紹介するための公共施設の写真"></div>
                   <div class="card__body">
                     <h3 class="card__title card__title--03">公共工事</h3>
-                    <p class="card__text">公共工事では、道路や橋梁、公共施設など、地域社会に欠かせないインフラや施設の建設・改修を行います。私たちは、公共の福祉と安全を考慮しながら、厳格な規制や基準に適合した施工を行います。</p>
-                    <button class="btn btn--primary card__btn btn--circle" type="button" href="/service/" value="具体的な事例を見る">Read More</button>
+                    <p class="card__text">公共工事では、道路や橋梁、公共施設など、地域社会に欠かせないインフラや施設の建設・改修を行います。私たちは、公共の福祉と安全を考慮しながら、厳格な規制や基準に適合した施工を行います。</p><a class="btn btn--primary card__btn btn--circle" type="button" href="./service/" value="具体的な事例を見る">Read More</a>
                   </div>
                 </div>
               </li>
@@ -176,9 +167,9 @@
               <div class="section-title__en title--news"><img src="/aobotan/img/top/news/news-title-eng.svg" alt="news"></div>
             </h2>
             <ul class="news__items">
-              <li class="news__item item" data-modal="modal-1"><span class="item__tag">イベント情報</span><span class="item__date">2025.10.23</span><a class="item__title" href="#">住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？</a></li>
-              <li class="news__item item" data-modal="modal-2"><span class="item__tag">イベント情報</span><span class="item__date">2025.10.21</span><a class="item__title" href="#">安全管理研修を行いました。</a></li>
-              <li class="news__item item" data-modal="modal-3"><span class="item__tag">更新情報</span><span class="item__date">2025.10.19</span><a class="item__title" href="#">ホームページをリニューアルしました！！</a></li>
+              <li class="news__item item" data-modal="modal-1"><span class="item__tag">イベント情報</span><span class="item__date">2025.10.23</span><a class="item__title" href="#" aria-label="住宅設計相談会についての詳細を見る">住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？</a></li>
+              <li class="news__item item" data-modal="modal-2"><span class="item__tag">イベント情報</span><span class="item__date">2025.10.21</span><a class="item__title" href="#" aria-label="安全管理研修についての詳細を見る">安全管理研修を行いました。</a></li>
+              <li class="news__item item" data-modal="modal-3"><span class="item__tag">更新情報</span><span class="item__date">2025.10.19</span><a class="item__title" href="#" aria-label="ホームページリニューアルについての詳細を見る">ホームページをリニューアルしました！！</a></li>
             </ul>
           </div>
         </section>
@@ -224,7 +215,7 @@
             </div>
           </div>
         </div>
-        <section class="contact-common">
+        <section class="contact-common contact">
           <div class="contact-common__inner">
             <h2 class="section-title inner">
               <p class="section-title__ja">お問い合わせ</p>
@@ -232,7 +223,7 @@
             </h2>
             <div class="contact-common__body inner">
               <div class="contact-common__tel-wrapper"><span class="contact-common__tel-eng">Tel</span><span class="contact-common__tel-ja">お電話</span></div>
-              <div class="contact-common__num-wrapper"><span class="contact-common__num">0000-000-0000</span><span class="contact-common__num-hours">営業時間 10:00-20:00</span></div><a class="contact-common__mail-btn btn btn--primary btn--circle" aria-label="メールフォームはこちら" href="/contact/">メールフォームはこちら</a>
+              <div class="contact-common__num-wrapper"><span class="contact-common__num">0000-000-0000</span><span class="contact-common__num-hours">営業時間 10:00-20:00</span></div><a class="contact-common__mail-btn btn btn--primary btn--circle" aria-label="メールフォームはこちら" href="./contact">メールフォームはこちら</a>
             </div>
           </div>
         </section>
@@ -252,17 +243,17 @@
               </div>
               <nav class="footer-nav">
                 <ul class="footer-nav__items">
-                  <li class="footer-nav__item"><a class="footer-nav__link" href="/">トップページ</a></li>
-                  <li class="footer-nav__item"><a class="footer-nav__link" href="/about/">私たちについて</a></li>
-                  <li class="footer-nav__item"><a class="footer-nav__link" href="/service/">経営理念</a></li>
-                  <li class="footer-nav__item"><a class="footer-nav__link" href="/news/">会社概要</a></li>
-                  <li class="footer-nav__item"><a class="footer-nav__link" href="/contact/">安全への取り組み</a></li>
-                  <li class="footer-nav__item"><a class="footer-nav__link" href="/business/">事業内容</a></li>
-                  <li class="footer-nav__item"><a class="footer-nav__link" href="/business/housing/">住宅建築・リフォーム</a></li>
-                  <li class="footer-nav__item"><a class="footer-nav__link" href="/business/corporate/">法人新築・リフォーム</a></li>
-                  <li class="footer-nav__item"><a class="footer-nav__link" href="/business/public/">公共工事</a></li>
-                  <li class="footer-nav__item"><a class="footer-nav__link" href="/news/">お知らせ</a></li>
-                  <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--contact" href="/contact/">お問い合わせ</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link" href="#top" data-href="#top">トップページ</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link" href="#about" data-href="#about">私たちについて</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link" href="#philosophy" data-href="#about">経営理念</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link" href="#company" data-href="#about">会社概要</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link" href="#safety" data-href="#about">安全への取り組み</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link" href="#service" data-href="#service">事業内容</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link" href="#residential" data-href="#service">住宅建築・リフォーム</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link" href="#corporate" data-href="#service">法人新築・リフォーム</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link" href="#public" data-href="#service">公共工事</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link" href="#news" data-href="#news">お知らせ</a></li>
+                  <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--contact" href="#contact" data-href="#contact">お問い合わせ</a></li>
                 </ul>
               </nav>
             </div>

@@ -103,14 +103,12 @@ select:disabled:focus,
 
 img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
 }
 
 .btn {
   border-radius: 10px;
-  height: 60px;
+  padding: 22px 0;
   text-align: center;
   display: inline-block;
   cursor: pointer;
@@ -139,16 +137,19 @@ img {
   width: 240px;
   font-weight: 700;
   font-size: 1.6rem;
+  text-align: center;
 }
 .btn--primary:after {
   background-color: #000000;
 }
-.btn--primary:hover {
-  color: #FFFFFF;
-  background-color: #000000;
-}
-.btn--primary:hover:after {
-  background-color: #FFFFFF;
+@media (hover: hover) {
+  .btn--primary:hover {
+    color: #FFFFFF;
+    background-color: #000000;
+  }
+  .btn--primary:hover:after {
+    background-color: #FFFFFF;
+  }
 }
 
 .btn--secondary {
@@ -157,16 +158,19 @@ img {
   width: 260px;
   font-weight: 700;
   font-size: 1.6rem;
+  text-align: center;
 }
 .btn--secondary:after {
   background-color: #4282B8;
 }
-.btn--secondary:hover {
-  color: #FFFFFF;
-  background-color: #4282B8;
-}
-.btn--secondary:hover:after {
-  background-color: #FFFFFF;
+@media (hover: hover) {
+  .btn--secondary:hover {
+    color: #FFFFFF;
+    background-color: #4282B8;
+  }
+  .btn--secondary:hover:after {
+    background-color: #FFFFFF;
+  }
 }
 @media screen and (min-width: 768px) {
   .btn--secondary {
@@ -218,7 +222,7 @@ img {
 .contact-common__body {
   margin-top: 47px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-common__body {
     margin-top: 39px;
     display: -webkit-box;
@@ -236,11 +240,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: bottom;
-  -ms-flex-align: bottom;
-  align-items: bottom;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-common__tel-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -264,7 +268,7 @@ img {
   display: inline-block;
   margin-left: 16px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-common__tel-ja {
     margin-left: 0;
     margin-top: 10px;
@@ -274,7 +278,7 @@ img {
 .contact-common__num-wrapper {
   padding: 24px 0 36px 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-common__num-wrapper {
     padding: 0 32px;
   }
@@ -322,7 +326,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-common__mail-btn {
     margin: 0 0 0 32px;
   }

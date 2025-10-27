@@ -1,18 +1,18 @@
 @use "../base/base";
 @use "../global" as *;
 
-.btn{
+.btn {
   border-radius: 10px;
-  height: 60px;
+  padding:22px 0;
   text-align: center;
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.btn--circle{
+.btn--circle {
   position: relative;
-  &:after{
+  &:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -24,42 +24,47 @@
   }
 }
 
-.btn--primary{
+.btn--primary {
   border: 1px solid $black;
   color: $black;
   width: 240px;
   font-weight: $bold;
   font-size: 1.6rem;
-  &:after{
+  text-align: center;
+  &:after {
     background-color: $black;
   }
-  &:hover{
-    color: $white;
-    background-color: $black;
-    &:after{
-      background-color: $white;
+  @media (hover: hover) {
+    &:hover {
+      color: $white;
+      background-color: $black;
+      &:after {
+        background-color: $white;
+      }
     }
   }
 }
 
-.btn--secondary{
+.btn--secondary {
   border: 1px solid $blue;
   color: $blue;
   width: 260px;
   font-weight: $bold;
   font-size: 1.6rem;
-  &:after{
+  text-align: center;
+  &:after {
     background-color: $blue;
   }
-  &:hover{
-    color: $white;
-    background-color: $blue;
-    &:after{
-      background-color: $white;
+  @media (hover: hover) {
+    &:hover {
+      color: $white;
+      background-color: $blue;
+      &:after {
+        background-color: $white;
+      }
     }
   }
-  @include mq("md"){
+  @include mq("md") {
     width: 284px;
   }
 }
-
