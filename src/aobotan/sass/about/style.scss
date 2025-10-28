@@ -31,10 +31,10 @@
 
 .section01-body {
   margin-top: 30px;
+  aspect-ratio: 923 / 519;
   @include mq("md") {
+    width: 100%;
     margin-top: 64px;
-    width: calc(923 / 1160 * 100%);
-    aspect-ratio: 923 / 519;
   }
 }
 

@@ -20,6 +20,32 @@
     padding-right: 20px;
   }
 }
+
+.inner--width880{
+  max-width: 100%;
+  @include mq("xl"){
+    max-width: 880px;
+    margin: 0 auto;
+  }
+}
+
+.inner--width960{
+  max-width: 100%;
+  @include mq("xl"){
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.inner--width1120{
+  max-width: 100%;
+  @include mq("xl"){
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+}
+
+
 // spでは表示
 .md-none{
   @include mq("md"){

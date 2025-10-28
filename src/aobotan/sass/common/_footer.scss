@@ -1,13 +1,16 @@
 @use "../base/base";
 @use "../global" as *;
 
+.footer {
+  margin-top: 117px;
+}
+
 .footer__inner {
   padding-top: 24px;
   padding-bottom: 24px;
   @include mq("md") {
     padding-bottom: 26px;
     padding-top: 0;
-    margin-top: 117px;
     padding-right: 40px;
   }
 }
@@ -30,6 +33,10 @@
 .footer__logo {
   width: 222px;
   margin: 0 auto;
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 0.5;
+  }
   @include mq("lg") {
     margin: 0;
   }

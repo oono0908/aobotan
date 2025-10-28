@@ -3,7 +3,6 @@
 
 .btn {
   border-radius: 10px;
-  padding:22px 0;
   text-align: center;
   display: inline-block;
   cursor: pointer;
@@ -31,6 +30,9 @@
   font-weight: $bold;
   font-size: 1.6rem;
   text-align: center;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
   &:after {
     background-color: $black;
   }
@@ -52,6 +54,7 @@
   font-weight: $bold;
   font-size: 1.6rem;
   text-align: center;
+  height: 60px;
   &:after {
     background-color: $blue;
   }

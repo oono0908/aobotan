@@ -298,9 +298,10 @@
   }
 }
 
-.about__body {
+
+.about__body-inner {
   padding-top: 183px;
-  width: 100%;
+  max-width: 100%;
   @include mq("md") {
     width: 429px;
     padding-top: 71px;
@@ -786,6 +787,7 @@
   height: 40px;
   font-size: 1.2rem;
   margin: 20px auto 0;
+  line-height: 40px;
   @include mq("md") {
     margin: 61px auto 0;
     width: 240px;
