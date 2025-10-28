@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  const $form = $(".contact__form");
   const $submitBtn = $(".btn--submit");
 
   // バリデーション設定
@@ -153,20 +152,4 @@ $(document).ready(function () {
     }
   );
 
-  // フォーム送信
-  $form.on("submit", function (e) {
-    e.preventDefault();
-
-    // 全フィールドをバリデーションしてエラー表示
-    Object.keys(validators).forEach(validateField);
-
-    const allValid = validateAllFields();
-
-    if (allValid) {
-      alert("フォームが正常に送信されました！");
-      // this.submit();
-    } else {
-      alert("入力内容にエラーがあります。確認してください。");
-    }
-  });
 });

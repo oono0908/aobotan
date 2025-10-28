@@ -3,6 +3,7 @@
 @use "../common/contact-section";
 @use "../common/section-title";
 @use "../common/btn";
+@use "../common/loading";
 
 /* =========================================================
 = mv =
@@ -30,7 +31,7 @@
 .mv__inner {
   position: relative;
   background-color: $white2;
-  width: calc(100% - 10px);
+  width: 100%;
   border-radius: 10px 0 0 10px;
   aspect-ratio: 365 / 589;
   @include mq("md") {
@@ -336,9 +337,10 @@
     background-color: $white2;
     height: 100%;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: -2;
-    width: 100%;
+    width: calc(275 / 375 * 100%);
+    border-radius: 50px 0 0 50px;
   }
   &:before {
     content: "";
@@ -359,8 +361,7 @@
     padding-right: 20px;
     &:after {
       right: 0;
-      left: auto;
-      border-radius: 50px 0 0 50px;
+      // left: auto;
       width: calc(968 / 1160 * 100%);
     }
     &:before {
@@ -523,12 +524,8 @@
   }
 }
 
-.card__title {
-  font-size: 2.4rem;
-  font-weight: $bold;
-  padding: 10px 16px;
-  background-color: $white;
-  white-space: nowrap;
+.card__title-wrapper {
+  width: 100%;
   position: relative;
   &:after {
     content: "";
@@ -546,24 +543,34 @@
       content: none;
     }
   }
+}
+
+.card__title {
+  font-size: 2.4rem;
+  font-weight: $bold;
+  padding: 10px 16px;
+  background-color: $white;
+  white-space: nowrap;
+  position: relative;
+  width: fit-content;
   @include mq("md") {
     margin-top: 20px;
   }
 }
 
-.card__title--01 {
+.card__title-wrapper--01 {
   &:after {
     background-image: url("/aobotan/img/top/service/num01.svg");
   }
 }
 
-.card__title--02 {
+.card__title-wrapper--02 {
   &:after {
     background-image: url("/aobotan/img/top/service/num02.svg");
   }
 }
 
-.card__title--03 {
+.card__title-wrapper--03 {
   &:after {
     background-image: url("/aobotan/img/top/service/num03.svg");
   }

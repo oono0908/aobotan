@@ -2,7 +2,9 @@
 @use "../global" as *;
 
 .footer {
-  margin-top: 117px;
+  @include mq("md"){
+    margin-top: 117px;
+  }
 }
 
 .footer__inner {
@@ -80,6 +82,8 @@
   display: flex;
   flex-direction: column;
   column-gap: 32px;
+  align-items: center;
+  justify-content: center;
   @include mq("md") {
     flex-direction: row;
     column-gap: 24px;

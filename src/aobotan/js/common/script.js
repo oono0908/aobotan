@@ -150,3 +150,9 @@ $(function() {
     }
   });
 });
+
+// ローディング画面のフェードアウト
+$(window).on('load', function () {
+  // ページの全てのリソース読み込み完了でフェードアウト
+  $('#loadingOverlay').fadeOut(300);
+});

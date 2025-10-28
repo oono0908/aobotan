@@ -25,7 +25,8 @@ html(lang="ja")
     // Google Fonts
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href='https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&family=Zen+Kaku+Gothic+New&display=swap', rel='stylesheet')
+    link(href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet")
+
     block css
       link(rel='stylesheet', href="/aobotan/css/common/reset.css" type="text/css")
       link(rel='stylesheet', href="/aobotan/css/common/style.css" type="text/css")
@@ -34,8 +35,10 @@ html(lang="ja")
       script(src='/aobotan/js/common/script.js')
   body
     .body__inner
+      include ./_loading.pug
       include ./_header.pug
       block main
+
 
 
 
