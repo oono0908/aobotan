@@ -43,16 +43,17 @@
 
 .section02__wrapper {
   margin-top: 30px;
-  @include mq("md") {
+  @include mq("lg") {
     display: flex;
     justify-content: space-between;
     margin-top: 64px;
     max-width: 953px;
+    flex-direction: row;
   }
 }
 
 .section02__body {
-  @include mq("md") {
+  @include mq("lg") {
     width: calc(485 / 953 * 100%);
   }
 }
@@ -63,12 +64,25 @@
   font-weight: $normal;
   line-height: 1.8;
   color: $black;
+  @include mq("md") {
+    margin-top: 64px;
+  }
+  @include mq("lg") {
+    margin-top: 20px;
+  }
 }
 
 .section02__thumb {
-  margin-top: 20px;
+  width: 60%;
+  margin: 20px auto 0;
   @include mq("md") {
+    margin-top: 20px;
+    width: 50%;
+    margin-left: auto;
+  }
+  @include mq("lg") {
     width: calc(331 / 953 * 100%);
+    margin-top: 0;
   }
 }
 

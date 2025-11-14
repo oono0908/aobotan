@@ -261,8 +261,9 @@ img {
 
 .contact-common__tel-eng {
   font-size: 3.2rem;
-  font-weight: 700;
+  font-weight: 400;
   display: inline-block;
+  font-family: "Kanit", sans-serif;
 }
 
 .contact-common__tel-ja {
@@ -289,13 +290,14 @@ img {
 
 .contact-common__num {
   font-size: 3.2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #000000;
+  font-family: "Kanit", sans-serif;
 }
 
 .contact-common__num-hours {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #000000;
   margin-top: 10px;
   display: block;
@@ -314,6 +316,8 @@ img {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  background-color: #FFFFFF;
+  border: none;
 }
 .contact-common__mail-btn:before {
   content: "";
@@ -1249,12 +1253,14 @@ img {
   padding-bottom: 25px;
   padding-left: 16px;
   padding-right: 16px;
+  height: 50%;
 }
 @media screen and (min-width: 768px) {
   .modal__inner {
     padding-left: 30px;
     padding-right: 30px;
     width: 80%;
+    height: 80%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1262,6 +1268,7 @@ img {
     padding-left: clamp(30px, 7.0833333333%, 102px);
     padding-right: clamp(30px, 7.0833333333%, 102px);
     width: 59.7222222222%;
+    height: 80%;
   }
 }
 
@@ -1292,6 +1299,7 @@ img {
   background-color: #FFFFFF;
   -webkit-transform-origin: center;
   transform-origin: center;
+  z-index: 20;
 }
 .modal__close-btn::before {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
@@ -1300,6 +1308,12 @@ img {
 .modal__close-btn::after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal__content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .modal__title {
@@ -1331,14 +1345,11 @@ img {
 }
 
 .modal__text-wrapper {
-  overflow-y: scroll;
-  height: 78px;
   margin-top: 15px;
 }
 @media screen and (min-width: 768px) {
   .modal__text-wrapper {
     margin-top: 35px;
-    height: 87px;
   }
 }
 

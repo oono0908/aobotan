@@ -145,11 +145,21 @@ $(document).ready(function () {
 
   ["name-family", "name-given", "email", "tel", "address"].forEach(
     (fieldId) => {
-      $(`#${fieldId}`).on("input blur", () => {
+      const $field = $(`#${fieldId}`);
+
+      // blur時にバリデーションを実行してエラーを表示
+      $field.on("blur", () => {
         validateField(fieldId);
+        updateSubmitButton();
+      });
+
+      // input時は既にエラーが表示されている場合のみリアルタイムで検証
+      $field.on("input", () => {
+        if ($field.hasClass("error")) {
+          validateField(fieldId);
+        }
         updateSubmitButton();
       });
     }
   );
-
 });

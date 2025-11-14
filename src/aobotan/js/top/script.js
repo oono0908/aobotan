@@ -35,27 +35,17 @@ $(function () {
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
     },
-
-    // 👇 画面幅ごとの spaceBetween 設定
+    preventClicks: false,
+    preventClicksPropagation: false,
     breakpoints: {
       0: {
-        // スマホ（〜767px）
         spaceBetween: 19,
       },
       768: {
-        // タブレット以上
         spaceBetween: 48,
       },
     },
   });
-
-  // 念のためクリックやホバーで停止しないように
-  $(".swiper").on(
-    "click mousedown mouseup focus mouseenter mouseleave",
-    function () {
-      // 何もしない
-    }
-  );
 });
 
 // mvの中の画像がマウスの動きに応じて動く
@@ -85,7 +75,6 @@ $(function () {
     $imgs.css("transform", "translate(0, 0)");
   });
 });
-
 
 // ニュースモーダルの開閉機能
 $(function () {

@@ -60,7 +60,7 @@
 .radio__item:not(:first-child) {
   margin-top: 10px;
   @include mq("md") {
-    margin-top: 14px;
+    margin-top: 16px;
   }
 }
 
@@ -78,7 +78,7 @@
 .radio__label,
 .form-group__checkbox-label {
   position: relative;
-  padding-left: 20px;
+  padding-left: 25px;
   font-size: 1.6rem;
   font-weight: $bold;
   color: $black;
@@ -132,6 +132,7 @@
     margin-top: 27px;
     display: flex;
     column-gap: 40px;
+    justify-content: flex-start;
   }
 }
 
@@ -167,6 +168,12 @@
   }
 }
 
+.form-group__row--name {
+  @include mq("md") {
+    width: auto;
+  }
+}
+
 .form-group__row > .form-group__input {
   margin-top: 0;
   @include mq("md") {
@@ -177,9 +184,11 @@
 .checkbox-wrapper {
   text-align: center;
 }
+
 .form-group__checkbox-label {
   margin-top: 20px;
   display: inline-block;
+  font-weight: $regular;
   @include mq("md") {
     margin-top: 51px;
   }

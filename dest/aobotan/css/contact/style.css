@@ -353,8 +353,9 @@ img {
 
 .contact-common__tel-eng {
   font-size: 3.2rem;
-  font-weight: 700;
+  font-weight: 400;
   display: inline-block;
+  font-family: "Kanit", sans-serif;
 }
 
 .contact-common__tel-ja {
@@ -381,13 +382,14 @@ img {
 
 .contact-common__num {
   font-size: 3.2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #000000;
+  font-family: "Kanit", sans-serif;
 }
 
 .contact-common__num-hours {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #000000;
   margin-top: 10px;
   display: block;
@@ -406,6 +408,8 @@ img {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  background-color: #FFFFFF;
+  border: none;
 }
 .contact-common__mail-btn:before {
   content: "";
@@ -547,7 +551,7 @@ img {
 .contact__contents {
   margin-top: 40px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact__contents {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -560,12 +564,6 @@ img {
     justify-content: space-between;
     max-width: 960px;
     margin-top: 62px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .contact__contents-main {
-    width: 48.9583333333%;
   }
 }
 
@@ -670,9 +668,8 @@ img {
   margin-top: 40px;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact__contents-sub {
-    width: 27.0833333333%;
     margin-top: 0;
     text-align: left;
   }
@@ -795,7 +792,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .radio__item:not(:first-child) {
-    margin-top: 14px;
+    margin-top: 16px;
   }
 }
 
@@ -813,7 +810,7 @@ img {
 .radio__label,
 .form-group__checkbox-label {
   position: relative;
-  padding-left: 20px;
+  padding-left: 25px;
   font-size: 1.6rem;
   font-weight: 700;
   color: #000000;
@@ -870,6 +867,9 @@ img {
     -webkit-column-gap: 40px;
     -moz-column-gap: 40px;
     column-gap: 40px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -929,6 +929,12 @@ img {
   font-weight: 700;
 }
 
+@media screen and (min-width: 768px) {
+  .form-group__row--name {
+    width: auto;
+  }
+}
+
 .form-group__row > .form-group__input {
   margin-top: 0;
 }
@@ -945,6 +951,7 @@ img {
 .form-group__checkbox-label {
   margin-top: 20px;
   display: inline-block;
+  font-weight: 300;
 }
 @media screen and (min-width: 768px) {
   .form-group__checkbox-label {

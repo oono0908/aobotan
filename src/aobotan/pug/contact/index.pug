@@ -55,7 +55,7 @@ block main
                       | お名前
                       span.form-group__required 必須
                     .form-group__input-wrapper
-                      .form-group__row
+                      .form-group__row.form-group__row--name
                         input.form-group__input#name-family(
                           type="text"
                           name="familyName"
@@ -65,7 +65,7 @@ block main
                           placeholder="青牡丹"
                         )
                         small.form-hint.visually-hidden#name-family-hint 例）青牡丹
-                      .form-group__row
+                      .form-group__row.form-group__row--name
                         input.form-group__input#name-given(
                           type="text"
                           name="givenName"
@@ -124,7 +124,6 @@ block main
                       input.form-group__checkbox-input.visually-hidden#privacy(type="checkbox" name="privacy" required)
                       label.form-group__checkbox-label.label--square(for="privacy")
                         | プライバシーポリシーに同意します
-                        span.form-group__required  必須
                   .form-submit
                     button.btn.btn--primary.btn--circle.btn--submit(type="submit") 送信する
             aside.contact__contents-sub

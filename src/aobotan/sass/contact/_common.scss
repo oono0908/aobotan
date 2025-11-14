@@ -14,18 +14,12 @@
 
 .contact__contents{
   margin-top: 40px;
-  @include mq("md"){
+  @include mq("lg"){
     display: flex;
     column-gap: 40px;
     justify-content: space-between;
     max-width: 960px;
     margin-top: 62px;
-  }
-}
-
-.contact__contents-main{
-  @include mq("md"){
-    width: calc(470 / 960 * 100%);
   }
 }
 
@@ -107,8 +101,7 @@
 .contact__contents-sub{
   margin-top: 40px;
   text-align: center;
-  @include mq("md"){
-    width: calc(260 / 960 * 100%);
+  @include mq("lg"){
     margin-top: 0;
     text-align: left;
   }

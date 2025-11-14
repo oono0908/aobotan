@@ -261,8 +261,9 @@ img {
 
 .contact-common__tel-eng {
   font-size: 3.2rem;
-  font-weight: 700;
+  font-weight: 400;
   display: inline-block;
+  font-family: "Kanit", sans-serif;
 }
 
 .contact-common__tel-ja {
@@ -289,13 +290,14 @@ img {
 
 .contact-common__num {
   font-size: 3.2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #000000;
+  font-family: "Kanit", sans-serif;
 }
 
 .contact-common__num-hours {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #000000;
   margin-top: 10px;
   display: block;
@@ -314,6 +316,8 @@ img {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  background-color: #FFFFFF;
+  border: none;
 }
 .contact-common__mail-btn:before {
   content: "";
@@ -770,6 +774,17 @@ img {
 @media screen and (min-width: 768px) {
   .details__item {
     width: 40.9302325581%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
   }
 }
 
@@ -819,5 +834,6 @@ img {
     font-weight: 400;
     color: #000000;
     margin-top: 20px;
+    text-align: left;
   }
 }

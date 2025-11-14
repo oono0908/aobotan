@@ -41,7 +41,6 @@
   }
 }
 
-
 .mv__img-wrapper {
   display: none;
   position: absolute;
@@ -228,7 +227,7 @@
     max-width: 280px !important;
     aspect-ratio: 1 / 1 !important;
   }
-  @include mq("lg"){
+  @include mq("lg") {
     max-width: 360px !important;
     aspect-ratio: 1 / 1 !important;
   }
@@ -266,7 +265,7 @@
     width: 110px;
     height: 350px;
   }
-  @include mq("lg"){
+  @include mq("lg") {
     font-size: 4rem;
     padding-top: 16px;
     top: calc(254 / 486 * 100%);
@@ -291,14 +290,13 @@
     right: 240px;
     width: 110px;
   }
-  @include mq("lg"){
+  @include mq("lg") {
     top: 452px;
     right: 374px;
     // width: 161px;
     width: calc(161 / 1160 * 100%);
   }
 }
-
 
 .about__body-inner {
   padding-top: 183px;
@@ -384,8 +382,8 @@
 
 .card__inner {
   width: 100%;
-  @include mq("lg"){
-   display: flex;
+  @include mq("lg") {
+    display: flex;
   }
 }
 
@@ -413,7 +411,7 @@
       aspect-ratio: 174 / 168;
       bottom: auto;
     }
-    @include mq("lg"){
+    @include mq("lg") {
       width: calc(174 / 516 * 100%);
     }
   }
@@ -424,8 +422,8 @@
 }
 
 .card__img-wrapper--01 {
-  @include mq("md"){
-    &:after{
+  @include mq("md") {
+    &:after {
       right: 0;
       top: 100%;
       z-index: 1;
@@ -445,8 +443,8 @@
 }
 
 .card__img-wrapper--02 {
-  @include mq("md"){
-    &:after{
+  @include mq("md") {
+    &:after {
       right: 0;
       top: 100%;
       z-index: 1;
@@ -466,8 +464,8 @@
 }
 
 .card__img-wrapper--03 {
-  @include mq("md"){
-    &:after{
+  @include mq("md") {
+    &:after {
       right: 0;
       top: 100%;
       z-index: 10;
@@ -685,8 +683,11 @@
   }
 }
 
+
 .modal__inner {
   position: absolute;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
   width: calc(100% - 32px);
   top: 50%;
   left: 50%;
@@ -696,15 +697,18 @@
   padding-bottom: 25px;
   padding-left: 16px;
   padding-right: 16px;
+  height: 50%;
   @include mq("md") {
     padding-left: 30px;
     padding-right: 30px;
     width: 80%;
+    height: 80%;
   }
   @include mq("lg") {
     padding-left: clamp(30px, calc(102 / 1440 * 100%), 102px);
     padding-right: clamp(30px, calc(102 / 1440 * 100%), 102px);
     width: calc(860 / 1440 * 100%);
+    height: 80%;
   }
 }
 
@@ -732,6 +736,7 @@
     height: 3px;
     background-color: $white;
     transform-origin: center;
+    z-index: 20;
   }
 
   &::before {
@@ -741,6 +746,12 @@
   &::after {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
+}
+
+.modal__content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .modal__title {
@@ -768,12 +779,9 @@
 }
 
 .modal__text-wrapper {
-  overflow-y: scroll;
-  height: 78px;
   margin-top: 15px;
   @include mq("md") {
     margin-top: 35px;
-    height: 87px;
   }
 }
 
