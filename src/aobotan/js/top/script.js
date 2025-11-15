@@ -25,19 +25,20 @@ $(window).on("load", function () {
 $(function () {
   var swiper = new Swiper(".swiper", {
     loop: true, // ループ有効
-  slidesPerView: 3, // 一度に表示する枚数
-  speed: 6000, // ループの時間
-  allowTouchMove: false, // スワイプ無効
-  autoplay: {
+    speed: 6000, // ループの時間
+    allowTouchMove: false, // スワイプ無効
+    autoplay: {
     delay: 0, // 途切れなくループ
   },
 
     breakpoints: {
       0: {
         spaceBetween: 19,
+        slidesPerView: 1
       },
       768: {
         spaceBetween: 48,
+        slidesPerView: 2
       },
     },
   });
