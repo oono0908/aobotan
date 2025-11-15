@@ -105,6 +105,10 @@
   left: calc(18 / 365 * 100%);
   display: none;
   @include mq("md") {
+    top: 70%;
+    left: 25%;
+  }
+  @include mq("lg") {
     top: calc(647 / 873 * 100%);
     left: calc(467 / 1120 * 100%);
   }
@@ -117,6 +121,7 @@
   display: inline-block;
   padding: 14px;
   background-color: $white;
+  font-size: clamp(2.4rem, 5.86vw, 4.5rem);
   @include mq("md") {
     font-size: clamp(3.2rem, 4vw, 6.4rem);
   }
@@ -127,6 +132,7 @@
   font-weight: $bold;
   font-size: 1.2rem;
   margin-top: 21px;
+  font-size: clamp(1.2rem, 2.604vw, 2rem);
   @include mq("md") {
     font-size: clamp(1.2rem, 1vw, 1.6rem);
     margin-top: clamp(10px, 2vw, 35px);
@@ -206,6 +212,14 @@
   @include mq("md") {
     padding-top: 76px;
   }
+}
+
+.swiper{
+  pointer-events: none;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
 }
 
 .about__swiper-container {
@@ -686,8 +700,6 @@
 
 .modal__inner {
   position: absolute;
-  // overflow-y: scroll;
-  // overflow-x: hidden;
   width: calc(100% - 32px);
   top: 50%;
   left: 50%;

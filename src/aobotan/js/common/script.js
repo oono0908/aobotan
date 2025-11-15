@@ -37,12 +37,18 @@ $(function () {
   $title.on("mouseenter", function (e) {
     e.stopPropagation();
     $(this).addClass("is-open");
-    $(this).find(".js-header-pc__nav-items").slideDown();
+    $(this)
+      .find(".js-header-pc__nav-items")
+      .stop(true, false)
+      .slideDown(400, "swing");
   });
   $title.on("mouseleave", function (e) {
     e.stopPropagation();
     $(this).removeClass("is-open");
-    $(this).find(".js-header-pc__nav-items").slideUp();
+    $(this)
+      .find(".js-header-pc__nav-items")
+      .stop(true, false)
+      .slideUp(300, "swing");
   });
 });
 
@@ -57,34 +63,36 @@ $(function () {
   // 現在のURLを取得
   let currentHref = window.location.href;
 
-  $navItem.add($drawerItem).add($footerItem).on("click", function (e) {
-    e.preventDefault();
+  $navItem
+    .add($drawerItem)
+    .add($footerItem)
+    .on("click", function (e) {
+      e.preventDefault();
 
-    let href = $(this).attr("href");
-    let dataHref = $(this).attr("data-href");
+      let href = $(this).attr("href");
+      let dataHref = $(this).attr("data-href");
 
-    if (dataHref === "#about") {
-      window.location.href = "/aobotan/about/index.html" + href;
-
-    } else if (dataHref === "#service") {
-      window.location.href = "/aobotan/service/index.html" + href;
-
-    } else if (dataHref === "#news") {
-      // トップページの時と下層ページの時で遷移先を変える
-      if (currentHref.includes("about") || currentHref.includes("service") || currentHref.includes("contact")) {
-        window.location.href = "/aobotan/index.html" + href;
-
-      } else {
-        window.location.href = "/aobotan/index.html" + href;
-
+      if (dataHref === "#about") {
+        window.location.href = "/aobotan/about/index.html" + href;
+      } else if (dataHref === "#service") {
+        window.location.href = "/aobotan/service/index.html" + href;
+      } else if (dataHref === "#news") {
+        // トップページの時と下層ページの時で遷移先を変える
+        if (
+          currentHref.includes("about") ||
+          currentHref.includes("service") ||
+          currentHref.includes("contact")
+        ) {
+          window.location.href = "/aobotan/index.html" + href;
+        } else {
+          window.location.href = "/aobotan/index.html" + href;
+        }
+      } else if (dataHref === "#contact") {
+        window.location.href = "/aobotan/contact/index.html";
+      } else if (dataHref === "#top") {
+        window.location.href = "/aobotan/index.html";
       }
-    } else if (dataHref === "#contact") {
-      window.location.href = "/aobotan/contact/index.html";
-
-    } else if (dataHref === "#top") {
-      window.location.href = "/aobotan/index.html";
-    }
-  });
+    });
 });
 
 window.onload = function () {
@@ -110,7 +118,6 @@ window.onload = function () {
     window.location.pathname + window.location.search
   );
 };
-
 
 // ページ内アンカーリンクのスムーズスクロール
 $(function () {
@@ -138,21 +145,21 @@ $(function () {
 });
 
 // スクロール時にヘッダーの背景色を変える
-$(function() {
-  $(window).on('scroll', function() {
-    let aboutTop = $('.js-scroll-top').offset().top;
+$(function () {
+  $(window).on("scroll", function () {
+    let aboutTop = $(".js-scroll-top").offset().top;
     let scroll = $(window).scrollTop();
 
     if (scroll >= aboutTop) {
-      $('.js-header-sp').css('background-color', "#ffffff");
+      $(".js-header-sp").css("background-color", "#ffffff");
     } else {
-      $('.js-header-sp').css('background-color', 'transparent');
+      $(".js-header-sp").css("background-color", "transparent");
     }
   });
 });
 
 // ローディング画面のフェードアウト
-$(window).on('load', function () {
+$(window).on("load", function () {
   // ページの全てのリソース読み込み完了でフェードアウト
-  $('#loadingOverlay').fadeOut(300);
+  $("#loadingOverlay").fadeOut(300);
 });

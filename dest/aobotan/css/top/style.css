@@ -584,6 +584,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .mv__title {
+    top: 70%;
+    left: 25%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mv__title {
     top: 74.1122565865%;
     left: 41.6964285714%;
   }
@@ -596,6 +602,7 @@ img {
   display: inline-block;
   padding: 14px;
   background-color: #FFFFFF;
+  font-size: clamp(2.4rem, 5.86vw, 4.5rem);
 }
 @media screen and (min-width: 768px) {
   .mv__title-main {
@@ -608,6 +615,7 @@ img {
   font-weight: 700;
   font-size: 1.2rem;
   margin-top: 21px;
+  font-size: clamp(1.2rem, 2.604vw, 2rem);
 }
 @media screen and (min-width: 768px) {
   .mv__title-sub {
@@ -716,6 +724,15 @@ img {
   .about__inner {
     padding-top: 76px;
   }
+}
+
+.swiper {
+  pointer-events: none;
+}
+
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
 }
 
 .about__swiper-container {

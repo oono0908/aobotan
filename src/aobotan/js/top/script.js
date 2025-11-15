@@ -21,22 +21,57 @@ $(window).on("load", function () {
 });
 
 // aboutセクションのswiper
+// $(function () {
+//   var swiper = new Swiper(".swiper", {
+//     loop: true,
+//     slidesPerView: "auto",
+//     speed: 800,
+//     allowTouchMove: false,
+//     loopAdditionalSlides: 10,
+//     allowTouchMove: false,
+//     autoplay: {
+//       delay: 0,
+//       disableOnInteraction: false,
+//       pauseOnMouseEnter: false,
+//     },
+//     preventClicks: false,
+//     preventClicksPropagation: false,
+//     simulateTouch: false,
+//     breakpoints: {
+//       0: {
+//         spaceBetween: 19,
+//         simulateTouch: false,
+//       },
+//       768: {
+//         spaceBetween: 48,
+//       },
+//     },
+//   });
+// });
+
 $(function () {
   var swiper = new Swiper(".swiper", {
     loop: true,
     slidesPerView: "auto",
-    speed: 8000,
     allowTouchMove: false,
-    freeMode: true,
-    freeModeMomentum: false,
-    loopAdditionalSlides: 10,
+    loopAdditionalSlides: 20, // 多めにしておくとループが安定しやすい
+
+    // 1周にかかる時間（大きいほどゆっくり流れる）
+    speed: 15000,
+
+    // ★ delay: 0 はバグりやすいので 1 にする
     autoplay: {
-      delay: 0,
+      delay: 1,
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
+      stopOnLastSlide: false,
+      waitForTransition: false,
     },
+
     preventClicks: false,
     preventClicksPropagation: false,
+    simulateTouch: false,
+
     breakpoints: {
       0: {
         spaceBetween: 19,
@@ -47,6 +82,7 @@ $(function () {
     },
   });
 });
+
 
 // mvの中の画像がマウスの動きに応じて動く
 $(function () {
