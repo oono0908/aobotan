@@ -27,6 +27,7 @@ $(function () {
     loop: true, // ループ有効
     speed: 6000, // ループの時間
     allowTouchMove: false, // スワイプ無効
+    loopAdditionalSlides: 10,
     autoplay: {
     delay: 0, // 途切れなくループ
   },
