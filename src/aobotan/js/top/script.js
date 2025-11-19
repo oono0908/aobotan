@@ -28,19 +28,9 @@ $(function () {
     speed: 6000, // ループの時間
     allowTouchMove: false, // スワイプ無効
     loopAdditionalSlides: 10,
+    slidesPerView: "auto", 
     autoplay: {
-    delay: 0, // 途切れなくループ
-  },
-
-    breakpoints: {
-      0: {
-        spaceBetween: 19,
-        slidesPerView: 1
-      },
-      768: {
-        spaceBetween: 48,
-        slidesPerView: 2
-      },
+      delay: 0, // 途切れなくループ
     },
   });
 });

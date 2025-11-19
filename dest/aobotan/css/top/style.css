@@ -103,7 +103,9 @@ select:disabled:focus,
 
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .btn {
@@ -742,6 +744,7 @@ img {
 .about__swiper {
   padding: 16px 0 16px 58px !important;
   background-color: #F8F8F8 !important;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .about__swiper {
@@ -749,28 +752,31 @@ img {
   }
 }
 
-.swiper-slide {
-  max-width: 200px !important;
-  aspect-ratio: 1/1 !important;
+.about__swiper .swiper-slide {
+  width: auto;
+  margin-right: 19px;
 }
 @media screen and (min-width: 768px) {
-  .swiper-slide {
-    max-width: 280px !important;
-    aspect-ratio: 1/1 !important;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .swiper-slide {
-    max-width: 360px !important;
-    aspect-ratio: 1/1 !important;
+  .about__swiper .swiper-slide {
+    margin-right: 48px;
   }
 }
 
 .swiper-slide > img {
-  -o-object-fit: cover !important;
-  object-fit: cover !important;
-  width: 100% !important;
-  height: 100% !important;
+  width: 200px !important;
+  aspect-ratio: 1/1 !important;
+}
+@media screen and (min-width: 768px) {
+  .swiper-slide > img {
+    width: 280px !important;
+    aspect-ratio: 1/1 !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .swiper-slide > img {
+    width: 360px !important;
+    aspect-ratio: 1/1 !important;
+  }
 }
 
 .about__swiper-text {

@@ -57,9 +57,9 @@ $(function () {
   // pc版のheaderリンククリック時
   let $navItem = $(".js-header-pc__nav-item").find("a");
   // ドロワーのリンククリック時
-  let $drawerItem = $(".drawer__item").find("a");
+  let $drawerItem = $(".js-drawer__item").find("a");
   // フッターのリンククリック時
-  let $footerItem = $(".footer-nav__item").find("a");
+  let $footerItem = $(".js-footer-nav__item").find("a");
   // 現在のURLを取得
   let currentHref = window.location.href;
 
@@ -71,28 +71,51 @@ $(function () {
 
       let href = $(this).attr("href");
       let dataHref = $(this).attr("data-href");
+      let isTopPage =
+        !currentHref.includes("about") &&
+        !currentHref.includes("service") &&
+        !currentHref.includes("contact");
 
-      if (dataHref === "#about") {
-        window.location.href = "/aobotan/about/index.html" + href;
-      } else if (dataHref === "#service") {
-        window.location.href = "/aobotan/service/index.html" + href;
-      } else if (dataHref === "#news") {
-        // トップページの時と下層ページの時で遷移先を変える
-        if (
-          currentHref.includes("about") ||
-          currentHref.includes("service") ||
-          currentHref.includes("contact")
-        ) {
+      // 同じページ内の場合はスクロール、異なる場合はページ遷移
+      if (dataHref === "#about" && currentHref.includes("about")) {
+        scrollToTarget(href);
+      } else if (dataHref === "#service" && currentHref.includes("service")) {
+        scrollToTarget(href);
+      } else if (dataHref === "#news" && isTopPage) {
+        scrollToTarget(href);
+      } else if (dataHref === "#contact" && currentHref.includes("contact")) {
+        scrollToTarget(href);
+      } else if (dataHref === "#top" && isTopPage) {
+        scrollToTarget(href);
+      } else {
+        // ページ遷移
+        if (dataHref === "#about") {
+          window.location.href = "/aobotan/about/index.html" + href;
+        } else if (dataHref === "#service") {
+          window.location.href = "/aobotan/service/index.html" + href;
+        } else if (dataHref === "#news") {
           window.location.href = "/aobotan/index.html" + href;
-        } else {
-          window.location.href = "/aobotan/index.html" + href;
+        } else if (dataHref === "#contact") {
+          window.location.href = "/aobotan/contact/index.html";
+        } else if (dataHref === "#top") {
+          window.location.href = "/aobotan/index.html";
         }
-      } else if (dataHref === "#contact") {
-        window.location.href = "/aobotan/contact/index.html";
-      } else if (dataHref === "#top") {
-        window.location.href = "/aobotan/index.html";
       }
     });
+
+  // スクロール処理の共通関数
+  function scrollToTarget(href) {
+    let $target = href.replace("#", "");
+    let className = $("." + $target);
+    if (className.length) {
+      let windowWidth = $(window).width();
+      let scrollOffset = windowWidth > 768 ? 60 : 120;
+      let scrollPosition = className.offset().top - scrollOffset;
+      $("html, body").animate({ scrollTop: scrollPosition }, 600);
+    } else if (href === "#top" || !href) {
+      $("html, body").animate({ scrollTop: 0 }, 600);
+    }
+  }
 });
 
 window.onload = function () {
@@ -118,31 +141,6 @@ window.onload = function () {
     window.location.pathname + window.location.search
   );
 };
-
-// ページ内アンカーリンクのスムーズスクロール
-$(function () {
-  // pc版のheaderリンククリック時
-  let $navItem = $(".js-header-pc__nav-item").find("a");
-  // ドロワーのリンククリック時
-  let $drawerItem = $(".drawer__item").find("a");
-
-  $navItem.add($drawerItem).on("click", function (e) {
-    let href = $(this).attr("href");
-    let $target = href.replace("#", "");
-    if ($target.length) {
-      e.preventDefault();
-      let className = $("." + $target);
-      let targetOffset = className.offset().top - 60;
-      $("html, body").animate(
-        {
-          scrollTop: targetOffset,
-        },
-        800,
-        "swing"
-      );
-    }
-  });
-});
 
 // スクロール時にヘッダーの背景色を変える
 $(function () {

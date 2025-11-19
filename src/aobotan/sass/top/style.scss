@@ -229,28 +229,34 @@
 .about__swiper {
   padding: 16px 0 16px 58px !important;
   background-color: $white2 !important;
+  overflow: hidden;
   @include mq("md") {
     padding: 63px 0 63px 48px !important;
   }
 }
 
-.swiper-slide {
-  max-width: 200px !important;
-  aspect-ratio: 1 / 1 !important;
+.about__swiper .swiper-slide {
+  width: auto; 
+  margin-right: 19px;
+
   @include mq("md") {
-    max-width: 280px !important;
-    aspect-ratio: 1 / 1 !important;
-  }
-  @include mq("lg") {
-    max-width: 360px !important;
-    aspect-ratio: 1 / 1 !important;
+    margin-right: 48px;
   }
 }
 
-.swiper-slide > img {
-  object-fit: cover !important;
-  width: 100% !important;
-  height: 100% !important;
+
+
+.swiper-slide > img{
+  width: 200px !important;
+  aspect-ratio: 1 / 1 !important;
+  @include mq("md") {
+    width: 280px !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+  @include mq("lg") {
+    width: 360px !important;
+    aspect-ratio: 1 / 1 !important;
+  }
 }
 
 .about__swiper-text {
