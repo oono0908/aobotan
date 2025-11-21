@@ -3,7 +3,7 @@ block var
 doctype
 html(lang="ja")
   head
-    meta(name="robots" content="noindex,nofollow")
+    //- meta(name="robots" content="noindex,nofollow")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width,initial-scale=1.0 viewport-fit=cover")
     meta(name="format-detection" content="telephone=no")
@@ -35,19 +35,22 @@ html(lang="ja")
     // Google Fonts
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet")
-
+    link(rel="preload" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'")
+    noscript
+      link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap")
+    block styles
     block css
-      link(rel='stylesheet', href="/aobotan/css/common/reset.css" type="text/css")
-      link(rel='stylesheet', href="/aobotan/css/common/style.css" type="text/css")
+      link(rel='stylesheet', href="/aobotan/css/common/reset.min.css" type="text/css")
+      link(rel='stylesheet', href="/aobotan/css/common/style.min.css" type="text/css")
     block js
-      script(src="https://code.jquery.com/jquery-3.6.0.min.js")
-      script(src='/aobotan/js/common/script.js')
+      script(src="https://code.jquery.com/jquery-3.6.0.min.js" defer)
+      script(src='/aobotan/js/common/script.min.js' defer)
   body
     .body__inner
       include ./_loading.pug
       include ./_header.pug
       block main
+      
 
 
 

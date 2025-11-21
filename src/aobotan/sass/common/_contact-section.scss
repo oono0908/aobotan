@@ -3,35 +3,35 @@
 @use "../common/btn";
 
 // contact
-.contact-common{
+.contact-common {
   padding-top: 85px;
-  @include mq("md"){
+  @include mq("md") {
     padding-top: 160px;
   }
 }
 
-.contact-common__inner{
+.contact-common__inner {
   padding: 27px 20px;
   background-color: $white2;
   position: relative;
   width: 100%;
-  &:after{
+  &:after {
     content: "";
     display: block;
     width: calc(59 / 375 * 100%);
     aspect-ratio: 59 / 86;
     position: absolute;
-    background-image: url("/aobotan/img/top/contact/contact.png");
+    background-image: url("/aobotan/img/top/contact/contact.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     top: -10%;
     right: 8%;
   }
-  @include mq("md"){
+  @include mq("md") {
     padding: 32px 24px;
     border-radius: 50px 0 0 50px;
-    &:after{
+    &:after {
       content: "";
       display: block;
       width: calc(175 / 1160 * 100%);
@@ -40,21 +40,21 @@
   }
 }
 
-.contact-common__body{
+.contact-common__body {
   margin-top: 47px;
-  @include mq("lg"){
+  @include mq("lg") {
     margin-top: 39px;
     display: flex;
     align-items: center;
   }
 }
 
-.contact-common__tel-wrapper{
+.contact-common__tel-wrapper {
   padding-bottom: 29px;
   border-bottom: 1px solid $black;
   display: flex;
   align-items: baseline;
-  @include mq("lg"){
+  @include mq("lg") {
     flex-direction: column;
     padding-right: 32px;
     border-bottom: none;
@@ -62,39 +62,39 @@
   }
 }
 
-.contact-common__tel-eng{
+.contact-common__tel-eng {
   font-size: 3.2rem;
   font-weight: $normal;
   display: inline-block;
   font-family: $kanit;
 }
 
-.contact-common__tel-ja{
+.contact-common__tel-ja {
   font-size: 1.2rem;
   font-weight: $bold;
   display: inline-block;
   margin-left: 16px;
-  @include mq("lg"){
+  @include mq("lg") {
     margin-left: 0;
     margin-top: 10px;
   }
 }
 
-.contact-common__num-wrapper{
+.contact-common__num-wrapper {
   padding: 24px 0 36px 0;
-  @include mq("lg"){
+  @include mq("lg") {
     padding: 0 32px;
   }
 }
 
-.contact-common__num{
+.contact-common__num {
   font-size: 3.2rem;
   font-weight: $normal;
   color: $black;
   font-family: $kanit;
 }
 
-.contact-common__num-hours{
+.contact-common__num-hours {
   font-size: 1.2rem;
   font-weight: $normal;
   color: $black;
@@ -102,7 +102,7 @@
   display: block;
 }
 
-.contact-common__mail-btn{
+.contact-common__mail-btn {
   margin: 0 auto;
   width: 284px;
   display: flex;
@@ -111,7 +111,7 @@
   position: relative;
   background-color: $white;
   border: none;
-  &:before{
+  &:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -124,7 +124,7 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-  @include mq("lg"){
-    margin: 0 0 0 32px
+  @include mq("lg") {
+    margin: 0 0 0 32px;
   }
 }

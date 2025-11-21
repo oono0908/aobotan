@@ -25,7 +25,8 @@ body {
   }
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -57,7 +58,7 @@ button:hover {
 
 a[href]:focus-visible,
 button:focus-visible,
-[role=button]:focus-visible,
+[role="button"]:focus-visible,
 [tabindex]:not([tabindex="-1"]):focus-visible {
   outline: var(--focus-ring);
   outline-offset: var(--focus-offset);
@@ -66,7 +67,7 @@ button:focus-visible,
 
 a[href]:focus,
 button:focus,
-[role=button]:focus,
+[role="button"]:focus,
 [tabindex]:not([tabindex="-1"]):focus {
   outline: var(--focus-ring);
   outline-offset: var(--focus-offset);
@@ -74,13 +75,13 @@ button:focus,
 
 a[href]:focus:not(:focus-visible),
 button:focus:not(:focus-visible),
-[role=button]:focus:not(:focus-visible),
+[role="button"]:focus:not(:focus-visible),
 [tabindex]:not([tabindex="-1"]):focus:not(:focus-visible) {
   outline: none;
 }
 
 button:disabled:focus,
-[aria-disabled=true]:focus {
+[aria-disabled="true"]:focus {
   outline: none;
 }
 
@@ -127,29 +128,29 @@ img {
   background-color: #000000;
 }
 .btn--primary:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000000;
 }
 .btn--primary:hover:after {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .btn--secondary {
-  border: 1px solid #4282B8;
-  color: #4282B8;
+  border: 1px solid #4282b8;
+  color: #4282b8;
   width: 260px;
   font-weight: 700;
   font-size: 1.6rem;
 }
 .btn--secondary:after {
-  background-color: #4282B8;
+  background-color: #4282b8;
 }
 .btn--secondary:hover {
-  color: #FFFFFF;
-  background-color: #4282B8;
+  color: #ffffff;
+  background-color: #4282b8;
 }
 .btn--secondary:hover:after {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .btn--secondary {
@@ -168,7 +169,7 @@ img {
 
 .contact__inner {
   padding: 27px 20px;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   position: relative;
   width: 100%;
 }
@@ -178,7 +179,7 @@ img {
   width: 15.7333333333%;
   aspect-ratio: 59/86;
   position: absolute;
-  background-image: url("/aobotan/img/top/contact/contact.png");
+  background-image: url("/aobotan/img/top/contact/contact.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -323,7 +324,7 @@ img {
   .fv:before {
     content: "";
     aspect-ratio: 727/583;
-    background-color: #4282B8;
+    background-color: #4282b8;
     position: absolute;
     top: 0;
     right: 0;
@@ -348,11 +349,11 @@ img {
 }
 
 .about-fv__inner {
-  background-image: url("/aobotan/img/about/about-fv.jpg");
+  background-image: url("/aobotan/img/about/about-fv.webp");
 }
 
 .service-fv__inner {
-  background-image: url("/aobotan/img/service/service-fv.jpg");
+  background-image: url("/aobotan/img/service/service-fv.webp");
 }
 
 .title {
@@ -398,11 +399,11 @@ img {
 }
 
 .title--about:after {
-  background-image: url("/aobotan/img/about/about-img01.png");
+  background-image: url("/aobotan/img/about/about-img01.webp");
 }
 
 .title--service:after {
-  background-image: url("/aobotan/img/service/service-img01.png");
+  background-image: url("/aobotan/img/service/service-img01.webp");
 }
 
 @media screen and (min-width: 768px) {
@@ -425,8 +426,8 @@ img {
     width: 208px;
     height: 60px;
     border-radius: 10px;
-    border: 1px solid #4282B8;
-    background-color: #FFFFFF;
+    border: 1px solid #4282b8;
+    background-color: #ffffff;
     color: #000000;
     font-size: 1.6rem;
     padding-top: 11px;
@@ -443,8 +444,8 @@ img {
     bottom: 11px;
     width: 5px;
     height: 5px;
-    border-left: 1px solid #4282B8;
-    border-bottom: 1px solid #4282B8;
+    border-left: 1px solid #4282b8;
+    border-bottom: 1px solid #4282b8;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }

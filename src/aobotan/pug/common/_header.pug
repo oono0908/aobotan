@@ -4,11 +4,11 @@ header.header
       if page === "top"
         h1.header-sp__logo.logo-title
           a(href="#").logo-title__link
-            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル' loading="lazy")
+            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル' loading="eager" fetchpriority="high")
       else
         h1.header-sp__logo.logo-title
           a(href="../index.html").logo-title__link
-            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル' loading="lazy")
+            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル' loading="eager" fetchpriority="high")
       .hamberger.md-none.js-hamberger
         span.hamberger__line.js-hamberger__line
         span.hamberger__line.js-hamberger__line
@@ -44,11 +44,11 @@ header.header
       if page === "top"
         h1.header-pc__logo.logo-title
           a(href="#").logo-title__link
-            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル' loading="lazy" width="200" height="121")
+            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル' loading="eager" fetchpriority="high" width="200" height="121")
       else
         h1.header-pc__logo.logo-title
           a(href="../").logo-title__link
-            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル' loading="lazy" width="200" height="121")
+            img.logo-title__img(src='/aobotan/img/common/title-logo.svg', alt='タイトル' loading="eager" fetchpriority="high" width="200" height="121")
       nav.header-pc__nav
         .header-pc__nav-title-wrapper.js-header-pc__nav-title-wrapper
           a.header-pc__nav-title(href="#about") 私たちについて

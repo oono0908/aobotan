@@ -4,14 +4,14 @@
 /* =========================================================
 header-sp
 ========================================================= */
-.header{
+.header {
   width: 100%;
   position: relative;
-  @include mq("md"){
+  @include mq("md") {
     width: 240px;
   }
-  @include mq("lg"){
-   width: 280px;
+  @include mq("lg") {
+    width: 280px;
   }
 }
 .header-sp {
@@ -82,7 +82,6 @@ header-sp
   }
 }
 
-
 .drawer {
   position: fixed;
   top: 0;
@@ -141,12 +140,12 @@ header-sp
   font-weight: $bold;
   font-size: 1.8rem;
   padding-left: 25px;
-  &:before{
+  &:before {
     content: "";
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url("/aobotan/img/common/mail.png");
+    background-image: url("/aobotan/img/common/mail.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -158,7 +157,7 @@ header-sp
   }
 }
 
-.drawer__copy{
+.drawer__copy {
   display: block;
   margin: 0 auto;
   margin-top: 28px;
@@ -168,16 +167,16 @@ header-sp
 header-pc
 ========================================================= */
 
-.header-pc{
+.header-pc {
   position: fixed;
   background-color: $white;
   top: 0;
   left: 0;
 }
 
-.header-pc__inner{
+.header-pc__inner {
   padding: 74px 20px 0 20px;
-  @include mq("lg"){
+  @include mq("lg") {
     padding: 74px 40px 0 40px;
   }
 }
@@ -191,16 +190,16 @@ header-pc
   }
 }
 
-.header-pc__nav{
+.header-pc__nav {
   margin-top: 57px;
 }
 
-.header-pc__nav-title-wrapper{
-  padding-bottom:32px;
+.header-pc__nav-title-wrapper {
+  padding-bottom: 32px;
   border-bottom: 1px solid $blue2;
 }
 
-.header-pc__nav-title{
+.header-pc__nav-title {
   font-size: 2rem;
   font-weight: $bold;
   display: block;
@@ -210,23 +209,23 @@ header-pc
   &:hover {
     opacity: 0.5;
   }
-  &:before{
+  &:before {
     content: "";
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
-    right:0;
+    right: 0;
     width: 24px;
     height: 1px;
     background-color: $blue;
     transition: all 0.3s ease;
   }
-  &:after{
+  &:after {
     content: "";
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
-    right:12px;
+    right: 12px;
     width: 1px;
     height: 24px;
     background-color: $blue;
@@ -234,38 +233,38 @@ header-pc
   }
 }
 
-.header-pc__nav-title--news, 
-.header-pc__nav-title--contact{
-  &:before{
+.header-pc__nav-title--news,
+.header-pc__nav-title--contact {
+  &:before {
     display: none;
   }
-  &:after{
+  &:after {
     display: none;
   }
 }
-.header-pc__nav-title-wrapper:not(:first-child){
+.header-pc__nav-title-wrapper:not(:first-child) {
   margin-top: 32px;
 }
 
-.header-pc__nav-title-wrapper.is-open > .header-pc__nav-title{
-  &:before{
+.header-pc__nav-title-wrapper.is-open > .header-pc__nav-title {
+  &:before {
     opacity: 0;
   }
-  &:after{
+  &:after {
     transform: translateY(-50%) rotate(90deg);
   }
 }
 
-.header-pc__nav-items{
+.header-pc__nav-items {
   display: none;
   padding: 32px 17px 0;
 }
 
-.header-pc__nav-item:not(:first-child){
+.header-pc__nav-item:not(:first-child) {
   margin-top: 24px;
 }
 
-.header-pc__nav-link{
+.header-pc__nav-link {
   font-size: 1.4rem;
   font-weight: $bold;
   color: $black;
@@ -275,14 +274,14 @@ header-pc
   }
 }
 
-.header-pc__nav-title{
+.header-pc__nav-title {
   color: $black;
   font-weight: $bold;
 }
 
-.header-pc__nav-title-wrapper--contact{
+.header-pc__nav-title-wrapper--contact {
   position: relative;
-  &:before{
+  &:before {
     content: "";
     position: absolute;
     left: 0;
@@ -295,7 +294,7 @@ header-pc
   }
 }
 
-.header-pc__nav-title--contact{
+.header-pc__nav-title--contact {
   display: block;
   padding-left: 35px;
 }

@@ -214,7 +214,7 @@
   }
 }
 
-.swiper{
+.swiper {
   pointer-events: none;
 }
 
@@ -236,7 +236,7 @@
 }
 
 .about__swiper .swiper-slide {
-  width: auto; 
+  width: auto;
   margin-right: 19px;
 
   @include mq("md") {
@@ -244,9 +244,7 @@
   }
 }
 
-
-
-.swiper-slide > img{
+.swiper-slide > img {
   width: 200px !important;
   aspect-ratio: 1 / 1 !important;
   @include mq("md") {
@@ -363,7 +361,7 @@
   &:before {
     content: "";
     position: absolute;
-    background-image: url("/aobotan/img/top/service/service.png");
+    background-image: url("/aobotan/img/top/service/service.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -702,7 +700,6 @@
     opacity: 1;
   }
 }
-
 
 .modal__inner {
   position: absolute;

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta name="robots" content="noindex,nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0 viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
@@ -21,14 +20,17 @@
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/aobotan/css/common/reset.css" type="text/css">
-    <link rel="stylesheet" href="/aobotan/css/common/style.css" type="text/css">
-    <link rel="stylesheet" href="/suit-site/css/thanks/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/aobotan/js/common/script.js"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;700&amp;display=swap">
+    </noscript>
+    <link rel="stylesheet" href="/aobotan/css/common/reset.min.css" type="text/css">
+    <link rel="stylesheet" href="/aobotan/css/common/style.min.css" type="text/css">
+    <link rel="stylesheet" href="/suit-site/css/thanks/style.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="/aobotan/js/common/script.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" defer></script>
-    <script src="/suit-site/js/common/script.js" defer></script>
+    <script src="/suit-site/js/common/script.min.js" defer></script>
   </head>
   <body>
     <div class="body__inner">
@@ -38,7 +40,7 @@
       <header class="header">
         <div class="header-sp js-header-sp md-none">
           <div class="header-sp__inner">
-            <h1 class="header-sp__logo logo-title"><a class="logo-title__link" href="../index.html"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル" loading="lazy"></a></h1>
+            <h1 class="header-sp__logo logo-title"><a class="logo-title__link" href="../index.html"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル" loading="eager" fetchpriority="high"></a></h1>
             <div class="hamberger md-none js-hamberger"><span class="hamberger__line js-hamberger__line"></span><span class="hamberger__line js-hamberger__line"></span><span class="hamberger__line js-hamberger__line"></span></div>
           </div>
         </div>
@@ -61,7 +63,7 @@
         </div>
         <div class="header-pc md-show">
           <div class="header-pc__inner">
-            <h1 class="header-pc__logo logo-title"><a class="logo-title__link" href="../"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル" loading="lazy" width="200" height="121"></a></h1>
+            <h1 class="header-pc__logo logo-title"><a class="logo-title__link" href="../"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル" loading="eager" fetchpriority="high" width="200" height="121"></a></h1>
             <nav class="header-pc__nav">
               <div class="header-pc__nav-title-wrapper js-header-pc__nav-title-wrapper"><a class="header-pc__nav-title" href="#about">私たちについて</a>
                 <ul class="header-pc__nav-items js-header-pc__nav-items">

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta name="robots" content="noindex,nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0 viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
@@ -22,15 +21,18 @@
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/aobotan/css/common/reset.css" type="text/css">
-    <link rel="stylesheet" href="/aobotan/css/common/style.css" type="text/css">
-    <link rel="stylesheet" href="/aobotan/css/service/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/aobotan/js/common/script.js"></script>
-    <script src="/aobotan/js/common/script.js" defer></script>
-    <script src="/aobotan/js/service/script.js" defer></script>
-    <script src="/aobotan/js/scroll-btn/script.js" defer></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;700&amp;display=swap">
+    </noscript>
+    <link rel="stylesheet" href="/aobotan/css/common/reset.min.css" type="text/css">
+    <link rel="stylesheet" href="/aobotan/css/common/style.min.css" type="text/css">
+    <link rel="stylesheet" href="/aobotan/css/service/style.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="/aobotan/js/common/script.min.js" defer></script>
+    <script src="/aobotan/js/common/script.min.js" defer></script>
+    <script src="/aobotan/js/service/script.min.js" defer></script>
+    <script src="/aobotan/js/scroll-btn/script.min.js" defer></script>
   </head>
   <body>
     <div class="body__inner">
@@ -40,7 +42,7 @@
       <header class="header">
         <div class="header-sp js-header-sp md-none">
           <div class="header-sp__inner">
-            <h1 class="header-sp__logo logo-title"><a class="logo-title__link" href="../index.html"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル" loading="lazy"></a></h1>
+            <h1 class="header-sp__logo logo-title"><a class="logo-title__link" href="../index.html"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル" loading="eager" fetchpriority="high"></a></h1>
             <div class="hamberger md-none js-hamberger"><span class="hamberger__line js-hamberger__line"></span><span class="hamberger__line js-hamberger__line"></span><span class="hamberger__line js-hamberger__line"></span></div>
           </div>
         </div>
@@ -63,7 +65,7 @@
         </div>
         <div class="header-pc md-show">
           <div class="header-pc__inner">
-            <h1 class="header-pc__logo logo-title"><a class="logo-title__link" href="../"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル" loading="lazy" width="200" height="121"></a></h1>
+            <h1 class="header-pc__logo logo-title"><a class="logo-title__link" href="../"><img class="logo-title__img" src="/aobotan/img/common/title-logo.svg" alt="タイトル" loading="eager" fetchpriority="high" width="200" height="121"></a></h1>
             <nav class="header-pc__nav">
               <div class="header-pc__nav-title-wrapper js-header-pc__nav-title-wrapper"><a class="header-pc__nav-title" href="#about">私たちについて</a>
                 <ul class="header-pc__nav-items js-header-pc__nav-items">
@@ -109,7 +111,7 @@
             <section class="section01">
               <ul class="section__items section__items">
                 <li class="section__item item residential" id="service-residential">
-                  <div class="item__img-wrapper"><img class="item__img" src="/aobotan/img/service/service-section01 1.jpg" alt="住宅建築・リフォームについて紹介するための住宅の写真" loading="lazy" width="960" height="400"></div>
+                  <div class="item__img-wrapper"><img class="item__img" src="/aobotan/img/service/service-section01 1.webp" alt="住宅建築・リフォームについて紹介するための住宅の写真" loading="lazy" width="960" height="400"></div>
                   <div class="item__body">
                     <h3 class="item__title">住宅建築・リフォーム</h3>
                     <div class="item__info-wrapper">
@@ -119,19 +121,19 @@
                     <ul class="item__details">
                       <li class="details__item">
                         <div class="details__title">芦屋（兵庫県）のコテージ付き住宅</div>
-                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section01 2.jpg" alt="住宅建築・リフォームについて紹介するための住宅の写真" loading="lazy" width="352" height="274"></div>
+                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section01 2.webp" alt="住宅建築・リフォームについて紹介するための住宅の写真" loading="lazy" width="352" height="274"></div>
                         <div class="details__date">工年月：R2年2月 構造：S造</div>
                       </li>
                       <li class="details__item">
                         <div class="details__title">鷹峯（京都府京都市）のモダン和風住宅</div>
-                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section01 3.jpg" alt="住宅建築・リフォームについて紹介するための住宅の写真" loading="lazy" width="352" height="274"></div>
+                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section01 3.webp" alt="住宅建築・リフォームについて紹介するための住宅の写真" loading="lazy" width="352" height="274"></div>
                         <div class="details__date">施工年月：R4年4月 構造：木造</div>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li class="section__item item corporate" id="service-corporate">
-                  <div class="item__img-wrapper"><img class="item__img" src="/aobotan/img/service/service-section02 1.jpg" alt="法人新築・リフォームのイメージ写真" loading="lazy" width="960" height="400"></div>
+                  <div class="item__img-wrapper"><img class="item__img" src="/aobotan/img/service/service-section02 1.webp" alt="法人新築・リフォームのイメージ写真" loading="lazy" width="960" height="400"></div>
                   <div class="item__body">
                     <h3 class="item__title">法人新築・リフォーム</h3>
                     <div class="item__info-wrapper">
@@ -141,19 +143,19 @@
                     <ul class="item__details">
                       <li class="details__item">
                         <div class="details__title">株式会社kaminari station</div>
-                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section02 2.jpg" alt="株式会社kaminari station 外観写真" loading="lazy" width="352" height="274"></div>
+                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section02 2.webp" alt="株式会社kaminari station 外観写真" loading="lazy" width="352" height="274"></div>
                         <div class="details__date">施工年月：H25年4月 構造：S造</div>
                       </li>
                       <li class="details__item">
                         <div class="details__title">鮮室隆運（株）</div>
-                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section02 3.jpg" alt="青い外装の工場外観写真" loading="lazy" width="352" height="274"></div>
+                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section02 3.webp" alt="青い外装の工場外観写真" loading="lazy" width="352" height="274"></div>
                         <div class="details__date">施工年月：R4年3月 構造：S造</div>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li class="section__item item public" id="service-public">
-                  <div class="item__img-wrapper"><img class="item__img" src="/aobotan/img/service/service-section03 1.jpg" alt="公共工事の実績イメージ（公共施設の外観）" loading="lazy" width="960" height="400"></div>
+                  <div class="item__img-wrapper"><img class="item__img" src="/aobotan/img/service/service-section03 1.webp" alt="公共工事の実績イメージ（公共施設の外観）" loading="lazy" width="960" height="400"></div>
                   <div class="item__body">
                     <h3 class="item__title">公共工事</h3>
                     <div class="item__info-wrapper">
@@ -163,12 +165,12 @@
                     <ul class="item__details">
                       <li class="details__item">
                         <div class="details__title">神戸市立真島小学校 内装工事</div>
-                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section03 2.jpg" alt="小学校の教室内装の写真" loading="lazy" width="352" height="274"></div>
+                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section03 2.webp" alt="小学校の教室内装の写真" loading="lazy" width="352" height="274"></div>
                         <div class="details__date">施工年月：R1年3月 構造：S造</div>
                       </li>
                       <li class="details__item">
                         <div class="details__title">枚方市内暮方郵便局</div>
-                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section03 3.jpg" alt="郵便局庁舎の外観写真" loading="lazy" width="352" height="274"></div>
+                        <div class="details__img-wrapper"><img class="details__img" src="/aobotan/img/service/service-section03 3.webp" alt="郵便局庁舎の外観写真" loading="lazy" width="352" height="274"></div>
                         <div class="details__date">施工年月：R4年4月 構造：木造</div>
                       </li>
                     </ul>

@@ -10,7 +10,7 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import uglify from 'gulp-uglify';
 import cleanCSS from 'gulp-clean-css';
-import htmlmin from 'gulp-htmlmin';
+import rename from 'gulp-rename';
 
 const sass = gulpSass(dartSass);
 
@@ -62,7 +62,8 @@ const sass_task = () => {
       cascade: false,
       })
     ]))
-  // .pipe(cleanCSS())
+  .pipe(cleanCSS())
+  .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest(dest.css))
   .pipe(browserSync.reload({stream:true}));
 }
@@ -70,7 +71,6 @@ const sass_task = () => {
 const pug_task = () => {
   return gulp.src(src.pug)
     .pipe(plumber())
-    // .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
     .pipe(pug({
       pretty: true,
       basedir: src.pugbase
@@ -82,6 +82,7 @@ const pug_task = () => {
 const js_task = () => {
   return gulp.src(src.js)
     .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(dest.js));
 }
 

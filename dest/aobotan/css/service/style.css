@@ -204,7 +204,7 @@ img {
   width: 15.7333333333%;
   aspect-ratio: 59/86;
   position: absolute;
-  background-image: url("/aobotan/img/top/contact/contact.png");
+  background-image: url("/aobotan/img/top/contact/contact.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -470,15 +470,15 @@ img {
 }
 
 .about-fv__inner {
-  background-image: url("/aobotan/img/about/about-fv.jpg");
+  background-image: url("/aobotan/img/about/about-fv.webp");
 }
 
 .service-fv__inner {
-  background-image: url("/aobotan/img/service/service-fv.jpg");
+  background-image: url("/aobotan/img/service/service-fv.webp");
 }
 
 .contact-fv__inner {
-  background-image: url("/aobotan/img/contact/contact-fv.jpg");
+  background-image: url("/aobotan/img/contact/contact-fv.webp");
 }
 
 .lower-title {
@@ -529,15 +529,15 @@ img {
 }
 
 .title--about:after {
-  background-image: url("/aobotan/img/about/about-img01.png");
+  background-image: url("/aobotan/img/about/about-img01.webp");
 }
 
 .title--service:after {
-  background-image: url("/aobotan/img/service/service-img01.png");
+  background-image: url("/aobotan/img/service/service-img01.webp");
 }
 
 .title--contact:after {
-  background-image: url("/aobotan/img/contact/contact-img01.png");
+  background-image: url("/aobotan/img/contact/contact-img01.webp");
 }
 
 .title__btns {

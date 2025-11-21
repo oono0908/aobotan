@@ -1,7 +1,6 @@
 @use "../base/base";
 @use "../global" as *;
 
-
 .fv {
   width: 100%;
   position: relative;
@@ -35,14 +34,14 @@
   }
 }
 
-.about-fv__inner{
-  background-image: url("/aobotan/img/about/about-fv.jpg");
+.about-fv__inner {
+  background-image: url("/aobotan/img/about/about-fv.webp");
 }
 
-.service-fv__inner{
-  background-image: url("/aobotan/img/service/service-fv.jpg");
+.service-fv__inner {
+  background-image: url("/aobotan/img/service/service-fv.webp");
 }
 
-.contact-fv__inner{
-  background-image: url("/aobotan/img/contact/contact-fv.jpg");
+.contact-fv__inner {
+  background-image: url("/aobotan/img/contact/contact-fv.webp");
 }

@@ -1,0 +1,1 @@
+$(window).on("load",function(){var t=window.location.hash;if(t){let o=$(t);o.length&&setTimeout(function(){var t=o.offset().top;$("html, body").animate({scrollTop:t},800,"swing")},100)}}),$(function(){$("a[href^='#']").on("click",function(t){var o=$(this).attr("href"),o=$(o);o.length&&(t.preventDefault(),t=o.offset().top,$("html, body").animate({scrollTop:t},800,"swing"))})});

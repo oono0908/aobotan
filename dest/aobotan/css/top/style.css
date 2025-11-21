@@ -204,7 +204,7 @@ img {
   width: 15.7333333333%;
   aspect-ratio: 59/86;
   position: absolute;
-  background-image: url("/aobotan/img/top/contact/contact.png");
+  background-image: url("/aobotan/img/top/contact/contact.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -905,7 +905,7 @@ img {
 .service__inner:before {
   content: "";
   position: absolute;
-  background-image: url("/aobotan/img/top/service/service.png");
+  background-image: url("/aobotan/img/top/service/service.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

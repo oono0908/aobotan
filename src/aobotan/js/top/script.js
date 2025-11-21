@@ -36,7 +36,6 @@ $(function () {
 });
 
 
-
 // mvの中の画像がマウスの動きに応じて動く
 $(function () {
   const $inner = $(".mv__inner");
